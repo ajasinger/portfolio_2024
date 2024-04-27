@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Navbar() {
     return(
-        <nav  className="font-sans text-lg py-8">
+        <nav  className="font-sans text-lg px-16 py-8">
             <ul className="flex gap-10 justify-end items-center">
                 {navLinks.map((link) => (
                     <li 
