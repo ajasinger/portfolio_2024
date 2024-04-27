@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const sans = DM_Sans({ subsets: ["latin"] });
 const serif = DM_Serif_Display({
@@ -24,8 +25,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${sans.className} ${serif.className} bg-zinc-950 text-stone-50 px-8`}>
-        < Header />
+        < Navbar />
         {children}
+        < Footer />
       </body>
     </html>
   );
