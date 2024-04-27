@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
+import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const sans = DM_Sans({ subsets: ["latin"] });
+const serif = DM_Serif_Display({
+  weight: '400',
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+})
 
 export const metadata: Metadata = {
   title: "Aja Singer",
@@ -17,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50 text-gray-950 relative`}>
+      <body className={`${sans.className} ${serif.className} bg-zinc-950 text-zinc-950 `}>
         < Header />
         {children}
       </body>
