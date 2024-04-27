@@ -23,7 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${sans.className} ${serif.className} bg-zinc-950 text-zinc-950 py-8`}>
+      <body className={`${sans.className} ${serif.className} bg-zinc-950 text-stone-50 px-8`}>
         < Header />
         {children}
       </body>
