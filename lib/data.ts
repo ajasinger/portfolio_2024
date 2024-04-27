@@ -14,9 +14,4 @@ export const links = [
         id:3,
         href:"https://www.linkedin.com/in/ajasinger/"
     },
-    {
-        name:"CONTACT ME",
-        id:4,
-        href:"#contact"
-    },
 ]
