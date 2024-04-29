@@ -46,13 +46,13 @@ export const techStack = [
 export const projects = [
     {
         id: 0,
-        href: "/images",
+        href: "/images/silvershield_site.png",
         title: "Silvershield.ai", 
         body: "A full-stack web app built with Next.js, Tailwind CSS and Supabase for AI-enabled fraud detection."
     },
     {
         id: 1,
-        href: "/images",
+        href: "/images/visiblework_site.png",
         title: "Visible Work", 
         body: "A JavaScript website for a personal branding service."
     },
