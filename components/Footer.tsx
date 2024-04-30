@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex flex-col gap-8">
                 <Link 
                     href="/work"
-                    className="px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
+                    className="font-semibold px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
                 >
                         CONTACT ME
                 </Link>
