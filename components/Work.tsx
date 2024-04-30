@@ -8,16 +8,16 @@ export default function Work() {
     return(
         <div className="px-16 pt-24 flex flex-col justify-center gap-10">
             <h3 className="text-4xl text-cream font-medium text-center">My work</h3>
-            <div className="flex flex-wrap align-center justify-center gap-16 text-zinc-950">
+            <div className="flex flex-wrap justify-center gap-16 text-zinc-950">
                 {projects.map(project => (
                     <div 
                         key={project.id}
                         className="w-2/5 flex flex-col gap-8"
                     >
                         <div 
-                            className=" bg-cream rounded-md p-8 z-0 relative overflow-hidden space-y-8"
+                            className=" bg-cream rounded-lg p-8 z-0 relative overflow-hidden space-y-8 h-full"
                         >
-                            <div>
+                            <div className="h-[500px] rounded-lg overflow-y-scroll">
                                 <Image
                                     src={project.href}
                                     width={600}
