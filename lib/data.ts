@@ -20,12 +20,14 @@ export const projects = [
         href: "/images/silvershield_site.png",
         name: "Silvershield", 
         alt: "Silvershield website landing page",
-        body: "A full-stack web app built with Next.js, Tailwind CSS and Supabase for AI-enabled fraud detection."
+        body: "A full-stack web app built with Next.js, Tailwind CSS and Supabase for AI-enabled fraud detection.",
+        param: "silvershield"
     },
     {
         href: "/images/visiblework_site.png",
         name: "Visible Work", 
         alt: "Visible Work website landing page",
-        body: "A JavaScript website for a personal branding service."
+        body: "A JavaScript website for a personal branding service.",
+        param: "visiblework"
     },
 ]
