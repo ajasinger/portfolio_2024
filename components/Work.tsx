@@ -17,7 +17,7 @@ export default function Work() {
                         <div 
                             className=" bg-cream rounded-lg p-8 z-0 relative overflow-hidden space-y-8 h-full"
                         >
-                            <div className="h-[500px] rounded-lg overflow-y-scroll">
+                            <div className="h-[325px] rounded-lg overflow-y-scroll">
                                 <Image
                                     src={project.href}
                                     width={600}
@@ -30,7 +30,7 @@ export default function Work() {
                                 <p className="z-50">{project.body}</p>
                             </div>
                             <div className="bg-[#E0FEAF] -z-10 absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem]"></div>
-                            <div className="bg-[#E4E2FF] -z-10 absolute top-[5rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
+                            <div className="bg-[#E4E2FF] -z-10 absolute top-[15rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
                         </div>
                         <Link href={`projects/${project.param}`} className="text-cream text-lg flex gap-2 items-center group">
                             LEARN MORE
