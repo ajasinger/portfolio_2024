@@ -9,12 +9,12 @@ export default function Header() {
         <span className="font-serif"> technology </span>and<span className="font-serif"> creativity</span>.
       </h2>
       <ul className="flex gap-8 font-light text-lg">
-        {techStack.map(tech => (
+        {techStack.map((tech, index) => (
           <li
-            key={tech.id}
+            key={index}
             className="flex gap-8"
           >
-            {tech.name}<span className={`${tech.id === techStack.length-1 && "invisible"}`}>/</span>
+            {tech.name}<span className={`${index === techStack.length-1 && "invisible"}`}>/</span>
           </li>
         ))}
       </ul>

@@ -7,9 +7,9 @@ export default function Navbar() {
     return(
         <nav  className="font-sans text-lg px-16 py-8">
             <ul className="flex gap-10 justify-end items-center">
-                {navLinks.map((link) => (
+                {navLinks.map((link, index) => (
                     <li 
-                        key={link.id}
+                        key={index}
                         className="hover:underline underline-offset-8 decoration-1"
                      >
                         <Link href={link.href}>{link.name}</Link>
