@@ -9,7 +9,12 @@ export default function Footer() {
                 <Link href="/work" className="text-xl">LINKEDIN</Link>
             </div>
             <div className="flex flex-col gap-8">
-                <Link href="/work">CONTACT ME</Link>
+                <Link 
+                    href="/work"
+                    className="px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
+                >
+                        CONTACT ME
+                </Link>
                 <p>info@ajasinger.com</p>
             </div>
 
