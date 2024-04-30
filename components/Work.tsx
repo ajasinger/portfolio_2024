@@ -30,7 +30,7 @@ export default function Work() {
                                 <p className="z-50">{project.body}</p>
                             </div>
                             <div className="bg-[#E0FEAF] -z-10 absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem]"></div>
-                            <div className="bg-[#EDCEE2] -z-10 absolute top-[15rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
+                            <div className="bg-[#E4E2FF] -z-10 absolute top-[5rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
                         </div>
                         <Link href={`projects/${project.name}`} className="text-cream text-lg flex gap-2 items-center group">
                             LEARN MORE
