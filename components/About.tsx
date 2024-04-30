@@ -2,7 +2,7 @@
 
 export default function About() {
   return (
-    <div className="px-48 py-36 bg-cream text-zinc-950 relative overflow-hidden">
+    <div className="px-48 py-24 bg-cream text-zinc-950 relative overflow-hidden">
       <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem]"></div>
       <div className="bg-[#EDCEE2] absolute top-[15rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
       <div className="flex justify-between items-center gap-20">
