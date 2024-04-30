@@ -1,5 +1,3 @@
-
-
 export default function About() {
   return (
     <div className="px-48 py-24 bg-cream text-zinc-950 relative overflow-hidden">
