@@ -2,10 +2,16 @@ import Link from 'next/link'
 
 export default function Contact() {
     return(
-        <div className="px-16 py-24 bg-cream text-zinc-950 relative overflow-hidden">
+        <div className="mt-24 px-16 py-24 bg-cream text-zinc-950 relative overflow-hidden">
+        {/* <div className="px-16 py-24 bg-cream text-zinc-950 relative overflow-hidden"> */}
             <div className="bg-[#E0FEAF] absolute z-10 top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem]"></div>
             <div className="bg-[#EDCEE2] absolute z-10 top-[15rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
-            <div className="flex gap-48">
+            <div className="flex justify-center">
+                <h2 className="text-3xl font-thin leading-relaxed z-50">
+                    Engineering <span className="font-serif"> creative </span> solutions to <span className="font-serif"> meaningful </span> problems.
+                </h2>
+            </div>
+            {/* <div className="flex gap-48">
                 <h3 className="text-4xl font-semibold z-50">Contact me</h3>
                 <Link 
                     href="/dashboard"
@@ -13,7 +19,7 @@ export default function Contact() {
                 >
                     Write to me
                 </Link>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -10,7 +10,7 @@ export default function Home() {
       < Header />
       < About />
       < Work />
-      < Text />
+      {/* < Text /> */}
       < Contact />
     </main>
   );

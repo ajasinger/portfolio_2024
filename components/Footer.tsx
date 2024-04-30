@@ -13,7 +13,7 @@ export default function Footer() {
                     href="/work"
                     className="font-semibold px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
                 >
-                        CONTACT ME
+                    CONTACT ME
                 </Link>
                 <p>info@ajasinger.com</p>
             </div>
