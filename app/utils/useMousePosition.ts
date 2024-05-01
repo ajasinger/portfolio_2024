@@ -13,7 +13,7 @@ export default function useMousePosition() {
         return() => {
             window.removeEventListener("mousemove", updateMousePosition);
         }
-    }) 
+    },[]) 
 
     return mousePosition;
 }
