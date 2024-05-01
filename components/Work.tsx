@@ -16,9 +16,9 @@ export default function Work() {
                     >
                         <Link 
                             href={`projects/${project.param}`}
-                            className=" bg-cream rounded-lg p-8 z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105"
+                            className=" bg-cream p-8 z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105"
                         >
-                            <div className="h-[325px] rounded-lg overflow-y-scroll">
+                            <div className="h-[325px] overflow-y-scroll">
                                 <Image
                                     src={project.href}
                                     width={600}
