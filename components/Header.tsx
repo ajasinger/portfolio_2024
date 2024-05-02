@@ -2,7 +2,7 @@ import { techStack } from '@/lib/data';
 
 export default function Header() {
   return (
-    <header className="px-16 pt-8 pb-24 flex flex-col gap-8">
+    <header className="px-16 pt-8 pb-16 flex flex-col gap-8">
       <h1 className="text-[250px] font-semibold">Hi, I'm Aja</h1>
       <h2 className="text-3xl font-thin max-w-4xl leading-relaxed">
         a junior<span className="font-serif"> full-stack engineer </span>building at the intersection of 
