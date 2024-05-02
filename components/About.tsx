@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { about } from '@/lib/data';
+import { aboutCards } from '@/lib/data';
 
 export default function About() {
 
@@ -14,7 +14,7 @@ export default function About() {
         <div className="flex flex-col gap-10 z-10">
           <h3 className="text-4xl font-semibold">About me</h3>
             <div className="flex gap-8">
-              {about.map((card, index) => (
+              {aboutCards.map((card, index) => (
                 <div key={index} className="flex flex-col gap-2 p-16 border border-zinc-500 w-2/5">
                   <div className="flex flex-col gap-2">
                     {card?.body?.map((text, index) => (
