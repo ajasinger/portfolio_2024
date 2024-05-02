@@ -6,8 +6,8 @@ import Link from 'next/link'
 
 export default function Work() {
     return(
-        <div id="work" className="px-16 pt-24 flex flex-col justify-center gap-10">
-            <h3 className="text-4xl text-cream font-medium text-center">My work</h3>
+        <div id="work" className="px-16 flex flex-col justify-center gap-10">
+            <h3 className="text-4xl font-medium text-cream text-center">My work</h3>
             <div className="flex flex-wrap justify-center gap-16 text-zinc-950">
                 {projects.map((project, index) => (
                     <div 
