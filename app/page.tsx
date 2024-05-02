@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="font-sans">
       < Header />
-      {/* < About /> */}
+      < About />
       < Carousel />
       < Work />
       {/* < Text /> */}
