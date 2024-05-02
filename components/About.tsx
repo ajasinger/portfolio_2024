@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { aboutCards } from '@/lib/data';
+import { aboutCards1 } from '@/lib/data';
 
 export default function About() {
 
@@ -14,20 +14,39 @@ export default function About() {
         <div className="flex flex-col gap-10 z-10">
           <h3 className="text-4xl font-semibold">About me</h3>
             <div className="flex gap-8">
-              {aboutCards.map((card, index) => (
-                <div key={index} className="flex flex-col gap-2 p-16 border border-zinc-500 w-2/5">
-                  <div className="flex flex-col gap-2">
-                    {card?.body?.map((text, index) => (
+              {/* {aboutCards1.map((card, index) => ( */}
+                {/* <div key={index} className="flex flex-col gap-2 p-16 border rounded-lg border-zinc-500"> */}
+                <div className="flex flex-col gap-2 p-16 border rounded-lg border-zinc-500 w-4/6">
+                    {/* {card?.body?.map((text, index) => (
                       <div key={index}>{text}</div>
                     ))}
                     <ol key={index} className="list-decimal space-y-2">
                       {card?.list?.map((text, index) => (
                         <li>{text}</li>
                       ))}
-                    </ol>
-                  </div>
+                    </ol> */}
+                    <p className="font-semibold">I like making things, but I love learning even more.</p>
+                    <p>I built a fashion startup from zero to seven figures and a brand featured on the cover of the New York Times Style section, but you can only innovate so much with women's workwear.</p>
+                    <p>I got bored, so I looked for a new challenge to satisfy my desire to build — one where the potential to learn was uncapped. My husband, who works with startups, suggested software development.</p>
+                    <p>Two days into my Codecademy course, <span className="italic">I was hooked.</span></p>
+                    <p>Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur friend planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, he was confident:</p>
+                    <p className="italic">“You're smart. You'll figure it out.”</p>
+                    <p>And I did.</p>
+                    <p>Today, after countless hours of debugging alongside professional developers, Stack Overflow rabbit holes, and late nights pouring over documentation, I can say that I'm a freelance full-stack developer who was paid to build an AI-powered web app with Next.js, Tailwind, and Supabase.</p>
+                    <p>Now, I'm excited to join a company that values <span className="italic">learning and creativity</span>, where I can <span className="italic">collaborate</span> and make a <span className="italic">meaningful difference</span>.</p>
                 </div>
-              ))}
+                <div className="flex flex-col gap-6 p-16 border rounded-lg border-zinc-500 w-2/6">
+                    <p>A little more about me:</p>
+                    <ol className="list-decimal space-y-2 ml-8">
+                      <li>I live in Brooklyn with my husband and toddler —  who knows that when I put my glasses on and turn on the big screen, “Mommy's working”.</li>
+                      <li>I'm from Toronto, which means you'll likely hear me say “sorry,” but not “eh.”</li>
+                      <li>I learned to ride a bike two years ago.</li>
+                      <li>I think Rubirosa's vodka pizza is the best pizza in NY. (I will not be taking questions.)</li>
+                      <li>When I'm not coding you'll find me trying to master a crow pose, snapping Polaroids, and seeking out fresh kimchi.</li>
+                    </ol>
+
+                </div>
+              {/* ))} */}
             </div>
         </div>
         {/* <button onClick={e => setSection(!section)} className="text-zinc-950 z-10">
