@@ -1,7 +1,7 @@
 type CardType = {
-    url: string;
-    title: string;
-    id: number;
+    name: string;
+    body: string[];
+    list?: string[];
 };
 
 
@@ -16,9 +16,16 @@ export default function Card( props: {card: CardType, index: number} ) {
                 <div className="bg-[#EDCEE2] absolute top-[15rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
                 <div className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"></div>
                 <div className="absolute inset-0 z-10 grid place-content-center">
-                    <p className="text-zinc-950 p-10">
-                        {props.card.title}
-                    </p>
+                    <div className="text-zinc-950 p-16 flex flex-col gap-2">
+                        {props?.card?.body?.map((text) => (
+                            <div key={props?.index}>{text}</div>
+                        ))}
+                        <ol key={props?.index} className="list-decimal space-y-2 ml-8">
+                            {props?.card?.list?.map((text) => (
+                                <li>{text}</li>
+                            ))}
+                        </ol>
+                    </div>
                 </div>
             </div>
 
