@@ -2,6 +2,8 @@ export const projects = [
     { 
         param: "silvershield",
         name: "Silvershield",
+        headerHref: "/images/silvershield_mobile_site.png",
+        headerImgAlt: "mobile version of the Silvershield website",
         overview: [
             "A full-stack AI-enabled web application, that enables family members to monitor their senior relative's inboxes for fraud.",
             "I built the platform from concept to beta launch and collaborated with the CEO, machine learning developers, designer, and marketing lead to develop the product and iterate. Silvershield is now in use by beta testers."
@@ -18,7 +20,7 @@ export const projects = [
             ]
         },
         websiteURL: "https://www.silvershield.ai/",
-        techStack: ["Next.JS", "Supabase", "Tailwind", "PosgresSQL", "Nylas", "Sendgrid", "Google APIs"],
+        techStack: ["Next.JS", "Supabase", "Tailwind", "PosgresSQL", "Nylas", "Google APIs", "Sendgrid"],
         approach: [
             {
                 body: [
