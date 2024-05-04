@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { projects } from '@/lib/projects-data';
+import AccordionContainer from '@/components/AccordianContainer';
 
 type ProjectType = {
     param: string;
@@ -30,9 +31,9 @@ export default function ProjectPage({ params }: { params: { project: string } })
     const data: ProjectType | undefined = projects.find(project => project.param === params.project);
 
     return(
-        <div className="bg-cream px-16 py-24 text-zinc-950 font-sans flex flex-col gap-16">
-            <h3 className="text-4xl font-semibold">{data?.name}</h3>
-            <div className="flex flex-col gap-4">
+        <div className="bg-cream pt-24 text-zinc-950 font-sans flex flex-col gap-16">
+            <h3 className="text-4xl font-semibold px-16">{data?.name}</h3>
+            <div className="flex flex-col gap-4 px-16">
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         {/* Intro Section */}
@@ -82,8 +83,9 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
             </div>
 
+            {/* Approach */}
+            < AccordionContainer />
             <div className="flex flex-col gap-16">
-                {/* Approach */}
                 <div className="flex flex-col gap-4 w-1/2">
                     <h4 className="font-serif text-lg font-semibold">Project Overview</h4>
                     <div>
