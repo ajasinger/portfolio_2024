@@ -16,7 +16,7 @@ type ProjectType = {
 };
 
 type Approach = {
-    title: string;
+    title?: string;
     body: string[];
     bodyList?: { title: string; body: string }[];
 };
@@ -59,8 +59,33 @@ export default function ProjectPage({ params }: { params: { project: string } })
                         ))}
                     </ul>
                 </div>
-                {/* Product Overview */}
-
+                {/* Approach */}
+                <div className="flex flex-col gap-4 w-1/2">
+                    <h4 className="font-serif text-lg font-semibold">Project Overview</h4>
+                    <div>
+                    {data?.approach?.map((text, index) => (
+                        <div key={index}>
+                            <h5 className="font-semibold uppercase">{text.title}</h5>
+                            <div  className="flex flex-col gap-2">
+                                {text?.body?.map((bodyText, index) => (
+                                    <div key={index}>
+                                        {bodyText}
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                {text?.bodyList?.map((text, index) => (
+                                    <ol key={index} className="list-decimal ml-8">
+                                        <li>
+                                            <p><span className="font-semibold">{text.title}</span>{' '}{text.body}</p>
+                                        </li>
+                                    </ol>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
