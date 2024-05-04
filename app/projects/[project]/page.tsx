@@ -1,6 +1,6 @@
 'use client';
 
-import Image, { ImageProps } from 'next/image';
+import Image from 'next/image';
 import { projects } from '@/lib/projects-data';
 
 type ProjectType = {
@@ -57,12 +57,15 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     </div>
                     <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
                         <div className="h-[450px] overflow-y-scroll border-8 border-black">
-                            <Image
-                                src={data?.headerHref}
-                                width={600}
-                                height={600}
-                                alt={data?.headerImgAlt}
-                            />
+                            {data && 
+                            // THIS IS TO GET RID OF TS ERROR -- CHANGE LATER!!!
+                                <Image
+                                    src={data?.headerHref}
+                                    width={600}
+                                    height={600}
+                                    alt={data?.headerImgAlt}
+                                />
+                            }
                         </div>
                     </div>
                 </div>
