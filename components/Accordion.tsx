@@ -19,7 +19,7 @@ export default function Accordion({ data }: Props) {
         <div className="flex">
             <div className="border border-zinc-950 z-50 h-full">
                 <div className="flex flex-col gap-4">
-                    <div className="flex">
+                    <div className="flex  divide-x divide-cream hover:divide-zinc-950">
                         {data?.map((text, index) => (
                             <div>
                                 {isOpen === index ? (
@@ -55,8 +55,7 @@ export default function Accordion({ data }: Props) {
                                 ): (
                                     <button
                                         key={index}
-                                        //  FIX BORDER ISSUE!!!!
-                                        className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full flex justify-center items-center border-cream hover:border-zinc-950 ${index !== data?.length-1 && "border-r"} ${index !== 0 && "hover:border-l"}`}
+                                        className={`bg-zinc-950 text-cream hover:text-zinc-950  hover:backdrop-blur hover:bg-white/30 w-16 h-full flex justify-center items-center `}
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <h5 className="font-semibold uppercase text-lg -rotate-90">{text.title}</h5>
