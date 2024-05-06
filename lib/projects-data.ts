@@ -23,7 +23,7 @@ export const projects = [
         techStack: ["Next.JS", "Supabase", "Tailwind", "PosgresSQL", "Nylas", "Google APIs", "Sendgrid"],
         approach: [
             {
-                title: "overview",
+                title: "approach",
                 body: [
                     "Security and scalability were the two main concerns when considering how to build Silvershield.ai.",
                     "Our users would be trusting us with sensitive data, so keeping it safe was a top priority. The first iteration of the product analyzes email inboxes for fraud but the intention is to scale to bank accounts, text messages, and physical mail so scalability and adaptability as the product evolves were paramount.",
