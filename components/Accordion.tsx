@@ -17,59 +17,55 @@ export default function Accordion({ data }: Props) {
 
     return(
         <div className="flex">
-            <div className="border border-zinc-950 z-50 p-16 h-[525px]">
+            <div className="border border-zinc-950 z-50 h-full">
                 <div className="flex flex-col gap-4">
-                    {isOpen === 0 && <h4 className="font-serif text-lg font-semibold z-50">Approach</h4>}
-                    <div>
-                    {data?.map((text, index) => (
-                        <button
-                            key={index}
-                            className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2"
-                            onClick={() => setIsOpen(index)}
-                        >
-                            {isOpen === index &&
-                                <div className="flex flex-col gap-2 text-left">
-                                    <h5 className="font-semibold uppercase text-left">{text.title}</h5>
-                                    <div  className="flex flex-col gap-2">
-                                        {text?.body?.map((bodyText, index) => (
-                                            <div 
-                                                key={index} 
-                                                className="z-50 flex flex-col gap-2"
-                                            >
-                                                {bodyText}
+                    <div className="flex">
+                        {data?.map((text, index) => (
+                            <div>
+                                {isOpen === index ? (
+                                    <button
+                                        key={index}
+                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[525px]"
+                                        onClick={() => setIsOpen(index)}
+                                    >
+                                        <div className="flex flex-col gap-2 text-left p-16">
+                                            {/* {isOpen === 0 && <h4 className="font-serif text-lg font-semibold z-50">Approach</h4>} */}
+                                            <h5 className="font-semibold uppercase text-left">{text.title}</h5>
+                                            <div  className="flex flex-col gap-2">
+                                                {text?.body?.map((bodyText, index) => (
+                                                    <div 
+                                                        key={index} 
+                                                        className="z-50 flex flex-col gap-2"
+                                                    >
+                                                        {bodyText}
+                                                    </div>
+                                                ))}
                                             </div>
-                                        ))}
-                                    </div>
-                                    <div className="flex flex-col gap-2">
-                                        {text?.bodyList?.map((text, index) => (
-                                            <ol key={index} className="list-decimal ml-8">
-                                                <li>
-                                                    <p><span className="font-semibold">{text.title}</span>{' '}{text.body}</p>
-                                                </li>
-                                            </ol>
-                                        ))}
-                                    </div>
-                                </div>
-                            }
-                        </button>
-                    ))}
+                                            <div className="flex flex-col gap-2">
+                                                {text?.bodyList?.map((listText, index) => (
+                                                    <ol key={index} className="list-disc ml-8">
+                                                        <li>
+                                                            <p><span className="font-semibold">{listText.title}</span>{' '}{listText.body}</p>
+                                                        </li>
+                                                    </ol>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </button>
+                                ): (
+                                    <button
+                                        key={index}
+                                        //  FIX BORDER ISSUE!!!!
+                                        className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full flex justify-center items-center border-cream hover:border-zinc-950 ${index !== data?.length-1 && "border-r"} ${index !== 0 && "hover:border-l"}`}
+                                        onClick={() => setIsOpen(index)}
+                                    >
+                                        <h5 className="font-semibold uppercase text-lg -rotate-90">{text.title}</h5>
+                                    </button>
+                                )}
+                            </div>
+                        ))}
                     </div>
                 </div>
-            </div>
-            <div className="z-50 flex">
-                {data?.map((text, index) => (
-                    <div>
-                        { isOpen !== index &&
-                            <button
-                                key={index}
-                                className="border-r bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950 hover:border-zinc-950 w-16 h-full"
-                                onClick={() => setIsOpen(index)}
-                            >
-                                <h5 className="font-semibold uppercase text-lg -rotate-90">{text.title}</h5>
-                            </button>
-                        }
-                    </div>
-                ))}
             </div>
         </div>
     )
