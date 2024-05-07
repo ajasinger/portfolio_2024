@@ -15,15 +15,16 @@ type ProjectType = {
         list: string[];
     };
     websiteURL: string;
+    githubURL?: string;
     techStack: string[];
     approach: ApproachType[];
-    solutions: SolutionsType[];
+    solutions?: SolutionsType[];
     learnings: LearningsType[];
 };
 
 type ApproachType = {
     title?: string;
-    body: string[];
+    body?: string[];
     bodyList?: { title: string; body: string }[];
 };
 
