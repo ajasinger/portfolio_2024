@@ -17,12 +17,25 @@ type ProjectType = {
     websiteURL: string;
     techStack: string[];
     approach: ApproachType[];
+    solutions: SolutionsType[];
+    learnings: LearningsType[];
 };
 
 type ApproachType = {
     title?: string;
     body: string[];
     bodyList?: { title: string; body: string }[];
+};
+
+type SolutionsType = {
+    title: string;
+    body: string;
+};
+
+type LearningsType = {
+    title: string;
+    body: string;
+    learnings: string;
 };
 
 export default function ProjectPage({ params }: { params: { project: string } }) {
