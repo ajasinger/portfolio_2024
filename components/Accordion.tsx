@@ -4,7 +4,7 @@ import { useState } from "react";
 
 type ApproachType = {
     title?: string;
-    body: string[];
+    body?: string[];
     bodyList?: { title: string; body: string }[];
 };
 
@@ -25,12 +25,15 @@ export default function Accordion({ data }: Props) {
                                 {isOpen === index ? (
                                     <button
                                         key={index}
-                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[525px]"
+                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "min-h-[525px]"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <div className="flex flex-col gap-2 text-left p-16">
-                                            {/* {isOpen === 0 && <h4 className="font-serif text-lg font-semibold z-50">Approach</h4>} */}
-                                            <h5 className="font-semibold uppercase text-left">{text.title}</h5>
+                                            {data?.length-1 < 2 ? (
+                                                <h4 className="font-serif text-lg font-semibold z-50">Approach</h4>
+                                            ) : (
+                                                <h5 className="font-semibold uppercase text-left">{text.title}</h5>
+                                            )}
                                             <div  className="flex flex-col gap-2">
                                                 {text?.body?.map((bodyText, index) => (
                                                     <div 
