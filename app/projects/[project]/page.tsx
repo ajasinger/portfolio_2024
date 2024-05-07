@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { projects } from '@/lib/projects-data';
 import ApproachAccordion from '@/components/ApproachAccordion';
+import SolutionsCarousel from '@/components/SolutionsCarousel';
 
 type ProjectType = {
     param: string;
@@ -125,35 +126,21 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Problems & Solutions */}
             <div className="px-16 py-12  text-zinc-950 flex gap-16 z-10">
-            <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
-                        <div className="h-[450px] overflow-y-scroll border-8 border-black">
-                            {data && 
-                                <Image
-                                    src={data?.headerHref}
-                                    width={600}
-                                    height={600}
-                                    alt={data?.headerImgAlt}
-                                />
-                            }
-                        </div>
+                <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
+                    <div className="h-[450px] overflow-y-scroll border-8 border-black">
+                        {data && 
+                            <Image
+                                src={data?.headerHref}
+                                width={600}
+                                height={600}
+                                alt={data?.headerImgAlt}
+                            />
+                        }
                     </div>
-                <div className="flex flex-col gap-4">
+                </div>
+                <div className="flex flex-col gap-4 w-1/2">
                     <h4 className="font-serif text-lg font-semibold">Problems & Solutions</h4>
-                    <div className="flex flex-col gap-2">
-                        {data?.overview?.map((text, index) => (
-                            <div key={index}>
-                                <p>{text}</p>
-                            </div>
-                        ))}
-                        <p>{data?.overviewList?.title}</p>
-                        <div className="flex flex-col gap-2">
-                            {data?.overviewList?.list?.map((text, index) => (
-                                <ol key={index} className="list-disc ml-8">
-                                    <li>{text}</li>
-                                </ol>
-                            ))}
-                        </div>
-                    </div>
+                    {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
                 </div>
             </div>
         </div>
