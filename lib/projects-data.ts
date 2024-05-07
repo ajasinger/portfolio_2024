@@ -123,4 +123,59 @@ export const projects = [
             },
         ]
     },
+    { 
+        param: "visiblework",
+        name: "Visible Work",
+        headerHref: "/images/visiblework_mobile_site.png",
+        headerImgAlt: "mobile version of the Visible Work website",
+        overview: [
+            "Visible Work is website built with JavaScript showcasing a personal branding service. I built it to showcase the service and highlight its most compelling features to potential clients. I included a text animation to highlight the company's value proposition as well as a Calendly pop-up for ease of booking.",
+        ],
+        overviewList: {
+            title: "The website includes:",
+            list: [
+                "A typing animation",
+                "Calendly booking pop-ups",
+                "Responsive styling with grid and flexbox",
+            ]
+        },
+        websiteURL: "https://visiblework.co/",
+        githubURL: "https://github.com/ajasinger/visible-work/",
+        techStack: ["JavaScript", "CSS", "Calendly API"],
+        approach: [
+            {
+                title: "approach",
+                bodyList: [
+                    {
+                        title: "Responsive styling:",
+                        body: "This was my first time creating a website for public use so I wanted to make sure it was responsive for a wide range of devices. I started with media queries and flexbox, and discovered for layouts that require more control as the window size changes, a grid is often effective."
+                    },
+                    {
+                        title: "Animation:",
+                        body: "I knew we wanted something eye catching as soon as a prospective client landed on the homepage so a text animation seemed like the perfect fit. I discovered a technique using just CSS that gradually revealed the word, but I knew this wouldn't be as responsive so I figured out how to create a typing animation using JavaScript."
+                    },
+                    {
+                        title: "Ease of booking:",
+                        body: "I wanted users to be able to book a session without being redirected to so I used the Calendly API to make a pop up when I user clicked a button to book a session."
+                    },
+                    {
+                        title: "Accessibility:",
+                        body: "I explored accessibility best practices for the first time on this project. To do this I used Lighthouse, WAVE, and VoiceOver. Through this process I discovered that my images weren't labelled descriptively enough and that it was an issue to skip header numbers."
+                    },
+                ]
+            },
+        ],
+        learnings: [
+            {
+                title: "Building start to finish:",
+                body: "If I were to list all the things I learned while developing this project it would be an (even longer) essay. This project took me from an aspiring coder to a full-fledged software engineer.", 
+                learnings: "Things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind, and most importantly, debugging interpreting logs."
+            },
+            {
+                title: "Flexibility & Scalability:",
+                body: "Making things as flexible as possible, especially when the product is not fully established is crucial. The product changed from one that analyzed all types of files, to bank accounts, until we settled on inboxes. Since, from early on, I had broken up my code into reusable components, it was easy to adapt to all these changes.", 
+                learnings: "Next time I will spend more time building out a system of nomenclature. I did come up with a few naming conventions like 'user' and 'organization', as the product changed and the complexity grew and developed, there were some inconsistencies. Now that I have seen how a system grows I'll be better equipped to plan accordingly."
+            },
+        ]
+    },
 ]
