@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { projects } from '@/lib/projects-data';
-import Accordion from '@/components/Accordion';
+import ApproachAccordion from '@/components/ApproachAccordion';
 
 type ProjectType = {
     param: string;
@@ -113,7 +113,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 <div className="bg-[#EDCEE2] absolute top-[25rem] right-[-5rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                 { data && 
                     <div className="z-50">
-                        < Accordion data={data?.approach} />
+                        < ApproachAccordion data={data?.approach} />
                     </div>
                 }
             </div>

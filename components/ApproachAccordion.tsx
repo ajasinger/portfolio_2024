@@ -12,7 +12,7 @@ interface Props {
     data: ApproachType[];
 }
 
-export default function Accordion({ data }: Props) {
+export default function ApproachAccordion({ data }: Props) {
     const [isOpen, setIsOpen] = useState(0);
 
     return(
