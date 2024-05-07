@@ -69,6 +69,17 @@ export default function ProjectPage({ params }: { params: { project: string } })
                                 </div>
                             </div>
                         </div>
+                        {/* Tech Stack */}
+                        <div className="flex flex-col gap-4 z-50">
+                            <h4 className="font-serif text-lg font-semibold">Tech Stack</h4>
+                            <ul className="flex gap-8">
+                                {data?.techStack?.map((text, index) => (
+                                    <li key={index} className="flex gap-4">
+                                        {text}<span className={`${index === data?.techStack.length-1 && "invisible"}`}>/</span>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
                     <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
                         <div className="h-[450px] overflow-y-scroll border-8 border-black">
@@ -83,7 +94,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                         </div>
                     </div>
                 </div>
-                {/* Tech Stack */}
+                {/* Tech Stack
                 <div className="flex flex-col gap-4 z-50">
                     <h4 className="font-serif text-lg font-semibold">Tech Stack</h4>
                     <ul className="flex gap-8">
@@ -93,7 +104,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                             </li>
                         ))}
                     </ul>
-                </div>
+                </div> */}
             </div>
 
             {/* Approach */}
