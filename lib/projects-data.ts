@@ -2,7 +2,7 @@ export const projects = [
     { 
         param: "silvershield",
         name: "Silvershield",
-        headerHref: "/images/silvershield_mobile_site.png",
+        headerHref: "/images/silvershield_mobile_site_updated.png",
         headerImgAlt: "mobile version of the Silvershield website",
         overview: [
             "A full-stack AI-enabled web application, that enables family members to monitor their senior relative's inboxes for fraud.",
