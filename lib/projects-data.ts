@@ -115,7 +115,7 @@ export const projects = [
                 learnings: "Have users test the product early and regularly to help inform the build."
             },
             {
-                title: "Pair-programming",
+                title: "Pair programming",
                 body: "I hadn't pair programmed before but I was working with the ML engineering team and my POST request to the ML endpoint was failing and we didn't know why. After a few days of emailing back and forth, it took 20 minutes on a zoom call to debug it together.", 
                 learnings: "When encountering a tricky problem that other developers are involved in, its best to work through it together in realtime."
             },
