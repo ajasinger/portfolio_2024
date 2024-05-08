@@ -102,12 +102,12 @@ export const projects = [
                 learnings: "Things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind, and most importantly, debugging interpreting logs."
             },
             {
-                title: "Flexibility & Scalability",
+                title: "Flexibility",
                 body: "Making things as flexible as possible, especially when the product is not fully established is crucial. The product changed from one that analyzed all types of files, to bank accounts, until we settled on inboxes. Since, from early on, I had broken up my code into reusable components, it was easy to adapt to all these changes.", 
                 learnings: "Next time I will spend more time building out a system of nomenclature. I did come up with a few naming conventions like 'user' and 'organization', as the product changed and the complexity grew and developed, there were some inconsistencies. Now that I have seen how a system grows I'll be better equipped to plan accordingly."
             },
             {
-                title: "Actionable feedback",
+                title: "User testing",
                 body: "It was incredibly informative watching users move through the (almost) finished product with no intervention. I learned of a few places that weren't intuitive so I completely restructured the flow after a user logs in, which greatly improved understanding and I believe will improve conversion.",
                 learnings: "Have users test the product regularly instead of waiting until it's almost complete, identifying other milestones where user interaction could help inform the design and product moving forward."
             },
@@ -117,7 +117,7 @@ export const projects = [
             //     learnings: "When encountering a tricky problem that other developers are involved in, its best to work through it together in realtime."
             // },
             {
-                title: "Community Support",
+                title: "Community",
                 body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than had I tackled them on my own. One of the most transformative hours of my coding career was debugging alongside an experienced dev. It taught me how to approach bugs methodically and strategically.", 
                 learnings: "While my first step will still be chatGPT/stackOverflow/Reddit I am now better equipped to know when I need help with something, what to try before going for help, and where to find it."
             },
