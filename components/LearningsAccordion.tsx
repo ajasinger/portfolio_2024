@@ -4,8 +4,9 @@ import { useState } from "react";
 
 type LearningsType = {
     title?: string;
-    body: string;
+    body?: string;
     learnings?: string;
+    bodyList?: { title: string; body: string }[];
 };
 
 interface Props {
@@ -43,16 +44,15 @@ export default function LearningsAccordion({ data }: Props) {
                                                     {text.learnings}
                                                 </p>
                                             </div>
-                                            {/* <div  className="flex flex-col gap-2">
-                                                {text?.body?.map((bodyText, index) => (
-                                                    <div 
-                                                        key={index} 
-                                                        className="z-50 flex flex-col gap-2"
-                                                    >
-                                                        {bodyText}
-                                                    </div>
+                                            <div className="flex flex-col gap-2">
+                                                {text?.bodyList?.map((listText, index) => (
+                                                    <ol key={index} className="list-disc ml-8">
+                                                        <li>
+                                                            <p><span className="font-semibold">{listText.title}</span>{' '}{listText.body}</p>
+                                                        </li>
+                                                    </ol>
                                                 ))}
-                                            </div> */}
+                                            </div>
                                         </div>
                                     </button>
                                 ): (

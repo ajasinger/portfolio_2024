@@ -38,8 +38,9 @@ type SolutionsType = {
 
 type LearningsType = {
     title?: string;
-    body: string;
-    learnings: string;
+    body?: string;
+    learnings?: string;
+    bodyList?: { title: string; body: string }[];
 };
 
 export default function ProjectPage({ params }: { params: { project: string } }) {

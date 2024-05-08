@@ -170,14 +170,20 @@ export const projects = [
         ],
         learnings: [
             {
-                title: "Building start to finish",
-                body: "If I were to list all the things I learned while developing this project it would be an (even longer) essay. This project took me from an aspiring coder to a full-fledged software engineer.", 
-                learnings: "Things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind, and most importantly, debugging interpreting logs."
-            },
-            {
-                title: "Flexibility & Scalability",
-                body: "Making things as flexible as possible, especially when the product is not fully established is crucial. The product changed from one that analyzed all types of files, to bank accounts, until we settled on inboxes. Since, from early on, I had broken up my code into reusable components, it was easy to adapt to all these changes.", 
-                learnings: "Next time I will spend more time building out a system of nomenclature. I did come up with a few naming conventions like 'user' and 'organization', as the product changed and the complexity grew and developed, there were some inconsistencies. Now that I have seen how a system grows I'll be better equipped to plan accordingly."
+                bodyList: [
+                    {
+                        title: "Hosting:",
+                        body: "I hosted and published a site with Vercel for the first time and set up the DNS."
+                    },
+                    {
+                        title: "Iterating:",
+                        body: "I learned how the design process takes iteration to make sure the design serves the content. As we updated the content, the design needed updating too."
+                    },
+                    {
+                        title: "Accessibility:",
+                        body: "Analyzing the accessibility really gave me a new perspective on how different people experience websites. I thought I was cognizant of accessibility while (adding alt text, using high contract colors), but was surprised to find a lot of room for improvement when running it through accessibility tools. In particular, using VoiceOver, I realized how crucial it is that headers are labelled properly and not skipped."
+                    },
+                ]
             },
         ]
     },
