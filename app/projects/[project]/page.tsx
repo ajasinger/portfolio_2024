@@ -127,24 +127,26 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div> */}
 
             {/* Problems & Solutions */}
-            <div className="px-16 py-12  text-zinc-950 flex gap-16 z-10">
-                <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
-                    <div className="h-[450px] overflow-y-scroll border-8 border-black">
-                        {data && 
-                            <Image
-                                src={data?.headerHref}
-                                width={600}
-                                height={600}
-                                alt={data?.headerImgAlt}
-                            />
-                        }
+            {data?.solutions && 
+                <div className="px-16 py-12  text-zinc-950 flex gap-16 z-10">
+                    <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
+                        <div className="h-[450px] overflow-y-scroll border-8 border-black">
+                            {data && 
+                                <Image
+                                    src={data?.headerHref}
+                                    width={600}
+                                    height={600}
+                                    alt={data?.headerImgAlt}
+                                />
+                            }
+                        </div>
+                    </div>
+                    <div className="flex flex-col gap-4 w-1/2">
+                        <h4 className="font-serif text-lg font-semibold">Problems & Solutions</h4>
+                        {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
                     </div>
                 </div>
-                <div className="flex flex-col gap-4 w-1/2">
-                    <h4 className="font-serif text-lg font-semibold">Problems & Solutions</h4>
-                    {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
-                </div>
-            </div>
+            }
 
             {/* Learnings */}
             <div className="px-16 py-12 bg-cream text-zinc-950 relative">
