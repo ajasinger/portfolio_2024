@@ -4,7 +4,8 @@ import { useState } from "react";
 
 type SolutionsType = {
     title: string;
-    body: string;
+    problem: string;
+    solution: string;
 };
 
 interface Props {
@@ -19,9 +20,10 @@ export default function SolutionsCarousel({ data }: Props) {
             {data?.map((text, index) => (
                 <div key={index}>
                     {isOpen === index &&
-                        <div>
+                        <div className="flex flex-col gap-2 min-h-[500px]">
                             <h5 className="font-semibold uppercase text-left">{text.title}</h5>
-                            <p>{text.body}</p>
+                            <p><span className="font-semibold">Problem: </span>{text.problem}</p>
+                            <p><span className="font-semibold">Solution: </span>{text.solution}</p>
                         </div>
                     }
                 </div>
