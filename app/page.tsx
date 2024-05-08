@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <main className="font-sans">
       < Header />
-      < About />
-      < Carousel />
+      {/* < About />
+      < Carousel /> */}
       < Work />
       {/* < Text /> */}
       < Contact />
