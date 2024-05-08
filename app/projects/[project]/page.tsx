@@ -85,8 +85,9 @@ export default function ProjectPage({ params }: { params: { project: string } })
                             </ul>
                         </div> */}
                     </div>
-                    <div className="rounded-lg z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
-                        <div className="h-[450px] overflow-y-scroll border-8 border-black">
+                    <div className="z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+
+                        <div className="h-[450px] overflow-y-scroll">
                             {data && 
                                 <Image
                                     src={data?.headerHref}
@@ -95,8 +96,33 @@ export default function ProjectPage({ params }: { params: { project: string } })
                                     alt={data?.headerImgAlt}
                                 />
                             }
+                            </div>
                         </div>
-                    </div>
+                    {/* <div className="z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105">
+                        {data && 
+                            <div className="h-[450px]">
+                                <div className="h-[450px] overflow-y-scroll">
+                                <Image
+                                    src={data?.headerHref}
+                                    width={600}
+                                    height={600}
+                                    alt={data?.headerImgAlt}
+                                    // className=" inset-0 w-full h-full overflow-y-scroll"
+                                />
+                                </div>
+                                <div className="absolute inset-0">
+                                <Image
+                                    src='/images/iphone_cropped.svg'
+                                    width={3000}
+                                    height={2000}
+                                    alt={data?.headerImgAlt}
+                                    // className="w-full"
+                                />
+                                </div>
+                            </div>
+                        }
+                       
+                    </div> */}
                 </div>
                 {/* Tech Stack */}
                 <div className="flex flex-col gap-4 z-50">
