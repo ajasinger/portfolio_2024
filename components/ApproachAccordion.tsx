@@ -25,12 +25,12 @@ export default function ApproachAccordion({ data }: Props) {
                                 {isOpen === index ? (
                                     <button
                                         key={index}
-                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "min-h-[525px]"}`}
+                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "min-h-[425px]"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <div className="flex flex-col gap-4 text-left p-16">
-                                            {data?.length-1 < 2 ? (
-                                                <h4 className="font-serif text-lg font-semibold z-50">Approach</h4>
+                                            {index === 0 ? (
+                                                <h5 className="font-semibold uppercase text-left">Approach</h5>
                                             ) : (
                                                 <h5 className="font-semibold uppercase text-left">{text.title}</h5>
                                             )}
