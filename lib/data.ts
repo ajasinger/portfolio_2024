@@ -85,7 +85,7 @@ export const aboutCards = [
         ]
     },
     {
-        title: "More about me",
+        title: "More about me...",
         list: [
             "I live in Brooklyn with my triathlete husband and inquisitive toddler—who knows that when I put my glasses on and turn on the big screen, “Mommy's working”.",
             "I'm from Toronto, which means you'll likely hear me say “sorry,” but not “eh.”",
