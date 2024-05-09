@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { aboutCards1 } from '@/lib/data';
+import { aboutCards } from '@/lib/data';
 
 export default function About() {
 
