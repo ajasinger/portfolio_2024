@@ -17,8 +17,6 @@ export default function Home() {
             < AboutAccordion />
           </div>
       </div>
-      {/* < About />
-      < Carousel /> */}
       < Work />
       {/* < Text /> */}
       < Contact />
