@@ -5,6 +5,8 @@ import { projects } from '@/lib/projects-data';
 import ApproachAccordion from '@/components/ApproachAccordion';
 import SolutionsCarousel from '@/components/SolutionsCarousel';
 import LearningsAccordion from '@/components/LearningsAccordion';
+import TwoImageSection from '@/components/TwoImageSection';
+import ThreeImageSection from '@/components/ThreeImageSection';
 
 type ProjectType = {
     param: string;
@@ -46,6 +48,7 @@ type LearningsType = {
 
 type ImageType = {
     src: string;
+    // vdeoSrc?: string;
     alt: string;
     srcHover?: string;
     altHover?: string;
@@ -57,8 +60,8 @@ export default function ProjectPage({ params }: { params: { project: string } })
     const data: ProjectType | undefined = projects.find(project => project.param === params.project);
 
     return(
-        <div className="bg-cream pt-24 text-zinc-950 font-sans flex flex-col gap-16">
-            <h3 className="text-4xl font-semibold px-16">{data?.name}</h3>
+        <div className="bg-cream pt-24 text-zinc-950 font-sans flex flex-col">
+            <h3 className="text-4xl font-semibold px-16 pb-16">{data?.name}</h3>
             
             {/* Intro Section */}
             <div className="flex flex-col gap-4 px-16">
@@ -98,7 +101,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* Tech Stack */}
-                <div className="flex flex-col gap-4 z-50">
+                <div className="flex flex-col gap-4 pb-16 z-50">
                     <h4 className="font-serif text-lg font-semibold text-nowrap">Tech Stack</h4>
                     <ul className="flex gap-8">
                         {data?.techStack?.map((text, index) => (
@@ -110,10 +113,21 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
             </div>
 
-            {/* Approach */}
-            <div className="px-16 py-12 bg-cream text-zinc-950 relative">
+            {/* Two Image Section */}
+            <div className={`${data && data.images.length -1 > 1 && "px-16 py-12"} text-zinc-950 relative`}>
                 <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                 <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
+                { data && data.images.length - 1 > 1 && 
+                    <div>
+                        < TwoImageSection image1={data.images[0]} image2={data.images[1]} />
+                    </div>
+                }
+            </div>
+
+            {/* Approach */}
+            <div className="px-16 py-12 text-zinc-950 relative">
+                {/* <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
+                {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
                     <div className="z-50">
                         < ApproachAccordion data={data?.approach} />
@@ -131,9 +145,20 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>                
             }
 
+            {/* Two Image Section */}
+            <div className="px-16 py-12 text-zinc-950 relative">
+                <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
+                <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
+                { data && 
+                    <div>
+                        < TwoImageSection image1={data.images[2]} image2={data.images[3]} />
+                    </div>
+                }
+            </div>
+            
             {/* Learnings */}
-            <div className="px-16 py-12 bg-cream text-zinc-950 relative">
-                <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
+            <div className="px-16 py-12  text-zinc-950 relative">
+                {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
                     <div className="z-50">
