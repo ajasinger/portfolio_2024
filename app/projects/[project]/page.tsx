@@ -149,13 +149,17 @@ export default function ProjectPage({ params }: { params: { project: string } })
             <div className="px-16 py-12 text-zinc-950 relative">
                 <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                 <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
-                { data && 
+                { data && data.images.length -1 > 1 &&
                     <div>
                         < TwoImageSection image1={data.images[2]} image2={data.images[3]} />
                     </div>
                 }
+                { data && data.images.length -1 <= 1 &&
+                    <div>
+                        < TwoImageSection image1={data.images[0]} image2={data.images[1]} />
+                    </div>
+                }
             </div>
-            
             {/* Learnings */}
             <div className="px-16 py-12  text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
