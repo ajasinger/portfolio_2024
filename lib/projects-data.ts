@@ -220,7 +220,7 @@ export const projects = [
                 altHover: "Visible Work landing page with a pop up covering the screen to book an info session with Calendly"
             },
             {
-                src: "/images/visiblework_video.gif",
+                src: "/images/visiblework_gif_2.gif",
                 alt: "The header on the Visible Work website showing the header with text 'Make your ____ visible' with a text animation cycling through the words work, experience, wins, skills, and insights.",
                 // srcHover: "",
                 // altHover: ""
