@@ -139,13 +139,13 @@ export const projects = [
                 // altHover: ""
             },
             {
-                src: "/images/silvershield_connect_email_desktop.png",
+                src: "/images/silvershieldintro-create-group_desktop.png",
                 alt: "Silvershield webpage to connect an inbox for fraud review with an input to enter an email address and buttons to connect email or skip this step.",
                 // srcHover: "",
                 // altHover: ""
             },
             {
-                src: "/images/silvershield_invite_members_desktop.png",
+                src: "/images/silvershield_email-view-settings_desktop.png",
                 alt: "Silvershield webpage to invite members to join your group with inputs for first name, last name, email, group access as an admin ot view only and an invite button.",
                 // srcHover: "",
                 // altHover: ""
