@@ -127,31 +127,25 @@ export const projects = [
         ], 
         images: [
             {
-                src: "/images/silvershield_dashboard.png",
+                src: "/images/silvershield_dashboard_desktop_2.png",
                 alt: "Silvershield dashboard showing an inbox with fraud alerts raning from low to high for each email.",
                 // srcHover: "",
                 // altHover: ""
             },
             {
-                src: "/images/silvershield_settings_desktop.png",
+                src: "/images/silvershield_settings_desktop_2.png",
                 alt: "The Silvershield website settings page dsiplaying first name, last name, email, password, groups the user is a member of, and an edit button.",
                 // srcHover: "",
                 // altHover: ""
             },
             {
-                src: "/images/silvershield_signup_tablet.png",
-                alt: "Signup page to create an account for the Silvershield platform with inpuits for first name, last name, email, password or the option to sign in with Google.",
-                // srcHover: "",
-                // altHover: ""
-            },
-            {
-                src: "/images/silvershield_connect_email_tablet.png",
+                src: "/images/silvershield_connect_email_desktop.png",
                 alt: "Silvershield webpage to connect an inbox for fraud review with an input to enter an email address and buttons to connect email or skip this step.",
                 // srcHover: "",
                 // altHover: ""
             },
             {
-                src: "/images/silvershield_invite_members_tablet.png",
+                src: "/images/silvershield_invite_members_desktop.png",
                 alt: "Silvershield webpage to invite members to join your group with inputs for first name, last name, email, group access as an admin ot view only and an invite button.",
                 // srcHover: "",
                 // altHover: ""
@@ -220,16 +214,16 @@ export const projects = [
         ],
         images: [
             {
-                src: "",
-                alt: "",
-                srcHover: "",
-                altHover: ""
+                src: "/images/visiblework_calendly_1.png",
+                alt: "Visible Work landing page 'What we do' and 'What you get' sections including a 'Join an info session' button",
+                srcHover: "/images/visiblework_calendly_2.png",
+                altHover: "Visible Work landing page with a pop up covering the screen to book an info session with Calendly"
             },
             {
-                src: "",
-                alt: "",
-                srcHover: "",
-                altHover: ""
+                src: "/images/visiblework_video.gif",
+                alt: "The header on the Visible Work website showing the header with text 'Make your ____ visible' with a text animation cycling through the words work, experience, wins, skills, and insights.",
+                // srcHover: "",
+                // altHover: ""
             },
         ]
     },
