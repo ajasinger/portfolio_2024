@@ -7,7 +7,7 @@ export default function AboutAccordion() {
     const [isOpen, setIsOpen] = useState(0);
 
     return(
-        <div className="bg-cream flex">
+        <div id="about" className="bg-cream flex">
             <div className="border border-zinc-950 z-50 h-full">
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">

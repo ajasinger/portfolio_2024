@@ -18,7 +18,7 @@ export default function Navbar() {
                         key={index}
                         className="hover:underline underline-offset-8 decoration-1"
                      >
-                        {link.href === "/#work" ||  link.href === "/about" ? (
+                        {link.href === "/#work" ||  link.href === "/#about" ? (
                             <Link href={link.href}>{link.name}</Link>
                         ):(
                             <Link href={link.href} target="_blank">{link.name}</Link>
