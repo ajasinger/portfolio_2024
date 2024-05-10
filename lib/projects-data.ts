@@ -127,28 +127,34 @@ export const projects = [
         ], 
         images: [
             {
-                src: "",
-                alt: "",
-                srcHover: "",
-                altHover: ""
+                src: "/images/silvershield_dashboard.png",
+                alt: "Silvershield dashboard showing an inbox with fraud alerts raning from low to high for each email.",
+                // srcHover: "",
+                // altHover: ""
             },
             {
-                src: "",
-                alt: "",
-                srcHover: "",
-                altHover: ""
+                src: "/images/silvershield_settings_desktop.png",
+                alt: "The Silvershield website settings page dsiplaying first name, last name, email, password, groups the user is a member of, and an edit button.",
+                // srcHover: "",
+                // altHover: ""
             },
             {
-                src: "",
-                alt: "",
-                srcHover: "",
-                altHover: ""
+                src: "/images/silvershield_signup_tablet.png",
+                alt: "Signup page to create an account for the Silvershield platform with inpuits for first name, last name, email, password or the option to sign in with Google.",
+                // srcHover: "",
+                // altHover: ""
             },
             {
-                src: "",
-                alt: "",
-                srcHover: "",
-                altHover: ""
+                src: "/images/silvershield_connect_email_tablet.png",
+                alt: "Silvershield webpage to connect an inbox for fraud review with an input to enter an email address and buttons to connect email or skip this step.",
+                // srcHover: "",
+                // altHover: ""
+            },
+            {
+                src: "/images/silvershield_invite_members_tablet.png",
+                alt: "Silvershield webpage to invite members to join your group with inputs for first name, last name, email, group access as an admin ot view only and an invite button.",
+                // srcHover: "",
+                // altHover: ""
             },
         ]
     },
