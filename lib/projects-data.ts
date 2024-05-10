@@ -124,6 +124,32 @@ export const projects = [
                 body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than had I tackled them on my own. One of the most transformative hours of my coding career was debugging alongside an experienced dev. It taught me how to approach bugs methodically and strategically.", 
                 learnings: "While my first step will still be chatGPT/stackOverflow/Reddit I am now better equipped to know when I need help with something, what to try before going for help, and where to find it."
             },
+        ], 
+        images: [
+            {
+                src: "",
+                alt: "",
+                srcHover: "",
+                altHover: ""
+            },
+            {
+                src: "",
+                alt: "",
+                srcHover: "",
+                altHover: ""
+            },
+            {
+                src: "",
+                alt: "",
+                srcHover: "",
+                altHover: ""
+            },
+            {
+                src: "",
+                alt: "",
+                srcHover: "",
+                altHover: ""
+            },
         ]
     },
     { 
@@ -184,6 +210,20 @@ export const projects = [
                         body: "Analyzing the accessibility really gave me a new perspective on how different people experience websites. I thought I was cognizant of accessibility while (adding alt text, using high contract colors), but was surprised to find a lot of room for improvement when running it through accessibility tools. In particular, using VoiceOver, I realized how crucial it is that headers are labelled properly and not skipped."
                     },
                 ]
+            },
+        ],
+        images: [
+            {
+                src: "",
+                alt: "",
+                srcHover: "",
+                altHover: ""
+            },
+            {
+                src: "",
+                alt: "",
+                srcHover: "",
+                altHover: ""
             },
         ]
     },

@@ -22,6 +22,7 @@ type ProjectType = {
     approach: ApproachType[];
     solutions?: SolutionsType[];
     learnings: LearningsType[];
+    images: ImageType[];
 };
 
 type ApproachType = {
@@ -41,6 +42,13 @@ type LearningsType = {
     body?: string;
     learnings?: string;
     bodyList?: { title: string; body: string }[];
+};
+
+type ImageType = {
+    src: string;
+    alt: string;
+    srcHover?: string;
+    altHover?: string;
 };
 
 export default function ProjectPage({ params }: { params: { project: string } }) {
