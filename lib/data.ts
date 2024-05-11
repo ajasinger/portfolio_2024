@@ -1,12 +1,12 @@
 export const navLinks = [
-    {
-        name:"ABOUT ME",
-        href:"/#about"
-    },
-    {
-        name:"WORK",
-        href:"/#work"
-    },
+    // {
+    //     name:"ABOUT ME",
+    //     href:"/#about"
+    // },
+    // {
+    //     name:"WORK",
+    //     href:"/#work"
+    // },
     {
         name:"LINKEDIN",
         href:"https://www.linkedin.com/in/ajasinger/"
