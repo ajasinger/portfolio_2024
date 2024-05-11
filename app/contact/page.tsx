@@ -28,24 +28,22 @@ export default function ContactPage() {
         });
 
         try {
-            const response = await fetch('/api/contactForm', {
+            const response = await fetch('/api/sendEmail', {
                 method: 'POST',
                 body: JSON.stringify(formData),
             });
 
             if(response.ok) {
                 setMessage("Thank you for contacting me — I'll be in touch soon!");
-                setDisabled(false);
             } else {
                 setMessage("Uh oh, something went wrong! Please email me at info@ajasinger.com.");
-                setDisabled(false);
             }
             
         } catch (err) {
             console.error(err);
             setMessage("Uh oh, something went wrong! Please email me at info@ajasinger.com.");
-            setDisabled(false);
         } finally {
+            setDisabled(false);
             setShowForm(false);
         }
     };
