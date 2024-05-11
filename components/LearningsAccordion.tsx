@@ -31,9 +31,9 @@ export default function LearningsAccordion({ data }: Props) {
                                     >
                                         <div className="flex flex-col gap-4 text-left p-16">
                                             {index === 0 ? (
-                                                <h5 className="font-semibold uppercase text-left">Learnings</h5>
+                                                <h5 className="font-semibold text-left font-serif text-xl">Learnings</h5>
                                             ) : (
-                                                <h5 className="font-semibold uppercase text-left">{text.title}</h5>
+                                                <h5 className="font-semibold text-left font-serif text-xl">{text.title}</h5>
                                             )}
                                             <div>
                                                 {text.body}

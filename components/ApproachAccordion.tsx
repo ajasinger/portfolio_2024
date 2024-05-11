@@ -30,9 +30,9 @@ export default function ApproachAccordion({ data }: Props) {
                                     >
                                         <div className="flex flex-col gap-4 text-left p-16">
                                             {index === 0 ? (
-                                                <h5 className="font-semibold uppercase text-left">Approach</h5>
+                                                <h5 className="font-semibold text-left text-xl font-serif">Approach</h5>
                                             ) : (
-                                                <h5 className="font-semibold uppercase text-left">{text.title}</h5>
+                                                <h5 className="font-semibold font-serif text-left text-xl">{text.title}</h5>
                                             )}
                                             <div  className="flex flex-col gap-2">
                                                 {text?.body?.map((bodyText, index) => (

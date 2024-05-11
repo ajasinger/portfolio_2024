@@ -16,7 +16,7 @@ export default function AboutAccordion() {
                                 {isOpen === index ? (
                                     <button
                                         key={index}
-                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[625px]"
+                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[550px]"
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <div className="flex flex-col gap-8 text-left p-12">

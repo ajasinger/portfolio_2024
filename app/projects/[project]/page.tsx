@@ -68,7 +68,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
-                            <h4 className="font-serif text-lg font-semibold">Project Overview</h4>
+                            <h4 className="font-serif text-xl font-semibold">Project Overview</h4>
                             <div className="flex flex-col gap-2">
                                 {data?.overview?.map((text, index) => (
                                     <div key={index}>
@@ -102,7 +102,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Tech Stack */}
                 <div className="flex flex-col gap-4 pb-16 z-50">
-                    <h4 className="font-serif text-lg font-semibold text-nowrap">Tech Stack</h4>
+                    <h4 className="font-serif text-xl font-semibold text-nowrap">Tech Stack</h4>
                     <ul className="flex gap-8">
                         {data?.techStack?.map((text, index) => (
                             <li key={index} className="flex gap-4">
@@ -139,7 +139,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             {data?.solutions && 
                 <div className="px-16 py-12  text-zinc-950 flex gap-24 z-10">
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-serif text-lg font-semibold">Problems & Solutions</h4>
+                        <h4 className="font-serif text-xl font-semibold">Problems & Solutions</h4>
                         {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
                     </div>
                 </div>                

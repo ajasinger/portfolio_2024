@@ -20,7 +20,7 @@ export default function SolutionsCarousel({ data }: Props) {
             {data?.map((text, index) => (
                 <div key={index}>
                     {isOpen === index &&
-                        <div className="flex gap-16 min-h-[275px]">
+                        <div className="flex gap-16 min-h-[200px]">
                             <div className="flex flex-col gap-2 w-1/2">
                                 <h5 className="font-semibold uppercase text-left">{text.title}</h5>
                                 <p><span className="font-semibold">Problem: </span>{text.problem}</p>
