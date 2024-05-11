@@ -105,7 +105,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     <h4 className="font-serif text-xl font-semibold text-nowrap">Tech Stack</h4>
                     <ul className="flex gap-8">
                         {data?.techStack?.map((text, index) => (
-                            <li key={index} className="flex gap-4">
+                            <li key={index} className="flex gap-8">
                                 {text}<span className={`${index === data?.techStack.length-1 && "invisible"}`}>/</span>
                             </li>
                         ))}
