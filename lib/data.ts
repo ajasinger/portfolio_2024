@@ -95,3 +95,25 @@ export const aboutCards = [
         ]
     },
 ]
+
+export const formInputs = [
+    {
+        "inputType": "name",
+        "inputText": "Name",
+        "placeholder": "Full name",
+        "autocomplete": "off",
+    },
+    {
+        "inputType": "email",
+        "inputText": "Email",
+        "placeholder": "email@email.com",
+        "autocomplete": "Email",
+    },
+    {
+        "inputType": "message",
+        "inputText": "Message",
+        "placeholder": "Your message",
+        "autocomplete": "off",
+        "inputRows": 6,
+    },
+]
