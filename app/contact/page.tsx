@@ -49,10 +49,11 @@ export default function ContactPage() {
     };
 
     return(
-        <div className="bg-cream px-16 py-24 font-sans text-zinc-950 relative">
+        <div className="bg-cream px-16 py-24 font-sans text-zinc-950 relative min-h-[800px]">
             <h3 className="text-4xl font-semibold pb-16 z-50">Contact me</h3>
             <div className="bg-[#E0FEAF] absolute top-[10rem] right-[5rem] h-[31.25rem] w-24.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
             <div className="bg-[#EDCEE2] absolute top-[10rem] right-[0rem] h-[21.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
+            <div className="z-50 relative">
             {showForm ? (
                 <form 
                     onSubmit={handleSubmit}
@@ -103,6 +104,7 @@ export default function ContactPage() {
                     }
                 </div>
             )}
+            </div>
         </div>
     )
 }
