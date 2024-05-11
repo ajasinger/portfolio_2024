@@ -141,8 +141,8 @@ export const projects = [
             {
                 src: "/images/silvershieldintro-create-group_desktop.png",
                 alt: "Silvershield webpage to connect an inbox for fraud review with an input to enter an email address and buttons to connect email or skip this step.",
-                // srcHover: "",
-                // altHover: ""
+                // srcHover: "/images/silvershield_createOrg_code_3.svg",
+                // altHover: "A code snippet for the component that enables users to create a group."
             },
             {
                 src: "/images/silvershield_email-view-settings_desktop.png",
@@ -216,7 +216,7 @@ export const projects = [
             {
                 src: "/images/visiblework_calendly_1.png",
                 alt: "Visible Work landing page 'What we do' and 'What you get' sections including a 'Join an info session' button",
-                srcHover: "/images/visiblework_calendly_2.png",
+                srcHover: "/images/visiblework_calendly_3.png",
                 altHover: "Visible Work landing page with a pop up covering the screen to book an info session with Calendly"
             },
             {
