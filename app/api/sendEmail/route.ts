@@ -3,22 +3,27 @@ import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 
 export async function POST(request: NextRequest) {
-    const { email, name, message } = await request.json();
+    const body = await request.json();
 
-    const transport = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: process.env.MY_EMAIL,
-            pass: process.env.MY_PASSWORD,
-        },
-    });
+    console.log('Email:', process.env.NODEMAILER_EMAIL); 
+  console.log('Email Pass:', process.env.NODEMAILER_PASSWORD); 
+  console.log('body', body)
 
-    const mailOptions: Mail.Options = {
-        from: process.env.MY_EMAIL,
-        to: process.env.MY_EMAIL,
-        subject: `Message from ${name} (${email})`,
-        text: message,
-    };
+        const transport = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: process.env.NODEMAILER_EMAIL,
+                pass: process.env.NODEMAILER_PASSWORD,
+            },
+        });
+    
+        const mailOptions: Mail.Options = {
+            from: process.env.NODEMAILER_EMAIL,
+            to: process.env.NODEMAILER_EMAIL,
+            subject: `Message from ${body.name} (${body.email})`,
+            text: body.message,
+        };
+
 
     const sendMailPromise = () =>
         new Promise<string>((resolve, reject) => {
@@ -26,6 +31,7 @@ export async function POST(request: NextRequest) {
             if (!err) {
                 resolve('Email sent');
             } else {
+                console.log('error sending email', err);
                 reject(err.message);
             }
         });
