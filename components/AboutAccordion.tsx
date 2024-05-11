@@ -19,31 +19,35 @@ export default function AboutAccordion() {
                                         className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[625px]"
                                         onClick={() => setIsOpen(index)}
                                     >
-                                        <div className="flex flex-col gap-4 text-left p-16">
+                                        <div className="flex flex-col gap-8 text-left p-12">
                                             {index === 0 ? (
-                                                <h5 className="font-semibold uppercase text-left">About Me</h5>
+                                                <h5 className="font-semibold text-4xl uppercase text-left">About Me</h5>
                                             ) : (
-                                                <h5 className="font-semibold uppercase text-left">{text.title}</h5>
+                                                <h5 className="font-semibold text-4xl uppercase text-left">{text.title}</h5>
                                             )}
-                                            <div  className="flex flex-col gap-2">
-                                                {text?.body?.map((bodyText, index) => (
-                                                    <div 
-                                                        key={index} 
-                                                        className="z-50 flex flex-col gap-2"
-                                                    >
-                                                        {bodyText}
-                                                    </div>
-                                                ))}
-                                            </div>
-                                            <div className="flex flex-col gap-2">
-                                                <ol key={index} className="list-decimal flex flex-col gap-2  ml-4">
-                                                    {text?.list?.map((listText, index) => (
-                                                        <li>
-                                                            <p>{listText}</p>
-                                                        </li>
+                                            {text?.body &&
+                                                <div  className="flex flex-col gap-2">
+                                                    {text?.body?.map((bodyText, index) => (
+                                                        <div 
+                                                            key={index} 
+                                                            className="z-50 flex flex-col gap-2"
+                                                        >
+                                                            {bodyText}
+                                                        </div>
                                                     ))}
-                                                 </ol>
-                                            </div>
+                                                </div>
+                                            }
+                                            {text?.list &&
+                                                <div className="flex flex-col gap-2">
+                                                    <ol key={index} className="list-decimal flex flex-col gap-2  ml-4">
+                                                        {text?.list?.map((listText, index) => (
+                                                            <li>
+                                                                <p>{listText}</p>
+                                                            </li>
+                                                        ))}
+                                                    </ol>
+                                                </div>
+                                            }
                                         </div>
                                     </button>
                                 ): (
