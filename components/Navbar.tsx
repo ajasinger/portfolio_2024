@@ -29,7 +29,7 @@ export default function Navbar() {
                 <li>
                     <Link 
                         href={'/contact'}
-                        className="px-6 py-3 border border-bg-stone-50 rounded-full hover:bg-cream hover:text-zinc-950"
+                        className="px-6 py-3 border rounded-full hover:bg-cream hover:text-zinc-950"
                     >
                     CONTACT ME
                     </Link>
