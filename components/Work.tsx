@@ -6,17 +6,17 @@ import Link from 'next/link'
 
 export default function Work() {
     return(
-        <div id="work" className="px-8 md:px-16 py-24 flex flex-col justify-center gap-12">
+        <div id="work" className="px-8 md:px-16 py-24 flex flex-col flex-wrap justify-center lg:justify-between gap-12">
             <h3 className="text-2xl md:text-4xl text-cream text-center font-semibold">MY WORK</h3>
-            <div className="flex justify-center gap-16 text-zinc-950">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-zinc-950">
                 {projects.map((project, index) => (
                     <div 
                         key={index}
-                        className="flex flex-col gap-8 basis-1/2"
+                        className="flex flex-col gap-8"
                     >
                         <Link 
                             href={`projects/${project.param}`}
-                            className=" bg-cream p-8 z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105"
+                            className=" bg-cream p-4 sm:p-8 z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 hover:scale-105"
                         >
                             <div className="h-[400px] overflow-y-scroll shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                                 <Image
