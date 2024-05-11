@@ -102,11 +102,12 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Tech Stack */}
                 <div className="flex flex-col gap-4 pb-16 z-50">
-                    <h4 className="font-serif text-xl font-semibold text-nowrap">Tech Stack</h4>
-                    <ul className="flex gap-8">
+                    <h4 className="font-serif text-xl font-semibold">Tech Stack</h4>
+                    <ul className="flex gap-8 flex-wrap">
                         {data?.techStack?.map((text, index) => (
-                            <li key={index} className="flex gap-8">
-                                {text}<span className={`${index === data?.techStack.length-1 && "invisible"}`}>/</span>
+                            <li key={index} className="flex gap-8 text-nowrap">
+                                <span>{text}</span>
+                                {index !== data?.techStack.length - 1 && <span>/</span>}
                             </li>
                         ))}
                     </ul>
