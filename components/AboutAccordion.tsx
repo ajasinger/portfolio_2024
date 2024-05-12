@@ -12,10 +12,9 @@ export default function AboutAccordion() {
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">
                         {aboutCards?.map((text, index) => (
-                            <div>
+                            <div key={index}>
                                 {isOpen === index ? (
                                     <button
-                                        key={index}
                                         className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[550px]"
                                         onClick={() => setIsOpen(index)}
                                     >
@@ -39,9 +38,9 @@ export default function AboutAccordion() {
                                             }
                                             {text?.list &&
                                                 <div className="flex flex-col gap-2">
-                                                    <ol key={index} className="list-decimal flex flex-col gap-2  ml-4">
+                                                    <ol className="list-decimal flex flex-col gap-2  ml-4">
                                                         {text?.list?.map((listText, index) => (
-                                                            <li>
+                                                            <li key={index}>
                                                                 <p>{listText}</p>
                                                             </li>
                                                         ))}

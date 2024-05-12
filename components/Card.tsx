@@ -20,9 +20,9 @@ export default function Card( props: {card: CardType, index: number} ) {
                         {props?.card?.body?.map((text) => (
                             <div key={props?.index}>{text}</div>
                         ))}
-                        <ol key={props?.index} className="list-decimal space-y-2 ml-8">
+                        <ol className="list-decimal space-y-2 ml-8">
                             {props?.card?.list?.map((text) => (
-                                <li>{text}</li>
+                                <li key={props?.index}>{text}</li>
                             ))}
                         </ol>
                     </div>

@@ -21,10 +21,9 @@ export default function ApproachAccordion({ data }: Props) {
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">
                         {data?.map((text, index) => (
-                            <div>
+                            <div key={index}>
                                 {isOpen === index ? (
                                     <button
-                                        key={index}
                                         className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "min-h-[425px]"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
