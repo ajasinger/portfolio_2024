@@ -8,7 +8,7 @@ export default function Navbar() {
     const pathname = usePathname()
 
     return(
-        <nav  className="font-sans text-lg px-8 md:px-16 py-8">
+        <nav  className="font-sans text-lg px-8 py-8">
             <ul className="flex gap-10 justify-end items-center">
                 {pathname !== '/' && 
                     <li className="hover:underline underline-offset-8 decoration-1"><Link href='/'>HOME</Link></li>
