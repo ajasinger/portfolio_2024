@@ -7,7 +7,7 @@ export default function Footer() {
     const pathname = usePathname();
 
     return(
-        <footer className="px-8 md:px-16 py-24 flex justify-between gap-16 font-sans">
+        <footer className="px-8 md:px-16 py-24 flex flex-col sm:flex-row justify-between gap-8 sm:gap-16 font-sans">
             <div className="flex flex-col gap-8">
                 <Link href="/"><h2 className="text-3xl max-w-4xl font-semibold">AJA SINGER</h2></Link>
                 {/* <Link href="/#work" className="text-xl hover:underline underline-offset-8 decoration-1">WORK</Link> */}
@@ -18,7 +18,7 @@ export default function Footer() {
                 {pathname !== '/contact' && 
                     <Link 
                         href="/contact"
-                        className="font-semibold px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
+                        className="w-fit text-xl sm:text-base sm:font-semibold sm:px-6 sm:py-3 sm:bg-cream sm:border sm:border-bg-stone-50 rounded-full hover:underline underline-offset-8 decoration-1 sm:hover:bg-zinc-950 text-cream sm:text-zinc-950 sm:hover:text-cream"
                     >
                         CONTACT ME
                     </Link>
