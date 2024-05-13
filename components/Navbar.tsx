@@ -2,16 +2,22 @@
 
 import { navLinks } from '@/lib/data';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
+import { useState, MouseEvent } from 'react';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const pathname = usePathname();
+    const router = useRouter();
 
     const handleToggle = () => {
         setIsOpen(!isOpen);
-      };
+    };
+    
+    const handleClick = (e: MouseEvent<HTMLButtonElement>) => {
+        router.push(e.currentTarget.value);
+        setIsOpen(false);
+    }
 
     return(
         <nav  className="font-sans text-lg px-8 py-4 sm:py-8">
@@ -23,7 +29,7 @@ export default function Navbar() {
                         {isOpen ? "CLOSE" : "MENU"}
                     </button>
                 </div>
-            <ul className={`${isOpen ? "flex flex-col pt-10 h-full" : "hidden"} sm:flex gap-10 justify-end sm:items-center`}>
+            <ul className={`${isOpen ? "flex flex-col pt-10" : "hidden"} sm:flex gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
                     pathname !== link.href &&
                         <li 
@@ -31,7 +37,7 @@ export default function Navbar() {
                             className="hover:underline underline-offset-8 decoration-1"
                         >
                             {link.href === "/" || link.href === "/#work" ||  link.href === "/#about" ? (
-                                <Link href={link.href}>{link.name}</Link>
+                                <button onClick={handleClick} value={link.href}>{link.name}</button >
                             ):(
                                 <Link href={link.href} target="_blank">{link.name}</Link>
                             )
