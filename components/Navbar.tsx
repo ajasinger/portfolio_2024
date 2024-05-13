@@ -29,12 +29,12 @@ export default function Navbar() {
                         {isOpen ? "CLOSE" : "MENU"}
                     </button>
                 </div>
-            <ul className={`${isOpen ? "flex flex-col pt-10" : "hidden"} sm:flex gap-10 justify-end sm:items-center`}>
+            <ul className={`${isOpen ? "flex flex-col mt-10 divide-y divide-white border-y border-white" : "hidden"} sm:flex sm:gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
                     pathname !== link.href &&
                         <li 
                             key={index}
-                            className="hover:underline underline-offset-8 decoration-1"
+                            className="hover:underline underline-offset-8 decoration-1 py-5 sm:py-0"
                         >
                             {link.href === "/" || link.href === "/#work" ||  link.href === "/#about" ? (
                                 <button onClick={handleClick} value={link.href}>{link.name}</button >
