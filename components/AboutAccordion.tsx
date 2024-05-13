@@ -9,6 +9,19 @@ export default function AboutAccordion() {
     return(
         <div id="about" className="bg-cream flex">
             <div className="sm:border border-zinc-950 z-50 h-full">
+                {/* mobile header buttons */}
+                <div className="flex gap-8 pb-8 sm:hidden">
+                {aboutCards?.map((text, index) => (
+                    <div key={index}>
+                        <button
+                            onClick={() => setIsOpen(index)}
+                            className={`${isOpen === index && "underline font-semibold"} hover:underline underline-offset-8 decoration-2 text-2xl uppercase`}
+                        >
+                            {text.title}
+                        </button>
+                    </div>
+                ))}
+                </div>
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">
                         {aboutCards?.map((text, index) => (
