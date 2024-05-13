@@ -37,7 +37,7 @@ export default function TwoImageSection ({ image1, image2 }: Props) {
                         </div>
                     }
             </div>
-            <div className="z-10 overflow-hidden h-full transition ease-in-out duration-300 delay-100 hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+            <div className="z-10 overflow-hidden h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                     <div>
                         <Image
                             src={image2?.src}
