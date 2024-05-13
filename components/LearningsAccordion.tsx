@@ -17,7 +17,7 @@ export default function LearningsAccordion({ data }: Props) {
     const [isOpen, setIsOpen] = useState(0);
 
     return(
-        <div className="flex pb-24">
+        <div className="flex">
             <div className="md:border border-zinc-950 z-50 h-full">
                 {/* mobile header buttons */}
                 <div className="flex flex-wrap gap-4 pb-8 md:hidden">
