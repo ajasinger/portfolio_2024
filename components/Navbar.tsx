@@ -23,7 +23,7 @@ export default function Navbar() {
                         {isOpen ? "CLOSE" : "MENU"}
                     </button>
                 </div>
-            <ul className={`${isOpen ? "flex flex-col pt-10" : "hidden"} sm:flex gap-10 justify-end sm:items-center`}>
+            <ul className={`${isOpen ? "flex flex-col pt-10 h-full" : "hidden"} sm:flex gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
                     pathname !== link.href &&
                         <li 
