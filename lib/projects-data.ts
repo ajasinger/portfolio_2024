@@ -114,11 +114,11 @@ export const projects = [
                 body: "It was so informative watching users move through the (almost) finished product with no intervention. We discovered parts of the user flow that weren't intuitive so I completely restructured the order of operations after a user logs in, which greatly improved user experience.",
                 learnings: "Have users test the product early and regularly to help inform the build."
             },
-            {
-                title: "Pair programming",
-                body: "I hadn't pair programmed before but I was working with the ML engineering team and my POST request to the ML endpoint was failing and we didn't know why. After a few days of emailing back and forth, it took 20 minutes on a zoom call to debug it together.", 
-                learnings: "When encountering a tricky problem that other developers are involved in, its best to work through it together in realtime."
-            },
+            // {
+            //     title: "Pair programming",
+            //     body: "I hadn't pair programmed before but I was working with the ML engineering team and my POST request to the ML endpoint was failing and we didn't know why. After a few days of emailing back and forth, it took 20 minutes on a zoom call to debug it together.", 
+            //     learnings: "When encountering a tricky problem that other developers are involved in, its best to work through it together in realtime."
+            // },
             {
                 title: "Community",
                 body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than had I tackled them on my own. One of the most transformative hours of my coding career was debugging alongside an experienced dev. It taught me how to approach bugs methodically and strategically.", 
