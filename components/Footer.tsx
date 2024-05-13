@@ -1,6 +1,11 @@
-import Link from "next/link"
+'use client';
+
+import Link from "next/link";
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
+    const pathname = usePathname();
+
     return(
         <footer className="px-8 md:px-16 py-24 flex justify-between gap-16 font-sans">
             <div className="flex flex-col gap-8">
@@ -10,12 +15,14 @@ export default function Footer() {
                 <Link href="https://github.com/ajasinger" className="text-xl hover:underline underline-offset-8 decoration-1" target="_blank">GITHUB</Link>
             </div>
             <div className="flex flex-col gap-8">
-                <Link 
-                    href="/contact"
-                    className="font-semibold px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
-                >
-                    CONTACT ME
-                </Link>
+                {pathname !== '/contact' && 
+                    <Link 
+                        href="/contact"
+                        className="font-semibold px-6 py-3 bg-cream border border-bg-stone-50 rounded-full hover:bg-zinc-950 text-zinc-950 hover:text-cream"
+                    >
+                        CONTACT ME
+                    </Link>
+                }
                 <p>info@ajasinger.com</p>
             </div>
 

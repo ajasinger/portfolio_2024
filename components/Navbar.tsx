@@ -11,7 +11,7 @@ export default function Navbar() {
         <nav  className="font-sans text-lg px-8 md:px-16 py-8">
             <ul className="flex gap-10 justify-end items-center">
                 {pathname !== '/' && 
-                <li className="hover:underline underline-offset-8 decoration-1"><Link href='/'>HOME</Link></li>
+                    <li className="hover:underline underline-offset-8 decoration-1"><Link href='/'>HOME</Link></li>
                 }
                 {navLinks.map((link, index) => (
                     <li 
@@ -26,14 +26,16 @@ export default function Navbar() {
                         }
                     </li>
                 ))}
-                <li>
-                    <Link 
-                        href={'/contact'}
-                        className="px-6 py-3 border rounded-full hover:bg-cream hover:text-zinc-950"
-                    >
-                    CONTACT ME
-                    </Link>
-                </li>
+                {pathname !== '/contact' && 
+                    <li>
+                        <Link 
+                            href={'/contact'}
+                            className="px-6 py-3 border rounded-full hover:bg-cream hover:text-zinc-950"
+                        >
+                        CONTACT ME
+                        </Link>
+                    </li>
+                }
             </ul>
         </nav>
     )
