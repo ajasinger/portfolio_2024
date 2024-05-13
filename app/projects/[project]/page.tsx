@@ -61,7 +61,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
     return(
         <div className="bg-cream pt-24 text-zinc-950 font-sans flex flex-col">
-            <h3 className="text-4xl font-semibold px-16 pb-16">{data?.name}</h3>
+            <h3 className="text-4xl font-semibold px-8 md:px-16 pb-16">{data?.name}</h3>
             
             {/* Intro Section */}
             <div className="flex flex-col gap-4 px-16">
@@ -115,7 +115,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* Two Image Section */}
-            <div className={`${data && data.images.length -1 > 1 && "px-16 py-12"} text-zinc-950 relative`}>
+            <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-12"} text-zinc-950 relative`}>
                 <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                 <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                 { data && data.images.length - 1 > 1 && 
@@ -126,7 +126,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* Approach */}
-            <div className="px-16 py-12 text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12 text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
@@ -138,7 +138,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Problems & Solutions */}
             {data?.solutions && 
-                <div className="px-16 py-12  text-zinc-950 flex gap-24 z-10">
+                <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
                     <div className="flex flex-col gap-4">
                         <h4 className="font-serif text-xl font-semibold">Problems & Solutions</h4>
                         {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
@@ -147,7 +147,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             }
 
             {/* Two Image Section */}
-            <div className="px-16 py-12 text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12 text-zinc-950 relative">
                 <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                 <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                 { data && data.images.length -1 > 1 &&
@@ -162,7 +162,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 }
             </div>
             {/* Learnings */}
-            <div className="px-16 py-12  text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12  text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
