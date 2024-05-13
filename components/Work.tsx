@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Work() {
     return(
-        <div id="work" className="px-8 md:px-16 py-24 flex flex-col flex-wrap justify-center lg:justify-between gap-12">
+        <div id="work" className="px-8 md:px-16 py-12 sm:py-24 flex flex-col flex-wrap justify-center lg:justify-between gap-8">
             <h3 className="text-2xl md:text-4xl text-cream text-center font-semibold">MY WORK</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-zinc-950">
                 {projects.map((project, index) => (

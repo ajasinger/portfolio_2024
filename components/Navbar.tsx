@@ -14,8 +14,16 @@ export default function Navbar() {
       };
 
     return(
-        <nav  className="font-sans text-lg px-8 py-8">
-            <ul className="flex gap-10 justify-end items-center">
+        <nav  className="font-sans text-lg px-8 py-4 sm:py-8">
+            <div className="sm:hidden flex justify-end">
+                    <button 
+                        onClick={handleToggle}
+                            className="px-6 py-3 bg-cream text-zinc-950 border rounded-full hover:bg-zinc-950 hover:text-cream"
+                        >
+                        {isOpen ? "CLOSE" : "MENU"}
+                    </button>
+                </div>
+            <ul className={`${isOpen ? "flex flex-col pt-10" : "hidden"} sm:flex gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
                     pathname !== link.href &&
                         <li 
@@ -40,14 +48,6 @@ export default function Navbar() {
                         </Link>
                     </li>
                 }
-                <li className="sm:hidden">
-                    <button 
-                        onClick={handleToggle}
-                            className="px-6 py-3 bg-cream text-zinc-950 border rounded-full hover:bg-zinc-950 hover:text-cream"
-                        >
-                        {isOpen ? "CLOSE" : "MENU"}
-                    </button>
-                </li>
             </ul>
         </nav>
     )
