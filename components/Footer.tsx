@@ -11,14 +11,14 @@ export default function Footer() {
             <div className="flex flex-col gap-8">
                 <Link href="/"><h2 className="text-3xl max-w-4xl font-semibold">AJA SINGER</h2></Link>
                 {/* <Link href="/#work" className="text-xl hover:underline underline-offset-8 decoration-1">WORK</Link> */}
-                <Link href="https://www.linkedin.com/in/ajasinger/" className="text-xl hover:underline underline-offset-8 decoration-1" target="_blank">LINKEDIN</Link>
-                <Link href="https://github.com/ajasinger" className="text-xl hover:underline underline-offset-8 decoration-1" target="_blank">GITHUB</Link>
+                <Link href="https://www.linkedin.com/in/ajasinger/" className="text-lg hover:underline underline-offset-8 decoration-1" target="_blank">LINKEDIN</Link>
+                <Link href="https://github.com/ajasinger" className="text-lg hover:underline underline-offset-8 decoration-1" target="_blank">GITHUB</Link>
             </div>
             <div className="flex flex-col gap-8">
                 {pathname !== '/contact' && 
                     <Link 
                         href="/contact"
-                        className="w-fit text-xl sm:text-base sm:font-semibold sm:px-6 sm:py-3 sm:bg-cream sm:border sm:border-bg-stone-50 rounded-full hover:underline underline-offset-8 decoration-1 sm:hover:bg-zinc-950 text-cream sm:text-zinc-950 sm:hover:text-cream"
+                        className="w-fit text-lg sm:text-base sm:font-semibold sm:px-6 sm:py-3 sm:bg-cream sm:border sm:border-bg-stone-50 rounded-full hover:underline underline-offset-8 decoration-1 sm:hover:bg-zinc-950 text-cream sm:text-zinc-950 sm:hover:text-cream"
                     >
                         CONTACT ME
                     </Link>
