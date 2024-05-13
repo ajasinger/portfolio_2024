@@ -4,7 +4,6 @@ import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FooterLogo from "@/components/FooterLogo";
 
 const sans = DM_Sans({ subsets: ["latin"] });
 const serif = DM_Serif_Display({
@@ -29,7 +28,6 @@ export default function RootLayout({
         < Navbar />
         {children}
         < Footer />
-        {/* < FooterLogo /> */}
       </body>
     </html>
   );
