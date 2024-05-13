@@ -10,7 +10,7 @@ export default function AboutAccordion() {
         <div id="about" className="bg-cream flex">
             <div className="sm:border border-zinc-950 z-50 h-full w-full">
                 {/* mobile header buttons */}
-                <div className="flex gap-8 pb-8 sm:hidden">
+                <div className="flex flex-wrap gap-4 pb-8 sm:hidden">
                 {aboutCards?.map((text, index) => (
                     <div key={index}>
                         <button
