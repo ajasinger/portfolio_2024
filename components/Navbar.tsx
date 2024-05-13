@@ -16,24 +16,22 @@ export default function Navbar() {
     return(
         <nav  className="font-sans text-lg px-8 py-8">
             <ul className="flex gap-10 justify-end items-center">
-                {pathname !== '/' && 
-                    <li className="hover:underline underline-offset-8 decoration-1"><Link href='/'>HOME</Link></li>
-                }
                 {navLinks.map((link, index) => (
-                    <li 
-                        key={index}
-                        className="hover:underline underline-offset-8 decoration-1"
-                     >
-                        {link.href === "/#work" ||  link.href === "/#about" ? (
-                            <Link href={link.href}>{link.name}</Link>
-                        ):(
-                            <Link href={link.href} target="_blank">{link.name}</Link>
-                        )
-                        }
-                    </li>
+                    pathname !== link.href &&
+                        <li 
+                            key={index}
+                            className="hover:underline underline-offset-8 decoration-1"
+                        >
+                            {link.href === "/" || link.href === "/#work" ||  link.href === "/#about" ? (
+                                <Link href={link.href}>{link.name}</Link>
+                            ):(
+                                <Link href={link.href} target="_blank">{link.name}</Link>
+                            )
+                            }
+                        </li>
                 ))}
                 {pathname !== '/contact' && 
-                    <li>
+                    <li className="hidden sm:block">
                         <Link 
                             href={'/contact'}
                             className="px-6 py-3 border rounded-full hover:bg-cream hover:text-zinc-950"
@@ -42,6 +40,14 @@ export default function Navbar() {
                         </Link>
                     </li>
                 }
+                <li className="sm:hidden">
+                    <button 
+                        onClick={handleToggle}
+                            className="px-6 py-3 bg-cream text-zinc-950 border rounded-full hover:bg-zinc-950 hover:text-cream"
+                        >
+                        {isOpen ? "CLOSE" : "MENU"}
+                    </button>
+                </li>
             </ul>
         </nav>
     )

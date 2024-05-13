@@ -8,6 +8,10 @@ export const navLinks = [
     //     href:"/#work"
     // },
     {
+        name:"HOME",
+        href:"/"
+    },
+    {
         name:"LINKEDIN",
         href:"https://www.linkedin.com/in/ajasinger/"
     },
