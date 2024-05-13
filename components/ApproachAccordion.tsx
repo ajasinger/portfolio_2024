@@ -17,9 +17,9 @@ export default function ApproachAccordion({ data }: Props) {
 
     return(
         <div className="flex">
-            <div className="sm:border border-zinc-950 z-50 h-full">
+            <div className="md:border border-zinc-950 z-50 h-full">
                 {/* mobile header buttons */}
-                <div className="flex flex-wrap gap-4 pb-8 sm:hidden">
+                <div className="flex flex-wrap gap-4 pb-8 md:hidden">
                     {data?.map((text, index) => (
                         <div key={index}>
                             <button
@@ -37,10 +37,10 @@ export default function ApproachAccordion({ data }: Props) {
                             <div key={index}>
                                 {isOpen === index ? (
                                     <button
-                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "min-h-[425px]"}`}
+                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "sm:min-h-[350px] md:min-h-[725px] lg:min-h-[475px] xl:min-h-[400px] 2xl:min-h-[375px]"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
-                                        <div className="flex flex-col gap-4 text-left sm:p-16">
+                                        <div className="flex flex-col gap-4 text-left md:p-16">
                                             {index === 0 ? (
                                                 <h5 className="font-semibold text-left text-xl font-serif">Approach</h5>
                                             ) : (
@@ -71,7 +71,7 @@ export default function ApproachAccordion({ data }: Props) {
                                     <button
                                         key={index}
                                         //className={`bg-zinc-950 text-cream hover:text-zinc-950  hover:backdrop-blur hover:bg-white/30 w-16 h-full flex justify-center items-center hover:border-x hover:border-zinc-950`}
-                                        className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full justify-center items-center hover:border-zinc-950 hidden sm:flex ${index !== data?.length-1 && "hover:border-r"} ${index !== 0 && "hover:border-l"}`}
+                                        className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full justify-center items-center hover:border-zinc-950 hidden md:flex ${index !== data?.length-1 && "hover:border-r"} ${index !== 0 && "hover:border-l"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <h5 className="font-semibold uppercase text-lg -rotate-90">{text.title}</h5>
