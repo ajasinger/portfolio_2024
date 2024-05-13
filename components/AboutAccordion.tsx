@@ -51,7 +51,7 @@ export default function AboutAccordion() {
                                             }
                                             {text?.list &&
                                                 <div className="flex flex-col gap-2">
-                                                    <ol className="list-decimal flex flex-col gap-2  ml-4">
+                                                    <ol className="list-decimal flex flex-col gap-2  ml-8 sm:ml-4">
                                                         {text?.list?.map((listText, index) => (
                                                             <li key={index}>
                                                                 <p>{listText}</p>
