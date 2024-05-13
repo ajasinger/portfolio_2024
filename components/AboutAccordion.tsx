@@ -8,7 +8,7 @@ export default function AboutAccordion() {
 
     return(
         <div id="about" className="bg-cream flex">
-            <div className="sm:border border-zinc-950 z-50 h-full">
+            <div className="sm:border border-zinc-950 z-50 h-full w-full">
                 {/* mobile header buttons */}
                 <div className="flex gap-8 pb-8 sm:hidden">
                 {aboutCards?.map((text, index) => (
@@ -28,7 +28,7 @@ export default function AboutAccordion() {
                             <div key={index}>
                                 {isOpen === index ? (
                                     <button
-                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 min-h-[550px]"
+                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 sm:min-h-[850px] md:min-h-[785px] lg:min-h-[625px] xl:min-h-[575px] 2xl:min-h-[550px]"
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <div className="flex flex-col gap-8 text-left sm:p-12">
@@ -51,7 +51,7 @@ export default function AboutAccordion() {
                                             }
                                             {text?.list &&
                                                 <div className="flex flex-col gap-2">
-                                                    <ol className="list-decimal flex flex-col gap-2  ml-8 sm:ml-4">
+                                                    <ol className="list-decimal flex flex-col gap-2  ml-6 sm:ml-4">
                                                         {text?.list?.map((listText, index) => (
                                                             <li key={index}>
                                                                 <p>{listText}</p>
