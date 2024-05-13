@@ -15,7 +15,7 @@ export default function AboutAccordion() {
                     <div key={index}>
                         <button
                             onClick={() => setIsOpen(index)}
-                            className={`${isOpen === index ? "bg-zinc-950 text-cream" : "text-zinc-950"} text-sm px-6 py-3 border border-zinc-950 rounded-full hover:bg-zinc-950 hover:text-cream uppercase text-nowrap`}
+                            className={`${isOpen === index ? "bg-zinc-950 text-cream" : "text-zinc-950"} text-sm px-4 py-3 border border-zinc-950 rounded-full hover:bg-zinc-950 hover:text-cream uppercase text-nowrap`}
                         >
                             {text.title}
                         </button>
