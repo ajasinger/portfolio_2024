@@ -2,10 +2,16 @@
 
 import { navLinks } from '@/lib/data';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
+import React, { useState } from 'react';
 
 export default function Navbar() {
-    const pathname = usePathname()
+    const [isOpen, setIsOpen] = useState(false);
+    const pathname = usePathname();
+
+    const handleToggle = () => {
+        setIsOpen(!isOpen);
+      };
 
     return(
         <nav  className="font-sans text-lg px-8 py-8">
