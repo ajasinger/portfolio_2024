@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             <h3 className="text-4xl font-semibold px-8 md:px-16 pb-16">{data?.name}</h3>
             
             {/* Intro Section */}
-            <div className="flex flex-col gap-4 px-16">
+            <div className="flex flex-col gap-4 px-8 md:px-16">
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
@@ -86,7 +86,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                         </div>
                     </div>
                 </div>
-                <div className="z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+                <div className="z-0 hidden md:block relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                     <div className="h-[450px] overflow-y-scroll">
                         {data && 
                                 <Image
