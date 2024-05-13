@@ -60,7 +60,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
     const data: ProjectType | undefined = projects.find(project => project.param === params.project);
 
     return(
-        <div className="bg-cream pt-12 sm:pt-24 text-zinc-950 font-sans flex flex-col">
+        <div className="bg-cream pt-24 text-zinc-950 font-sans flex flex-col">
             <h3 className="text-4xl font-semibold px-8 md:px-16 pb-8 sm:pb-16">{data?.name}</h3>
             
             {/* Intro Section */}
@@ -162,7 +162,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 }
             </div>
             {/* Learnings */}
-            <div className="px-8 md:px-16 py-12  text-zinc-950 relative">
+            <div className="px-8 md:px-16 pt-12 pb-24  text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
