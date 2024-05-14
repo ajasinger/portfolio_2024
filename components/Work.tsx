@@ -18,7 +18,7 @@ export default function Work() {
                             href={`projects/${project.param}`}
                             className=" bg-cream p-4 sm:p-8 z-0 relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105"
                         >
-                            <div className="h-[400px] md:overflow-y-scroll shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+                            <div className="h-[400px] overflow-hidden md:overflow-y-scroll shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                                 <Image
                                     src={project.href}
                                     objectFit="cover"
