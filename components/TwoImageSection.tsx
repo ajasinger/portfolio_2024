@@ -17,7 +17,7 @@ interface Props {
 export default function TwoImageSection ({ image1, image2 }: Props) {
     return(
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-between">
-            <div className="z-10 relative group overflow-hidden overflow-y-scroll h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+            <div className="z-10 relative group overflow-hidden h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                     <div className={`${image1?.srcHover && "lg:group-hover:opacity-0 transition-opacity duration-300 delay-100 ease-in-out"}`}>
                         <Image
                             src={image1?.src}
