@@ -20,7 +20,7 @@ export default function Navbar() {
     }
 
     return(
-        <nav  className="font-sans text-lg px-8 py-4 sm:py-8">
+        <nav  className={`${isOpen && pathname === '/' && "border-b border-white"} font-sans text-lg px-8 py-4 sm:py-8`}>
             <div className="sm:hidden flex justify-end">
                     <button 
                         onClick={handleToggle}
@@ -29,7 +29,7 @@ export default function Navbar() {
                         {isOpen ? "CLOSE" : "MENU"}
                     </button>
                 </div>
-            <ul className={`${isOpen ? "flex flex-col mt-10 divide-y divide-white border-y border-white" : "hidden"} sm:flex sm:gap-10 justify-end sm:items-center`}>
+            <ul className={`${isOpen ? "flex flex-col mt-10 divide-y divide-white border-t border-white" : "hidden"} sm:flex sm:gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
                     pathname !== link.href &&
                         <li 
@@ -45,10 +45,10 @@ export default function Navbar() {
                         </li>
                 ))}
                 {pathname !== '/contact' && 
-                    <li className="hidden sm:block">
+                    <li className={`${isOpen && "pt-10 pb-8"}`}>
                         <Link 
                             href={'/contact'}
-                            className="px-6 py-3 border rounded-full hover:bg-cream hover:text-zinc-950"
+                            className={`px-6 py-3 border rounded-full hover:bg-cream hover:text-zinc-950 ${isOpen && "bg-cream text-zinc-950"}`}
                         >
                         CONTACT ME
                         </Link>
