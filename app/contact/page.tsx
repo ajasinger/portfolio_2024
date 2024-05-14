@@ -49,7 +49,7 @@ export default function ContactPage() {
     };
 
     return(
-        <div className="bg-cream px-16 py-24 font-sans text-zinc-950 relative min-h-[800px]">
+        <div className="bg-cream px-8 md:px-16 py-12 sm:py-24 font-sans text-zinc-950 relative min-h-[800px]">
             <h3 className="relative text-4xl font-semibold pb-16 z-10">Contact me</h3>
             <div className="bg-[#E0FEAF] absolute top-[10rem] right-[5rem] h-[31.25rem] w-24.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
             <div className="bg-[#EDCEE2] absolute top-[10rem] right-[0rem] h-[21.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
@@ -57,7 +57,7 @@ export default function ContactPage() {
             {showForm ? (
                 <form 
                     onSubmit={handleSubmit}
-                    className="flex flex-col gap-6 items-center w-2/3"
+                    className="flex flex-col gap-6 items-center md:w-2/3"
                 >
                     {formInputs.map((input, index) => (
                         <div 
