@@ -136,7 +136,7 @@ export const projects = [
             },
             {
                 src: "/images/silvershield_settings_desktop_2.png",
-                tabletSrc: "public/images/silvershield_settings_tablet.png",
+                tabletSrc: "/images/silvershield_settings_tablet.png",
                 mobileSrc:"/images/silvershield_settings_iPhone_14.png",
                 alt: "The Silvershield website settings page dsiplaying first name, last name, email, password, groups the user is a member of, and an edit button.",
                 // srcHover: "",
@@ -223,12 +223,16 @@ export const projects = [
         images: [
             {
                 src: "/images/visiblework_calendly_1.png",
+                tabletSrc: "/images/silvershield_dashboard_tablet.png",
+                mobileSrc:"/images/silvershield_dashboard_iPhone_14_2.png",
                 alt: "Visible Work landing page 'What we do' and 'What you get' sections including a 'Join an info session' button",
                 srcHover: "/images/visiblework_calendly_3.png",
                 altHover: "Visible Work landing page with a pop up covering the screen to book an info session with Calendly"
             },
             {
                 src: "/images/visiblework_gif_2.gif",
+                tabletSrc: "/images/silvershield_dashboard_tablet.png",
+                mobileSrc:"/images/silvershield_dashboard_iPhone_14_2.png",
                 alt: "The header on the Visible Work website showing the header with text 'Make your ____ visible' with a text animation cycling through the words work, experience, wins, skills, and insights.",
                 // srcHover: "",
                 // altHover: ""

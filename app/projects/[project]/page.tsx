@@ -48,8 +48,8 @@ type LearningsType = {
 
 type ImageType = {
     src: string;
-    tabletSrc?: string;
-    mobileSrc?: string;
+    tabletSrc: string;
+    mobileSrc: string;
     alt: string;
     srcHover?: string;
     altHover?: string;
