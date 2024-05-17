@@ -128,29 +128,37 @@ export const projects = [
         images: [
             {
                 src: "/images/silvershield_dashboard_desktop_2.png",
+                tabletSrc: "/images/silvershield_dashboard_tablet.png",
+                mobileSrc:"/images/silvershield_dashboard_iPhone_14_2.png",
                 alt: "Silvershield dashboard showing an inbox with fraud alerts raning from low to high for each email.",
                 // srcHover: "",
                 // altHover: ""
             },
             {
                 src: "/images/silvershield_settings_desktop_2.png",
+                tabletSrc: "public/images/silvershield_settings_tablet.png",
+                mobileSrc:"/images/silvershield_settings_iPhone_14.png",
                 alt: "The Silvershield website settings page dsiplaying first name, last name, email, password, groups the user is a member of, and an edit button.",
                 // srcHover: "",
                 // altHover: ""
             },
             {
                 src: "/images/silvershieldintro-create-group_desktop.png",
+                tabletSrc: "/images/silvershield_intro-create-group_tablet.png",
+                mobileSrc:"/images/silvershield_intro-create-group_iPhone_14.png",
                 alt: "Silvershield webpage to connect an inbox for fraud review with an input to enter an email address and buttons to connect email or skip this step.",
                 // srcHover: "/images/silvershield_createOrg_code_3.svg",
                 // altHover: "A code snippet for the component that enables users to create a group."
             },
             {
                 src: "/images/silvershield_email-view-settings_desktop.png",
+                tabletSrc: "/images/silvershield_email-view-settings_tablet.png",
+                mobileSrc: "/images/silvershield_email-view-settings_iPhone_14.png",
                 alt: "Silvershield webpage to invite members to join your group with inputs for first name, last name, email, group access as an admin ot view only and an invite button.",
                 // srcHover: "",
                 // altHover: ""
             },
-        ]
+        ],
     },
     { 
         param: "visiblework",
