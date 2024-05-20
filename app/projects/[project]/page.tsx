@@ -180,7 +180,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     </div>
                     {/* One Image Section */}
                     <div className="lg:hidden">
-                        {data && 
+                        {data && data.images.length -1 > 1 && 
                             < OneImageSection image={data.images[2]} />
                         }
                     </div>
