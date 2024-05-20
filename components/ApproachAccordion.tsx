@@ -19,18 +19,20 @@ export default function ApproachAccordion({ data }: Props) {
         <div className="flex">
             <div className="md:border border-zinc-950 z-50 h-full">
                 {/* mobile header buttons */}
-                <div className="flex flex-wrap gap-4 pb-8 md:hidden">
-                    {data?.map((text, index) => (
-                        <div key={index}>
-                            <button
-                                onClick={() => setIsOpen(index)}
-                                className={`${isOpen === index ? "bg-zinc-950 text-cream" : "text-zinc-950"} text-sm px-4 py-3 border border-zinc-950 rounded-full hover:bg-zinc-950 hover:text-cream uppercase text-nowrap`}
-                            >
-                                {text.title}
-                            </button>
-                        </div>
-                    ))}
-                </div>
+                { data.length -1 >= 1 &&
+                    <div className="flex flex-wrap gap-4 pb-8 md:hidden">
+                        {data?.map((text, index) => (
+                            <div key={index}>
+                                <button
+                                    onClick={() => setIsOpen(index)}
+                                    className={`${isOpen === index ? "bg-zinc-950 text-cream" : "text-zinc-950"} text-sm px-4 py-3 border border-zinc-950 rounded-full hover:bg-zinc-950 hover:text-cream uppercase text-nowrap`}
+                                >
+                                    {text.title}
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                }
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">
                         {data?.map((text, index) => (
