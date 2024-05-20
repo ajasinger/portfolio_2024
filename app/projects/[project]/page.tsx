@@ -115,7 +115,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
             </div>
 
-                <div className={`px-8 md:px-16 py-12 text-zinc-950 relative`}>
+                <div className={`${data && data.images.length - 1 < 1 ? "px-8 md:px-16 py-12" : "px-8 md:px-16 py-12 lg:p-0"} text-zinc-950 relative`}>
                     <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                     <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                     {/* Two Image Section */}
@@ -162,7 +162,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             }
 
             
-                <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-12"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length - 1 < 1 ? "px-8 md:px-16 py-12" : "p-0 lg:px-16 lg:py-12"} text-zinc-950 relative`}>
                     <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                     <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                     {/* Two Image Section */}
