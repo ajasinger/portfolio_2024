@@ -116,10 +116,8 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
                 <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-12" : "px-8 md:px-16 py-12 lg:p-0"} text-zinc-950 relative`}>
-                    <div className="bg-[#E0FEAF] absolute -top-[10rem] right-[20rem] 2xl:left-[20rem] h-[31.25rem] w-[31.25rem] lg:w-[61.25rem] rounded-full blur-[7rem] z-0"></div>
-                    <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
-                    {/* <div className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-                    <div className="bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div> */}
+                    <div className="bg-[#E0FEAF] absolute -top-[10rem] right-[20rem] 2xl:left-[20rem] h-[81.25rem] md:h-[31.25rem] lg:h-[61.25rem] w-[31.25rem] lg:w-[61.25rem] rounded-full blur-[7rem] z-0"></div>
+                    <div className="bg-[#EDCEE2] absolute top-[55rem] md:top-[10rem] right-[0rem] h-[61.25rem] md:h-[31.25rem] lg:h-[61.25rem] w-[50rem] lg:w-[51.25rem] rounded-full blur-[7rem] z-0"></div>
                     {/* Two Image Section */}
                     <div className="hidden lg:block">
                         { data && data.images.length - 1 > 1 && 
@@ -147,7 +145,8 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* One Image Section */}
-            <div className="lg:hidden px-8 md:px-16 py-12">
+            <div className="lg:hidden px-8 md:px-16 py-12 relative">
+                <div className="bg-[#E0FEAF] absolute top-[15rem] sm:-top-[5rem] md:-top-[20rem] right-[5rem] 2xl:left-[20rem] h-[41.25rem] w-[31.25rem] lg:w-[81.25rem] rounded-full blur-[7rem] z-0"></div>
                 {data && 
                     < OneImageSection image={data.images[1]} />
                 }
