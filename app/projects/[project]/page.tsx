@@ -102,7 +102,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* Tech Stack */}
-                <div className="flex flex-col gap-4 py-6 sm:py-12 z-50">
+                <div className="flex flex-col gap-4 py-12 z-50">
                     <h4 className="font-serif text-xl font-semibold">Tech Stack</h4>
                     <ul className="flex gap-4 flex-wrap">
                         {data?.techStack?.map((text, index) => (
@@ -115,7 +115,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
             </div>
 
-                <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-6 sm:py-12"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-12"} text-zinc-950 relative`}>
                     <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                     <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                     {/* Two Image Section */}
@@ -125,7 +125,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                         }
                     </div>
                     {/* One Image Section */}
-                    <div className="lg:hidden px-8 md:px-16 py-6 sm:py-12">
+                    <div className="lg:hidden px-8 md:px-16 py-12">
                         {data && 
                             < OneImageSection image={data.images[0]} />
                         }
@@ -134,7 +134,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
         
 
             {/* Approach */}
-            <div className="px-8 md:px-16 py-6 sm:py-12 text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12 text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
@@ -145,7 +145,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* One Image Section */}
-            <div className="lg:hidden px-8 md:px-16 py-6 sm:py-12">
+            <div className="lg:hidden px-8 md:px-16 py-12">
                 {data && 
                     < OneImageSection image={data.images[1]} />
                 }
@@ -153,7 +153,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Problems & Solutions */}
             {data?.solutions && 
-                <div className="px-8 md:px-16 py-6 sm:py-12  text-zinc-950 flex gap-24 z-10">
+                <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
                     <div className="flex flex-col gap-4">
                         <h4 className="font-serif text-xl font-semibold">Problems & Solutions</h4>
                         {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
@@ -162,7 +162,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             }
 
             
-                <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-6 sm:py-12"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-12"} text-zinc-950 relative`}>
                     <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                     <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                     {/* Two Image Section */}
@@ -188,7 +188,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             
 
             {/* Learnings */}
-            <div className="px-8 md:px-16 py-6 sm:py-12 pb-24  text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12 pb-24  text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
