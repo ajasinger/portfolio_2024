@@ -223,16 +223,16 @@ export const projects = [
         images: [
             {
                 src: "/images/visiblework_calendly_1.png",
-                tabletSrc: "/images/visiblework_whetyouget_tablet.png",
-                mobileSrc:"/images/visiblework_whetyouget_tablet.png",
+                tabletSrc: "/images/visiblework_header_tablet.gif",
+                mobileSrc:"/images/visiblework_header_tablet.gif",
                 alt: "Visible Work landing page 'What we do' and 'What you get' sections including a 'Join an info session' button",
                 srcHover: "/images/visiblework_calendly_3.png",
                 altHover: "Visible Work landing page with a pop up covering the screen to book an info session with Calendly"
             },
             {
                 src: "/images/visiblework_gif_2.gif",
-                tabletSrc: "/images/visiblework_header_tablet.gif",
-                mobileSrc:"/images/visiblework_header_tablet.gif",
+                tabletSrc: "/images/visiblework_whetyouget_tablet.png",
+                mobileSrc:"/images/visiblework_whetyouget_tablet.png",
                 alt: "The header on the Visible Work website showing the header with text 'Make your ____ visible' with a text animation cycling through the words work, experience, wins, skills, and insights.",
                 // srcHover: "",
                 // altHover: ""
