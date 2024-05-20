@@ -6,7 +6,7 @@ import ApproachAccordion from '@/components/ApproachAccordion';
 import SolutionsCarousel from '@/components/SolutionsCarousel';
 import LearningsAccordion from '@/components/LearningsAccordion';
 import TwoImageSection from '@/components/TwoImageSection';
-import ThreeImageSection from '@/components/ThreeImageSection';
+import OneImageSection from '@/components/OneImageSection';
 
 type ProjectType = {
     param: string;
@@ -115,16 +115,23 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
             </div>
 
-            {/* Two Image Section */}
-            <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-6 sm:py-12"} text-zinc-950 relative`}>
-                <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
-                <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
-                { data && data.images.length - 1 > 1 && 
-                    <div>
-                        < TwoImageSection image1={data.images[0]} image2={data.images[1]} />
+                <div className={`${data && data.images.length -1 > 1 && "px-8 md:px-16 py-6 sm:py-12"} text-zinc-950 relative`}>
+                    <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
+                    <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
+                    {/* Two Image Section */}
+                    <div className="hidden lg:block">
+                        { data && data.images.length - 1 > 1 && 
+                            < TwoImageSection image1={data.images[0]} image2={data.images[1]} />
+                        }
                     </div>
-                }
-            </div>
+                    {/* One Image Section */}
+                    <div className="lg:hidden">
+                        {data && 
+                            < OneImageSection image={data.images[0]} />
+                        }
+                    </div>
+                </div>
+        
 
             {/* Approach */}
             <div className="px-8 md:px-16 py-6 sm:py-12 text-zinc-950 relative">
@@ -134,6 +141,13 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     <div className="z-50">
                         < ApproachAccordion data={data?.approach} />
                     </div>
+                }
+            </div>
+
+            {/* One Image Section */}
+            <div className="lg:hidden px-8 md:px-16 py-6 sm:py-12">
+                {data && 
+                    < OneImageSection image={data.images[1]} />
                 }
             </div>
 
@@ -147,21 +161,32 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>                
             }
 
-            {/* Two Image Section */}
-            <div className="px-8 md:px-16 py-6 sm:py-12 text-zinc-950 relative">
-                <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
-                <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
-                { data && data.images.length -1 > 1 &&
-                    <div>
-                        < TwoImageSection image1={data.images[2]} image2={data.images[3]} />
+            
+                <div className="px-8 md:px-16 py-6 sm:py-12 text-zinc-950 relative">
+                    <div className="bg-[#D8D5FF] absolute top-[-5rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
+                    <div className="bg-[#E0FEAF] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
+                    {/* Two Image Section */}
+                    <div className="hidden lg:block">
+                        { data && data.images.length -1 > 1 &&
+                            <div>
+                                < TwoImageSection image1={data.images[2]} image2={data.images[3]} />
+                            </div>
+                        }
+                        { data && data.images.length -1 <= 1 &&
+                            <div>
+                                < TwoImageSection image1={data.images[0]} image2={data.images[1]} />
+                            </div>
+                        }
                     </div>
-                }
-                { data && data.images.length -1 <= 1 &&
-                    <div>
-                        < TwoImageSection image1={data.images[0]} image2={data.images[1]} />
+                    {/* One Image Section */}
+                    <div className="lg:hidden">
+                        {data && 
+                            < OneImageSection image={data.images[2]} />
+                        }
                     </div>
-                }
-            </div>
+                </div>
+            
+
             {/* Learnings */}
             <div className="px-8 md:px-16 py-6 sm:py-12 pb-12  text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
@@ -172,6 +197,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     </div>
                 }
             </div>
+
         </div>
     )
 }
