@@ -79,8 +79,9 @@ export const aboutCards = [
         body: [
             "I like making things, but I love learning even more.", 
             "I built a fashion startup from zero to seven figures and a brand featured on the cover of the New York Times Style section, but you can only innovate so much with women's workwear.", 
-            "I got bored, so I looked for a new challenge to satisfy my desire to build — one where the potential to learn was uncapped. My husband, who works with startups, suggested software development.",
+            "I got bored, so I looked for a new challenge to satisfy my desire to build — one where the potential to learn was uncapped.",
             "Two days into my Codecademy course, I was hooked.",
+            "It was the most engaged I had been professionally in quite a while — and I never looked back.",
             "Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur friend planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, he was confident: ",
             "“You're smart. You'll figure it out.”",
             "And I did.",
@@ -91,7 +92,7 @@ export const aboutCards = [
     {
         title: "More about me...",
         list: [
-            "I live in Brooklyn with my triathlete husband and inquisitive toddler—who knows that when I put my glasses on and turn on the big screen, “Mommy's working”.",
+            // "I live in Brooklyn with my triathlete husband and inquisitive toddler—who knows that when I put my glasses on and turn on the big screen, “Mommy's working”.",
             "I'm from Toronto, which means you'll likely hear me say “sorry,” but not “eh.”",
             "I just learned to ride a bike two years ago.",
             "I think Rubirosa's vodka pizza is the best pizza in NY. (I will not be taking questions.)",
