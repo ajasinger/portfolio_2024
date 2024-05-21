@@ -7,6 +7,7 @@ import SolutionsCarousel from '@/components/SolutionsCarousel';
 import LearningsAccordion from '@/components/LearningsAccordion';
 import TwoImageSection from '@/components/TwoImageSection';
 import OneImageSection from '@/components/OneImageSection';
+import SolutionsSection from '@/components/SolutionsSection';
 
 type ProjectType = {
     param: string;
@@ -33,10 +34,15 @@ type ApproachType = {
     bodyList?: { title: string; body: string }[];
 };
 
+// type SolutionsType = {
+//     title: string;
+//     problem: string;
+//     solution: string;
+// };
+
 type SolutionsType = {
     title: string;
-    problem: string;
-    solution: string;
+    body: string;
 };
 
 type LearningsType = {
@@ -156,8 +162,9 @@ export default function ProjectPage({ params }: { params: { project: string } })
             {data?.solutions && 
                 <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
                     <div className="flex flex-col gap-4">
-                        <h4 className="font-serif text-xl font-semibold">Problems & Solutions</h4>
-                        {data?.solutions && < SolutionsCarousel data={data?.solutions} />}
+                        <h4 className="font-serif text-xl font-semibold text-center">Problems & Solutions</h4>
+                        {data?.solutions && < SolutionsSection data={data?.solutions} />}
+                        {/* {data?.solutions && < SolutionsCarousel data={data?.solutions} />} */}
                     </div>
                 </div>                
             }
