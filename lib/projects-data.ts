@@ -81,21 +81,35 @@ export const projects = [
             }
 
         ],
+        // solutions: [
+        //     {
+        //         title: "User permission",
+        //         problem: "Multiple family members all needed access to data with varying permission for viewing and updating the data scores. Also, I needed to prevent anyone outside of those family members from accessing the data.",
+        //         solution: "My first thought was filtering the data on the front-end, but this was not efficient or secure so I used two Supabase features: Row Level Security (RLS) and JWTs. I created organizations and using RLS, only members could access relevant table rows. I used JWTs to store organization memberships and related roles to easily check membership without a database call, and in conjunction with RLS, check it against table data so any data they don't have permissions for cant be sent to the front-end, adding a layer of security."
+        //     },
+        //     {
+        //         title: "useContext",
+        //         problem: "Some users may want to create multiple organizations for different family members, so I wanted it to be easy to toggle between them. Also, when they logged back into our platform I wanted them to view the organization they were viewing when they were last logged in.",
+        //         solution: "To solve this I added a 'last_organization' column that could be checked as soon as a user logged in and incorporated a useContext hook. Using that hook I set a platform-wide state for the current organization as that affected many components in the app, so the relevant data was visible across the platform. The downside to useContext is that I had to move a number of database calls from server components to client components, but decided that loss in efficiency was outweighed by avoiding prop drilling."
+        //     },
+        //     {
+        //         title: "Webhooks",
+        //         problem: "I needed to receive data on emails as soon as they hit the user's inbox to process them for fraud detection. I set up a Nylas webhook to notify me when a new email was received, but I couldn't figure out how to get the RLS protected access tokens from Supabase to get the email data when a user wasn't logged in to our platform.",
+        //         solution: "My first approach was a useEffect to fetch the access token the next time a user logged in, but this didn't allow us to alert users about fraudulent emails in realtime — I solved this with a service role key to bypass RLS. Fetching the token, email data and generating fraud scores timed out in production so I tried a cron job that would periodically check if new 'email_id's had been added to a table and send them to the ML endpoint, but this was inefficient, so I set up a Supabase webhook to trigger a function every time a new 'email_id' was added to the table, to generate a fraud score and notify the user if it was high."
+        //     },
+        // ],
         solutions: [
             {
                 title: "User permission",
-                problem: "Multiple family members all needed access to data with varying permission for viewing and updating the data scores. Also, I needed to prevent anyone outside of those family members from accessing the data.",
-                solution: "My first thought was filtering the data on the front-end, but this was not efficient or secure so I used two Supabase features: Row Level Security (RLS) and JWTs. I created organizations and using RLS, only members could access relevant table rows. I used JWTs to store organization memberships and related roles to easily check membership without a database call, and in conjunction with RLS, check it against table data so any data they don't have permissions for cant be sent to the front-end, adding a layer of security."
+                body: "The first major challenge in building the Silvershield platform was keeping sensitive data secure and accessible to multiple users with various permissions. Filtering data on the front-end, even on the server side didn't provide as much security as I wanted which led me to two Supabase features: Row Level Security (RLS) and JWTs. By storing membership and permission data in JWTs and checking it against table data with RLS I was able to access the necessary data and keep it secure.",
             },
             {
-                title: "useContext",
-                problem: "Some users may want to create multiple organizations for different family members, so I wanted it to be easy to toggle between them. Also, when they logged back into our platform I wanted them to view the organization they were viewing when they were last logged in.",
-                solution: "To solve this I added a 'last_organization' column that could be checked as soon as a user logged in and incorporated a useContext hook. Using that hook I set a platform-wide state for the current organization as that affected many components in the app, so the relevant data was visible across the platform. The downside to useContext is that I had to move a number of database calls from server components to client components, but decided that loss in efficiency was outweighed by avoiding prop drilling."
+                title: "useContext hook",
+                body: "I realized that some users would want to create multiple groups, and would want to easily toggle between them and automatically log into their most recent group when logging back into the Silvershield platform. I solved this by saving their last group to the profiles table and incorporating a useContext hook to set a platform-wide state for the current group. This did result in a loss of efficiency and speed, moving database calls from the server side to client side, but I decided this was outweighed by the benefits to user experience.",
             },
             {
                 title: "Webhooks",
-                problem: "I needed to receive data on emails as soon as they hit the user's inbox to process them for fraud detection. I set up a Nylas webhook to notify me when a new email was received, but I couldn't figure out how to get the RLS protected access tokens from Supabase to get the email data when a user wasn't logged in to our platform.",
-                solution: "My first approach was a useEffect to fetch the access token the next time a user logged in, but this didn't allow us to alert users about fraudulent emails in realtime — I solved this with a service role key to bypass RLS. Fetching the token, email data and generating fraud scores timed out in production so I tried a cron job that would periodically check if new 'email_id's had been added to a table and send them to the ML endpoint, but this was inefficient, so I set up a Supabase webhook to trigger a function every time a new 'email_id' was added to the table, to generate a fraud score and notify the user if it was high."
+                body: "One of the trickiest problems I worked through was how to send a notification to a user as soon as they received a potentially fraudulent email in an inbox they had connected to our platform. I set up a Nylas webhook to notify me when a new email was received, but the function to fetch additional email data, and process that email for fraud timed out. My main objective was solving this without saving any data from the actual email to our database for security purposes. First, I tried a cron job that would periodically check if new emails had been received and process them, but this was inefficient, so I set up a Supabase webhook to trigger a function every time a new email was received, to generate a fraud score and notify the user if it was high.",
             },
         ],
         learnings: [
