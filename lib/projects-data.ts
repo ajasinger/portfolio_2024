@@ -5,30 +5,30 @@ export const projects = [
         headerHref: "/images/silvershield_mobile_site_updated.png",
         headerImgAlt: "mobile version of the Silvershield website",
         overview: [
-            "A full-stack AI-enabled web application, that enables family members to monitor their senior relative's inboxes for fraud.",
-            "I built the platform from concept to beta launch and collaborated with the CEO, machine learning developers, designer, and marketing lead to develop the product and iterate. Silvershield is now in use by beta testers."
+            "A full-stack AI-enabled web application, for family members to monitor their senior relative's emails for fraud.",
+            "I built the platform from concept to beta launch and collaborated with the CEO, machine learning developers, designer, and marketing lead to develop and iterate on the product. Silvershield is now in use by beta testers."
         ],
         overviewList: {
             title: "The platform's functionality includes:",
             list: [
                 "Integration with Supabase auth and database",
                 "CRUD operations for user profiles, and organizations with multiple members",
-                "Row Level Security and trigger functions with PostgresSQL",
+                "Row Level Security and trigger functions with PostgreSQL",
                 "Automated emails with Sendgrid",
                 "Communication with multiple APIs and SDKs",
                 "Fully responsive frontend"
             ]
         },
         websiteURL: "https://www.silvershield.ai/",
-        techStack: ["Next.JS", "Supabase", "Tailwind", "PosgresSQL", "Nylas", "Google APIs", "Sendgrid"],
+        techStack: ["Next.js", "Supabase", "Tailwind", "PosgreSQL", "Nylas", "Google APIs", "Sendgrid"],
         approach: [
             {
                 title: "Overview",
                 body: [
-                    "Security and scalability were my two main considerations when building the Silvershield platform.",
-                    "Our users would be trusting us with sensitive data, so keeping it safe was a top priority. The first iteration of the product analyzes email inboxes for fraud but eventually it will also analyze bank accounts, and messages so scalability and adaptability were crucial.",
-                    "Also, with users in their 40s-50s and their senior parents creating accounts, the interface needed to be both modern and intuitive to a senior user.",
-                    "To accomplish this I chose Next.js, Supabase, Nylas, Sendgrid, Tailwind, and hosted on Vercel."
+                    "When I built the Silvershield platform, I focused on two key things: security and scalability.",
+                    "Our users would be trusting us with sensitive data, so keeping it safe was a top priority. The first iteration of the platform analyzes email inboxes for fraud but in the future will also analyze bank accounts, and messages so it needed to be adaptable and scalable.",
+                    "Also, with users in their 40s-50s and their senior parents, the interface needed to be both modern and intuitive to a senior user.",
+                    "To achieve this I chose to use Next.js, Supabase, Nylas, Sendgrid, Tailwind, and hosted the platform on Vercel."
                 ],
             },
             {
@@ -43,7 +43,7 @@ export const projects = [
                     },
                     {
                         title: "Server side rendering & data fetching:",
-                        body: "Server components allowed me to fetch and cache data, where possible, in server components to improve load time and a seamless user experience."
+                        body: "Server components allowed me to fetch and cache data, where possible, in server components to improve load time for a seamless user experience."
                     },
                     // {
                     //     title: "SEO:",
@@ -75,7 +75,7 @@ export const projects = [
                 bodyList: [
                     {
                         title: "Efficiency:",
-                        body: "Given that we want seniors to connect their inboxes we wanted our platform to be compatible with a wide range of email providers. Instead of integrating individual email email APIs I selected Nylas, as an efficient way to get up and running and test the product. Eventually we will switch over to individual email APIs for cost saving."
+                        body: "Given that we want seniors to connect their inboxes we wanted our platform to be compatible with a wide range of email providers. Instead of integrating individual email APIs I selected Nylas as an efficient way to get up and running and test the product. Eventually we will switch over to individual email APIs for cost saving."
                     },
                 ]
             }
