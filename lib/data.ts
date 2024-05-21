@@ -28,7 +28,7 @@ export const projects = [
         href: "/images/silvershield_site.png",
         name: "Silvershield", 
         alt: "Silvershield website landing page",
-        body: "A full-stack web app built with Next.js, Tailwind CSS and Supabase for AI-enabled fraud detection.",
+        body: "A full-stack web app built with Next.js, Supabase, and Tailwind for AI-enabled fraud detection.",
         param: "silvershield"
     },
     {
@@ -81,11 +81,11 @@ export const aboutCards = [
             "I built a fashion startup from zero to seven figures and a brand featured on the cover of the New York Times Style section, but you can only innovate so much with women's workwear.", 
             "I got bored, so I looked for a new challenge to satisfy my desire to build — one where the potential to learn was uncapped.",
             "Two days into my Codecademy course, I was hooked.",
-            "It was the most engaged I had been professionally in quite a while — and I never looked back.",
+            "It was the most engaged I had been professionally in quite a while and I never looked back.",
             "Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur friend planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, he was confident: ",
             "“You're smart. You'll figure it out.”",
-            "And I did.",
-            "Today, after countless hours of debugging alongside professional developers, Stack Overflow rabbit holes, and late nights pouring over documentation, I can say that I'm a freelance full-stack developer who was paid to build an AI-powered web app with Next.js, Tailwind, and Supabase.",
+            "I did.",
+            "Today, after countless hours of debugging alongside professional developers, Stack Overflow rabbit holes, and late nights pouring over documentation, I can say that I'm a freelance full-stack developer who was paid to build an AI-powered web app with Next.js, Supabase, and Tailwind.",
             "Now, I'm excited to join a company that values learning and creativity, where I can collaborate and make a meaningful difference.",
         ]
     },
