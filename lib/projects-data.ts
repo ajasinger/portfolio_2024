@@ -101,31 +101,31 @@ export const projects = [
         solutions: [
             {
                 title: "User permission",
-                body: "The first major challenge in building the Silvershield platform was keeping sensitive data secure and accessible to multiple users with various permissions. Filtering data on the front-end, even on the server side didn't provide as much security as I wanted which led me to two Supabase features: Row Level Security (RLS) and JWTs. By storing membership and permission data in JWTs and checking it against table data with RLS I was able to access the necessary data and keep it secure.",
+                body: "The first major challenge in building the Silvershield platform was keeping sensitive data secure and accessible to multiple users with different permissions. Filtering data on the front-end, even server side, didn't provide as much security as I wanted which led me to two Supabase features: Row Level Security (RLS) and JWTs. By storing membership and permission data in JWTs and checking it against table data with RLS, I could access the necessary data and keep it secure.",
             },
             {
                 title: "useContext hook",
-                body: "I realized that some users would want to create multiple groups, and would want to easily toggle between them and automatically log into their most recent group when logging back into the Silvershield platform. I solved this by saving their last group to the profiles table and incorporating a useContext hook to set a platform-wide state for the current group. This did result in a loss of efficiency and speed, moving database calls from the server side to client side, but I decided this was outweighed by the benefits to user experience.",
+                body: "I realized some users would want to create multiple groups and easily switch between them, automatically logging into their most recent group when they came back to the platform. To make this happen, I saved their last group to the profiles table and used the useContext hook to set a platform-wide state for their current group. Although this shift from server-side to client-side database calls meant a loss in efficiency and speed, I felt the improvement in user experience was worth it.",
             },
             {
                 title: "Webhooks",
-                body: "One of the trickiest problems I worked through was how to send a notification to a user as soon as they received a potentially fraudulent email in an inbox they had connected to our platform. I set up a Nylas webhook to notify me when a new email was received, but the function to fetch additional email data, and process that email for fraud timed out. My main objective was solving this without saving any data from the actual email to our database for security purposes. First, I tried a cron job that would periodically check if new emails had been received and process them, but this was inefficient, so I set up a Supabase webhook to trigger a function every time a new email was received, to generate a fraud score and notify the user if it was high.",
+                body: "One of the trickiest problems I encountered was how to notify users as soon as they received a potentially fraudulent email in their connected inbox. I set up a Nylas webhook to alert me when a new email arrived, but the function to fetch additional email data, and process it for fraud kept timing out. I also wanted to avoid saving any email data to our database for security purposes. First, I tried a cron job that would periodically check if new emails had been received and process them, but it was inefficient, so I set up a Supabase webhook to trigger a function every time a new email was received, generating a fraud score and notify the user if it was high.",
             },
         ],
         learnings: [
             {
                 title: "Overview",
                 body: "If I were to list all the things I learned while developing this project it would be an essay. This project took me from an aspiring coder to a full-fledged software engineer.", 
-                learnings: "Some of the things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind, and most importantly, debugging interpreting logs."
+                learnings: "Some of the things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind, and most importantly, debugging and interpreting logs."
             },
             {
                 title: "Flexibility",
-                body: "Making things as flexible as possible, especially when the product is not fully established is necessary. The product changed from one that analyzed files, to bank accounts, to inboxes. Since, from early on, I had broken up my code into reusable components, it was easy to adapt to all these changes", 
-                learnings: "Next time I will spend more time building out a system of nomenclature. I did come up with a few naming conventions like 'user' and 'organization', but as the product changed and the complexity grew and developed, there were some inconsistencies. Now that I have seen how a system grows I'll be better equipped to plan accordingly."
+                body: "You need to write code that's as flexible as possible, especially in the early stages of a product. Our product changed from one that analyzed files, to bank accounts, to inboxes. Since I had broken up my code into reusable components, it was easy to adapt to all these changes.", 
+                learnings: "Next time I will spend more time building out a system of nomenclature. I did come up with a few naming conventions like 'user' and 'organization', but as the product changed and the complexity grew, there were some inconsistencies. Now that I have seen how a system grows I'll be better prepared."
             },
             {
                 title: "User testing",
-                body: "It was so informative watching users move through the (almost) finished product with no intervention. We discovered parts of the user flow that weren't intuitive so I completely restructured the order of operations after a user logs in, which greatly improved user experience.",
+                body: "It was so informative watching users move through the (almost) finished product with no intervention. After some user testing I completely restructured the order of operations after a user signs up, to make it more intuitive.",
                 learnings: "Have users test the product early and regularly to help inform the build."
             },
             // {
@@ -135,7 +135,7 @@ export const projects = [
             // },
             {
                 title: "Community",
-                body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than had I tackled them on my own. One of the most transformative hours of my coding career was debugging alongside an experienced dev. It taught me how to approach bugs methodically and strategically.", 
+                body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than if I had tackled them on my own. One of the most transformative hours of my coding career was debugging alongside an experienced dev. It taught me how to approach bugs methodically and strategically.", 
                 learnings: "While my first step will still be chatGPT/stackOverflow/Reddit I am now better equipped to know when I need help with something, what to try before going for help, and where to find it."
             },
         ], 
