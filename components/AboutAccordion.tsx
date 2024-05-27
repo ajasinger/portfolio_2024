@@ -51,41 +51,49 @@ export default function AboutAccordion() {
                         {aboutCards?.map((text, index) => (
                             <div key={index}>
                                 {isOpen === index ? (
-                                    <button
+                                    <div
                                         className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 sm:min-h-[850px] md:min-h-[785px] lg:min-h-[625px] xl:min-h-[575px] 2xl:min-h-[550px]"
-                                        onClick={() => setIsOpen(index)}
                                     >
-                                        <div className="flex flex-col gap-8 text-left sm:p-12">
-                                            {index === 0 ? (
-                                                <h5 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">About Me</h5>
-                                            ) : (
-                                                <h5 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">{text.title}</h5>
-                                            )}
-                                            {text?.body &&
-                                                <div  className="flex flex-col gap-2">
-                                                    {text?.body?.map((bodyText, index) => (
-                                                        <div 
-                                                            key={index} 
-                                                            className="z-50 flex flex-col gap-2"
-                                                        >
-                                                            {bodyText}
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            }
-                                            {text?.list &&
-                                                <div className="flex flex-col gap-2">
-                                                    <ol className="list-decimal flex flex-col gap-2  ml-6 sm:ml-4">
-                                                        {text?.list?.map((listText, index) => (
-                                                            <li key={index}>
-                                                                <p>{listText}</p>
-                                                            </li>
+                                        <motion.div
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            <div className="flex flex-col gap-8 text-left sm:p-12">
+                                            
+                                                {index === 0 ? (
+                                                    <h5 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">About Me</h5>
+                                                ) : (
+                                                    <h5 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">{text.title}</h5>
+                                                )}
+                                                {text?.body &&
+                                                    <div  className="flex flex-col gap-2">
+                                                    
+                                                        {text?.body?.map((bodyText, index) => (
+                                                            <div 
+                                                                key={index} 
+                                                                className="z-50 flex flex-col gap-2"
+                                                            >
+                                                                {bodyText}
+                                                            </div>
                                                         ))}
-                                                    </ol>
-                                                </div>
-                                            }
-                                        </div>
-                                    </button>
+                                                    </div>
+                                                }
+                                                {text?.list &&
+                                                    <div className="flex flex-col gap-2">
+                                                        <ol className="list-decimal flex flex-col gap-2  ml-6 sm:ml-4">
+                                                            {text?.list?.map((listText, index) => (
+                                                                <li key={index}>
+                                                                    <p>{listText}</p>
+                                                                </li>
+                                                            ))}
+                                                        </ol>
+                                                    </div>
+                                                }
+                                                
+                                            </div>
+                                        </motion.div>
+                                    </div>
                                 ): (
                                     <button
                                         key={index}
