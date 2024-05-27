@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import { useAnimation, motion } from 'framer-motion';
 
 type ApproachType = {
     title?: string;
@@ -38,37 +39,42 @@ export default function ApproachAccordion({ data }: Props) {
                         {data?.map((text, index) => (
                             <div key={index}>
                                 {isOpen === index ? (
-                                    <button
+                                    <div
                                         className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "sm:min-h-[350px] md:min-h-[725px] lg:min-h-[475px] xl:min-h-[400px] 2xl:min-h-[375px]"}`}
-                                        onClick={() => setIsOpen(index)}
                                     >
-                                        <div className="flex flex-col gap-4 text-left md:p-16">
-                                            {index === 0 ? (
-                                                <h5 className="font-semibold text-left text-xl font-serif">Approach</h5>
-                                            ) : (
-                                                <h5 className="font-semibold font-serif text-left text-xl">{text.title}</h5>
-                                            )}
-                                            <div  className="flex flex-col gap-2">
-                                                {text?.body?.map((bodyText, index) => (
-                                                    <div 
-                                                        key={index} 
-                                                        className="z-50 flex flex-col gap-2"
-                                                    >
-                                                        {bodyText}
-                                                    </div>
-                                                ))}
+                                        <motion.div
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0.5 }}
+                                        >
+                                            <div className="flex flex-col gap-4 text-left md:p-16">
+                                                {index === 0 ? (
+                                                    <h5 className="font-semibold text-left text-xl font-serif">Approach</h5>
+                                                ) : (
+                                                    <h5 className="font-semibold font-serif text-left text-xl">{text.title}</h5>
+                                                )}
+                                                <div  className="flex flex-col gap-2">
+                                                    {text?.body?.map((bodyText, index) => (
+                                                        <div 
+                                                            key={index} 
+                                                            className="z-50 flex flex-col gap-2"
+                                                        >
+                                                            {bodyText}
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                <div className="flex flex-col gap-2">
+                                                    {text?.bodyList?.map((listText, index) => (
+                                                        <ol key={index} className="list-disc ml-8">
+                                                            <li>
+                                                                <p><span className="font-semibold">{listText.title}</span>{' '}{listText.body}</p>
+                                                            </li>
+                                                        </ol>
+                                                    ))}
+                                                </div>
                                             </div>
-                                            <div className="flex flex-col gap-2">
-                                                {text?.bodyList?.map((listText, index) => (
-                                                    <ol key={index} className="list-disc ml-8">
-                                                        <li>
-                                                            <p><span className="font-semibold">{listText.title}</span>{' '}{listText.body}</p>
-                                                        </li>
-                                                    </ol>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    </button>
+                                        </motion.div>
+                                    </div>
                                 ): (
                                     <button
                                         key={index}
