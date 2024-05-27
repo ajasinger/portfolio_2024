@@ -13,7 +13,7 @@ export default function Header() {
         transition={{ duration: 1 }}
       >
         <h2 className="text-2xl md:text-3xl font-thin max-w-4xl leading-relaxed">
-          a junior<span className="font-serif"> front-end engineer </span>building at the intersection of 
+          a<span className="font-serif"> front-end engineer </span>building at the intersection of 
           <span className="font-serif"> technology </span>and<span className="font-serif"> creativity</span>.
         </h2>
       </motion.div>

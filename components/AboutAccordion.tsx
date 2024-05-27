@@ -1,13 +1,37 @@
 'use client';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { aboutCards } from '@/lib/data';
+import { useAnimation, motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function AboutAccordion() {
     const [isOpen, setIsOpen] = useState(0);
+    const controls = useAnimation();
+
+    const [ref, inView] = useInView({
+        triggerOnce: true,  
+        threshold: 0.1,  
+    });
+
+    useEffect(() => {
+        if (inView) {
+        controls.start('visible');
+        }
+    }, [controls, inView]);
 
     return(
-        <div id="about" className="bg-cream flex">
+        <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 1 }}
+        >
+        <div id="about" className="flex">
             <div className="sm:border border-zinc-950 z-50 h-full w-full">
                 {/* mobile header buttons */}
                 <div className="flex flex-wrap gap-4 pb-8 sm:hidden">
@@ -77,5 +101,6 @@ export default function AboutAccordion() {
                 </div>
             </div>
         </div>
+        </motion.div>
     )
 }
