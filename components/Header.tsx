@@ -10,7 +10,7 @@ export default function Header() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <h2 className="text-2xl md:text-3xl font-thin max-w-4xl leading-relaxed">
           a<span className="font-serif"> front-end engineer </span>building at the intersection of 
@@ -20,7 +20,7 @@ export default function Header() {
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1 }}
+        transition={{ duration: 0.5, delay: 1 }}
       >
         <ul className="flex gap-4 sm:gap-4 font-light md:text-lg flex-wrap">
           {techStack.map((tech, index) => (

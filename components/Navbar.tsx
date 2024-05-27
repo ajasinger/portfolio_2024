@@ -33,7 +33,7 @@ export default function Navbar() {
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.5 }}
             >
             <ul className={`${isOpen ? "flex flex-col mt-10 divide-y divide-white border-t border-white" : "hidden"} sm:flex sm:gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
