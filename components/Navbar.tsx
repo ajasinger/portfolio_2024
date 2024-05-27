@@ -4,6 +4,7 @@ import { navLinks } from '@/lib/data';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState, MouseEvent } from 'react';
+import { motion } from 'framer-motion';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,13 +23,18 @@ export default function Navbar() {
     return(
         <nav  className={`${isOpen && pathname === '/' && "border-b border-white"} font-sans text-lg px-8 py-4 sm:py-8`}>
             <div className="sm:hidden flex justify-end">
-                    <button 
-                        onClick={handleToggle}
-                            className="px-6 py-3 bg-cream text-zinc-950 border rounded-full hover:bg-zinc-950 hover:text-cream"
-                        >
-                        {isOpen ? "CLOSE" : "MENU"}
-                    </button>
-                </div>
+                <button 
+                    onClick={handleToggle}
+                    className="px-6 py-3 bg-cream text-zinc-950 border rounded-full hover:bg-zinc-950 hover:text-cream"
+                >
+                    {isOpen ? "CLOSE" : "MENU"}
+                </button>
+            </div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
             <ul className={`${isOpen ? "flex flex-col mt-10 divide-y divide-white border-t border-white" : "hidden"} sm:flex sm:gap-10 justify-end sm:items-center`}>
                 {navLinks.map((link, index) => (
                     pathname !== link.href &&
@@ -55,6 +61,7 @@ export default function Navbar() {
                     </li>
                 }
             </ul>
+            </motion.div>
         </nav>
     )
 }
