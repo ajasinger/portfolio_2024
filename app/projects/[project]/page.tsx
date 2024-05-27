@@ -6,7 +6,6 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 import { projects } from '@/lib/projects-data';
 import ApproachAccordion from '@/components/ApproachAccordion';
-import SolutionsCarousel from '@/components/SolutionsCarousel';
 import LearningsAccordion from '@/components/LearningsAccordion';
 import TwoImageSection from '@/components/TwoImageSection';
 import OneImageSection from '@/components/OneImageSection';
@@ -36,12 +35,6 @@ type ApproachType = {
     body?: string[];
     bodyList?: { title: string; body: string }[];
 };
-
-// type SolutionsType = {
-//     title: string;
-//     problem: string;
-//     solution: string;
-// };
 
 type SolutionsType = {
     title: string;
