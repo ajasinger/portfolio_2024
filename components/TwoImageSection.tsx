@@ -1,13 +1,6 @@
 'use client';
 import Image from 'next/image';
-
-type ImageType = {
-    src: string;
-    // videoSrc?: string;
-    alt: string;
-    srcHover?: string;
-    altHover?: string;
-};
+import { ImageType } from '@/lib/types';
 
 interface Props {
     image1: ImageType;
