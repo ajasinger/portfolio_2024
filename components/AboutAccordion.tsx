@@ -79,7 +79,7 @@ export default function AboutAccordion() {
                                         className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full hidden sm:flex justify-center items-center hover:border-zinc-950 ${index !== aboutCards?.length-1 && "hover:border-r"} ${index !== 0 && "hover:border-l"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
-                                        <h5 className="font-semibold uppercase text-lg -rotate-90 text-nowrap">{text.title}</h5>
+                                        <h3 className="font-semibold uppercase text-lg -rotate-90 text-nowrap">{text.title}</h3>
                                     </button>
                                 )}
                             </div>
