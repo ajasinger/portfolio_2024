@@ -2,12 +2,7 @@
 
 import { useState } from "react";
 import { useAnimation, motion } from 'framer-motion';
-
-type ApproachType = {
-    title?: string;
-    body?: string[];
-    bodyList?: { title: string; body: string }[];
-};
+import { ApproachType } from '@/lib/types';
 
 interface Props {
     data: ApproachType[];

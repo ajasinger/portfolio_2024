@@ -2,13 +2,7 @@
 
 import { useState } from "react";
 import { motion } from 'framer-motion';
-
-type LearningsType = {
-    title?: string;
-    body?: string;
-    learnings?: string;
-    bodyList?: { title: string; body: string }[];
-};
+import { LearningsType } from '@/lib/types';
 
 interface Props {
     data: LearningsType[];

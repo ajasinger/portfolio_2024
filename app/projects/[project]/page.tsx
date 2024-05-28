@@ -10,52 +10,7 @@ import LearningsAccordion from '@/components/LearningsAccordion';
 import TwoImageSection from '@/components/TwoImageSection';
 import OneImageSection from '@/components/OneImageSection';
 import SolutionsSection from '@/components/SolutionsSection';
-
-type ProjectType = {
-    param: string;
-    name: string;
-    headerHref: string;
-    headerImgAlt: string;
-    overview: string[];
-    overviewList?: {
-        title: string;
-        list: string[];
-    };
-    websiteURL: string;
-    githubURL?: string;
-    techStack: string[];
-    approach: ApproachType[];
-    solutions?: SolutionsType[];
-    learnings: LearningsType[];
-    images: ImageType[];
-};
-
-type ApproachType = {
-    title?: string;
-    body?: string[];
-    bodyList?: { title: string; body: string }[];
-};
-
-type SolutionsType = {
-    title: string;
-    body: string;
-};
-
-type LearningsType = {
-    title?: string;
-    body?: string;
-    learnings?: string;
-    bodyList?: { title: string; body: string }[];
-};
-
-type ImageType = {
-    src: string;
-    tabletSrc: string;
-    mobileSrc: string;
-    alt: string;
-    srcHover?: string;
-    altHover?: string;
-};
+import { ProjectType } from '@/lib/types';
 
 type MotionSectionProps = {
     children: React.ReactNode;

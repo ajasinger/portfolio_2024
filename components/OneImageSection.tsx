@@ -1,14 +1,6 @@
 'use client';
 import Image from 'next/image';
-
-type ImageType = {
-    src: string;
-    tabletSrc: string;
-    mobileSrc: string;
-    alt: string;
-    srcHover?: string;
-    altHover?: string;
-};
+import { ImageType } from '@/lib/types';
 
 interface Props {
     image: ImageType;
