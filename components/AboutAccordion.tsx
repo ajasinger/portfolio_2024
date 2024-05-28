@@ -1,36 +1,15 @@
 'use client';
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { motion } from 'framer-motion';
 import { aboutCards } from '@/lib/data';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import MotionSection from '@/components/MotionSection';
 
 export default function AboutAccordion() {
     const [isOpen, setIsOpen] = useState(0);
-    const controls = useAnimation();
-
-    const [ref, inView] = useInView({
-        triggerOnce: true,  
-        threshold: 0.1,  
-    });
-
-    useEffect(() => {
-        if (inView) {
-        controls.start('visible');
-        }
-    }, [controls, inView]);
 
     return(
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 1 }}
-        >
+        <MotionSection>
         <div id="about" className="flex">
             <div className="sm:border border-zinc-950 z-50 h-full w-full">
                 {/* mobile header buttons */}
@@ -109,6 +88,6 @@ export default function AboutAccordion() {
                 </div>
             </div>
         </div>
-        </motion.div>
+        </MotionSection>
     )
 }

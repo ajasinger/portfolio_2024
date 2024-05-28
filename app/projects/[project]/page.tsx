@@ -1,9 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
 import { projects } from '@/lib/projects-data';
 import ApproachAccordion from '@/components/ApproachAccordion';
 import LearningsAccordion from '@/components/LearningsAccordion';

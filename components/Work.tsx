@@ -1,37 +1,13 @@
 'use client';
 
-import { useEffect } from "react";
 import { projects } from '@/lib/data';
-import { useAnimation, motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import MotionSection from '@/components/MotionSection';
 import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Work() {
-    const controls = useAnimation();
-
-    const [ref, inView] = useInView({
-        triggerOnce: true,  
-        threshold: 0.1,  
-    });
-
-    useEffect(() => {
-        if (inView) {
-        controls.start('visible');
-        }
-    }, [controls, inView]);
-
     return(
-        <motion.div
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0 },
-            }}
-            transition={{ duration: 1 }}
-        >
+        <MotionSection>
         <div id="work" className="px-8 md:px-16 py-12 sm:py-24 flex flex-col flex-wrap justify-center lg:justify-between gap-8">
             <h3 className="text-2xl md:text-4xl text-cream text-center font-semibold">MY WORK</h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 text-zinc-950">
@@ -71,6 +47,6 @@ export default function Work() {
                 ))}
             </div>
         </div>
-        </motion.div>
+        </MotionSection>
     )
 }
