@@ -94,7 +94,7 @@ export const aboutCards = [
         list: [
             // "I live in Brooklyn with my triathlete husband and inquisitive toddler—who knows that when I put my glasses on and turn on the big screen, “Mommy's working”.",
             "I'm from Toronto, which means you'll likely hear me say “sorry,” but not “eh.”",
-            "I have lived in Toronto, Montreal, and New York (for a long time) and South Africa and Australia (for a short time).",
+            "I have lived in Toronto, Montreal, and New York (for a long time) and South Africa, Italy, and Australia (for a short time).",
             "I just learned to ride a bike two years ago.",
             "I have been meditating and doing yoga on and off for 10 years",
             "I love to draw and paint but I don't get to do it as much as I'd like.", 
