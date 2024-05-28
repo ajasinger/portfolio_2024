@@ -10,40 +10,8 @@ import LearningsAccordion from '@/components/LearningsAccordion';
 import TwoImageSection from '@/components/TwoImageSection';
 import OneImageSection from '@/components/OneImageSection';
 import SolutionsSection from '@/components/SolutionsSection';
+import MotionSection from '@/components/MotionSection';
 import { ProjectType } from '@/lib/types';
-
-type MotionSectionProps = {
-    children: React.ReactNode;
-  };
-
-const MotionSection: React.FC<MotionSectionProps> = ({ children }) => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView({
-      triggerOnce: true,
-      threshold: 0.1,
-    });
-  
-    useEffect(() => {
-      if (inView) {
-        controls.start('visible');
-      }
-    }, [controls, inView]);
-  
-    return (
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={controls}
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        transition={{ duration: 0.5 }}
-      >
-        {children}
-      </motion.div>
-    );
-  };
 
 export default function ProjectPage({ params }: { params: { project: string } }) {
     
