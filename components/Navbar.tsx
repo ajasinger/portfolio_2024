@@ -43,9 +43,9 @@ export default function Navbar() {
                             className="hover:underline underline-offset-8 decoration-1 py-5 sm:py-0"
                         >
                             {link.href === "/" || link.href === "/#work" ||  link.href === "/#about" ? (
-                                <button onClick={handleClick} value={link.href}>{link.name}</button >
+                                <button onClick={handleClick} value={link.href} aria-label={link.ariaLabel}>{link.name}</button >
                             ):(
-                                <Link href={link.href} target="_blank">{link.name}</Link>
+                                <Link href={link.href} target="_blank" aria-label={link.ariaLabel}>{link.name}</Link>
                             )
                             }
                         </li>

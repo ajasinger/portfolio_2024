@@ -9,15 +9,18 @@ export const navLinks = [
     // },
     {
         name:"HOME",
-        href:"/"
+        href:"/",
+        ariaLabel:"link to website homepage"
     },
     {
         name:"LINKEDIN",
-        href:"https://www.linkedin.com/in/ajasinger/"
+        href:"https://www.linkedin.com/in/ajasinger/",
+        ariaLabel:"link to Aja Singer's LinkedIn"
     },
     {
         name:"GITHUB",
-        href:"https://github.com/ajasinger"
+        href:"https://github.com/ajasinger",
+        ariaLabel:"link to Aja Singer's github"
     }
 ]
 
