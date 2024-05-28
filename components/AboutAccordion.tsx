@@ -41,9 +41,9 @@ export default function AboutAccordion() {
                                             <div className="flex flex-col gap-8 text-left sm:p-12">
                                             
                                                 {index === 0 ? (
-                                                    <h5 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">About Me</h5>
+                                                    <h4 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">About Me</h4>
                                                 ) : (
-                                                    <h5 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">{text.title}</h5>
+                                                    <h4 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">{text.title}</h4>
                                                 )}
                                                 {text?.body &&
                                                     <div  className="flex flex-col gap-2">
