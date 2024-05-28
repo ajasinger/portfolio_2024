@@ -18,7 +18,7 @@ export default function Footer() {
                 {pathname !== '/contact' && 
                     <Link 
                         href="/contact"
-                        className="text-lg sm:text-base sm:font-semibold sm:px-6 sm:py-3 sm:bg-cream sm:border sm:border-bg-stone-50 rounded-full hover:underline underline-offset-8 decoration-1 sm:hover:bg-zinc-950 text-cream sm:text-zinc-950 sm:hover:text-cream"
+                        className="text-lg sm:text-base sm:font-semibold sm:px-6 sm:py-3 sm:bg-cream sm:border sm:border-bg-stone-50 rounded-full hover:underline underline-offset-8 decoration-1 sm:hover:no-underline sm:hover:bg-zinc-950 text-cream sm:text-zinc-950 sm:hover:text-cream"
                     >
                         CONTACT ME
                     </Link>
