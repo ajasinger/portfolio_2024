@@ -58,7 +58,7 @@ export const projects = [
                 ],
                 bodyList: [
                     {
-                        title: "PosgresSQL:",
+                        title: "PostgreSQL:",
                         body: "I knew that we would be storing data about users, their connections to one another and to various datasets and tokens, and Supabase provided the PostgreSQL infrastructure to handle this data with an easy to use SDK. "
                     },
                     {
