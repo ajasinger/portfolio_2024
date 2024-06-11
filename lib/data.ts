@@ -81,8 +81,7 @@ export const aboutCards = [
         title: "About me",
         body: [
             "I like making things, but I love learning even more.", 
-            "I built a fashion startup from zero to seven figures and a brand featured on the cover of the New York Times Style section, but you can only innovate so much with women's workwear.", 
-            "I got bored, so I looked for a new challenge to satisfy my desire to build — one where the potential to learn was uncapped.",
+            "I built a fashion startup from zero to seven figures and a brand featured on the cover of the New York Times Style section, but you can only innovate so much with women's workwear, so I looked for a new challenge to satisfy my desire to build — one where the potential to learn was uncapped.",
             "Someone suggested software development and two days later, I was hooked.",
             "It was the most engaged I had been professionally in quite a while — and I never looked back.",
             "Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur friend planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, he was confident: ",
@@ -101,7 +100,7 @@ export const aboutCards = [
             "I just learned to ride a bike two years ago.",
             "I have been meditating and doing yoga on and off for 10 years.",
             "I love to draw and paint but I don't get to do it as much as I'd like.", 
-            "I got behind the wheel of an airplane before a car.",
+            //"I got behind the wheel of an airplane before a car.",
             "I think Rubirosa's vodka pizza is the best pizza in NY. (I will not be taking questions.)",
             "When I'm not coding you'll find me trying to master a crow pose, snapping Polaroids, and seeking out fresh kimchi."
         ]
