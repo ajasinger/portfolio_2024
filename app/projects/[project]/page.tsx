@@ -19,10 +19,10 @@ export default function ProjectPage({ params }: { params: { project: string } })
     return(
         <div className="bg-cream pt-12 sm:pt-24 text-zinc-950 font-sans flex flex-col">
             <Head>
-                <title>{data?.name}</title>
-                <meta name="description" content={`This page is an overview of Aja Singer's work on ${data?.name}.`} />
-                <meta property="og:title" content={data?.name} />
-                <meta property="og:description" content={`This page is an overview of Aja Singer's work on ${data?.name}.`} />
+                <title>Work | Aja Singer</title>
+                <meta name="description" content={`This page is an overview of Aja Singer's work.`} />
+                <meta property="og:title" content="Work" />
+                <meta property="og:description" content={`This page is an overview of Aja Singer's work.`} />
             </Head>
 
             <h3 className="text-4xl font-semibold px-8 md:px-16 pb-8 sm:pb-16">{data?.name}</h3>

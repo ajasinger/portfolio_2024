@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="description" content={metadata?.description ?? ''} />
+      </head>
       <body className={`${sans.className} ${serif.className} bg-zinc-950 text-cream`}>
         < Navbar />
         {children}
