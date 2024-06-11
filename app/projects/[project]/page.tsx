@@ -61,17 +61,19 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
 
                 {/* Tech Stack */}
-                <div className="flex flex-col gap-4 py-12 z-50">
+                <div className="py-12 z-50">
                     <MotionSection>
-                        <h4 className="font-serif text-xl font-semibold">Tech Stack</h4>
-                        <ul className="flex gap-4 flex-wrap">
-                            {data?.techStack?.map((text, index) => (
-                                <li key={index} className="flex gap-4 text-nowrap">
-                                    <span>{text}</span>
-                                    {index !== data?.techStack.length - 1 && <span>/</span>}
-                                </li>
-                            ))}
-                        </ul>
+                        <div className="flex flex-col gap-4 ">
+                            <h4 className="font-serif text-xl font-semibold">Tech Stack</h4>
+                            <ul className="flex gap-4 md:text-lg flex-wrap">
+                                {data?.techStack?.map((text, index) => (
+                                    <li key={index} className="flex gap-4 text-nowrap uppercase">
+                                        <span>{text}</span>
+                                        {index !== data?.techStack.length - 1 && <span>/</span>}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
                     </MotionSection>
                 </div>
 

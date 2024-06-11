@@ -20,7 +20,7 @@ export const projects = [
             ]
         },
         websiteURL: "https://www.silvershield.ai/",
-        techStack: ["Next.js", "Supabase", "Tailwind", "PosgreSQL", "Nylas", "Google APIs", "Sendgrid"],
+        techStack: ["Next.js", "Supabase", "Tailwind", "PostgreSQL", "Nylas", "Google API", "Sendgrid"],
         approach: [
             {
                 title: "Overview",
