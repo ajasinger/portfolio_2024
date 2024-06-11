@@ -87,8 +87,9 @@ export const aboutCards = [
             //"It was the most engaged I had been professionally in quite a while — and I never looked back.",
             //"Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur friend planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, he was confident: ",
             //"“You're smart. You'll figure it out.”",
-            "Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, I knew I could learn.",
-            "And I did.",
+            //"Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, I knew I could learn.",
+            "Seven months later, a conversation about my career change led to my first freelance project. Despite the fact that I hadn't yet built a full-stack web app, I knew I could learn.",
+            //"And I did.",
             "Today, after countless hours debugging, Stack Overflow rabbit holes, and late nights pouring over documentation, I can say that I'm a software developer who was paid to build an AI-powered web app with Next.js, Supabase, and Tailwind.",
             "Now, I'm excited to join a company that values learning and creativity, where I can collaborate and make a meaningful difference.",
         ]
