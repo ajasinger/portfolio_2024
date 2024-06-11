@@ -135,7 +135,7 @@ export const projects = [
             // },
             {
                 title: "Community",
-                body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than if I had tackled them on my own. One of the most transformative hours of my coding career was debugging alongside an experienced dev. It taught me how to approach bugs methodically and strategically.", 
+                body: "This project really showed me how supportive the engineering community is. Between programmers I'd met, Discord groups, and support technicians, I was able to work through problems much more quickly and efficiently than if I had tackled them on my own. One of the most transformative hours of my coding career was learning to debug from an experienced dev. It taught me how to approach bugs methodically and strategically.", 
                 learnings: "While my first step will still be chatGPT/stackOverflow/Reddit I am now better equipped to know when I need help with something, what to try before going for help, and where to find it."
             },
         ], 
