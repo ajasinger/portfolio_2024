@@ -29,7 +29,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
                             <h4 className="text-2xl font-semibold">Project overview</h4>
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 max-w-3xl">
                                 {data?.overview?.map((text, index) => (
                                     <div key={index}>
                                         <p>{text}</p>
@@ -46,7 +46,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                             </div>
                         </div>
                     </div>
-                    <div className="z-0 hidden md:block relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
+                    <div className="z-0 hidden max-w-sm md:block relative overflow-hidden space-y-8 h-full transition ease-in-out duration-300 delay-100 lg:hover:scale-105 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
                         <div className="h-[450px] overflow-y-scroll">
                             {data && 
                                     <Image
@@ -100,11 +100,11 @@ export default function ProjectPage({ params }: { params: { project: string } })
         
 
             {/* Approach */}
-            <div className="px-8 md:px-16 py-12 text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12 text-zinc-950 relative flex justify-center">
                 {/* <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
-                    <div className="z-50">
+                    <div className="z-50 max-w-5xl">
                         <MotionSection>
                             < ApproachAccordion data={data?.approach} />
                         </MotionSection>
@@ -124,10 +124,10 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Problems & Solutions */}
             {data?.solutions && 
-                <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
+                <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10 justify-center w-full">
                     <MotionSection>
-                        <div className="flex flex-col gap-4 lg:px-16">
-                            <h4 className="text-2xl font-semibold">Problems & solutions</h4>
+                        <div className="flex gap-16 max-w-5xl">
+                            <h4 className="text-2xl font-semibold whitespace-nowrap">Problems & solutions</h4>
                             {data?.solutions && < SolutionsSection data={data?.solutions} />}
                             {/* {data?.solutions && < SolutionsCarousel data={data?.solutions} />} */}
                         </div>
@@ -164,11 +164,11 @@ export default function ProjectPage({ params }: { params: { project: string } })
             
 
             {/* Learnings */}
-            <div className="px-8 md:px-16 py-12  text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-12  text-zinc-950 relative flex justify-center ">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
-                    <div className="z-50">
+                    <div className="z-50 max-w-5xl">
                         <MotionSection>
                             < LearningsAccordion data={data?.learnings} />
                         </MotionSection>
