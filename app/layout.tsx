@@ -14,7 +14,7 @@ const serif = DM_Serif_Display({
 
 export const metadata: Metadata = {
   title: "Aja Singer",
-  description: "Aja Singer is a software engineeer building at the intersection of technology and creativity.",
+  description: "Aja Singer is a software engineer and creative.",
 };
 
 export default function RootLayout({
