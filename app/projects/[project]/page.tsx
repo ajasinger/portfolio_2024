@@ -1,7 +1,5 @@
-'use client';
-
 import Image from 'next/image';
-import Head from 'next/head';
+import { Metadata } from 'next';
 import { projects } from '@/lib/projects-data';
 import ApproachAccordion from '@/components/ApproachAccordion';
 import LearningsAccordion from '@/components/LearningsAccordion';
@@ -11,6 +9,11 @@ import SolutionsSection from '@/components/SolutionsSection';
 import MotionSection from '@/components/MotionSection';
 import { ProjectType } from '@/lib/types';
 
+export const metadata: Metadata = {
+    title: "Work | Aja Singer",
+    description: "This is an overview of Aja Singer's work.",
+  };
+
 export default function ProjectPage({ params }: { params: { project: string } }) {
     
     //set data to current project object
@@ -18,13 +21,6 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
     return(
         <div className="bg-cream pt-12 sm:pt-24 text-zinc-950 font-sans flex flex-col">
-            <Head>
-                <title>Work | Aja Singer</title>
-                <meta name="description" content={`This page is an overview of Aja Singer's work.`} />
-                <meta property="og:title" content="Work" />
-                <meta property="og:description" content={`This page is an overview of Aja Singer's work.`} />
-            </Head>
-
             <h3 className="text-4xl font-semibold px-8 md:px-16 pb-8 sm:pb-16">{data?.name}</h3>
             
             {/* Intro Section */}
