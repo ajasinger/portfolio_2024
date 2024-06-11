@@ -124,8 +124,8 @@ export default function ProjectPage({ params }: { params: { project: string } })
             {data?.solutions && 
                 <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
                     <MotionSection>
-                        <div className="flex flex-col gap-4">
-                            <h4 className="font-serif text-xl font-semibold text-center">Problems & Solutions</h4>
+                        <div className="flex flex-col gap-4 lg:px-16">
+                            <h4 className="font-serif text-xl font-semibold">Problems & Solutions</h4>
                             {data?.solutions && < SolutionsSection data={data?.solutions} />}
                             {/* {data?.solutions && < SolutionsCarousel data={data?.solutions} />} */}
                         </div>
