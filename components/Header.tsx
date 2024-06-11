@@ -14,7 +14,7 @@ export default function Header() {
       >
         <h2 className="text-2xl md:text-3xl font-thin max-w-4xl leading-relaxed">
           a<span className="font-serif"> full-stack engineer </span>and 
-          <span className="font-serif"> creative thinker</span>.
+          <span className="font-serif"> creative</span>.
         </h2>
       </motion.div>
       <motion.div
