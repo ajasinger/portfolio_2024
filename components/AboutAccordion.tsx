@@ -25,6 +25,7 @@ export default function AboutAccordion() {
                         </div>
                     ))}
                 </div>
+                {/* section body */}
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">
                         {aboutCards?.map((text, index) => (
@@ -41,9 +42,9 @@ export default function AboutAccordion() {
                                             <div className="flex flex-col gap-8 text-left sm:p-12">
                                             
                                                 {index === 0 ? (
-                                                    <h3 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">About Me</h3>
+                                                    <h3 className="hidden sm:block font-semibold text-2xl md:text-4xl text-left">About me</h3>
                                                 ) : (
-                                                    <h3 className="hidden sm:block font-semibold text-2xl md:text-4xl uppercase text-left">{text.title}</h3>
+                                                    <h3 className="hidden sm:block font-semibold text-2xl md:text-4xl text-left">{text.title}</h3>
                                                 )}
                                                 {text?.body &&
                                                     <div  className="flex flex-col gap-2">

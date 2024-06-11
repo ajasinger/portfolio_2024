@@ -29,6 +29,7 @@ export default function ApproachAccordion({ data }: Props) {
                         ))}
                     </div>
                 }
+                {/* section body */}
                 <div className="flex flex-col gap-4">
                     <div className="flex divide-x-2 divide-transparent">
                         {data?.map((text, index) => (
@@ -44,9 +45,9 @@ export default function ApproachAccordion({ data }: Props) {
                                         >
                                             <div className="flex flex-col gap-4 text-left md:p-16">
                                                 {index === 0 ? (
-                                                    <h5 className="font-semibold text-left text-xl font-serif">Approach</h5>
+                                                    <h5 className="font-semibold text-left text-2xl">Approach</h5>
                                                 ) : (
-                                                    <h5 className="font-semibold font-serif text-left text-xl">{text.title}</h5>
+                                                    <h5 className="font-semibold text-left text-2xl">{text.title}</h5>
                                                 )}
                                                 <div  className="flex flex-col gap-2">
                                                     {text?.body?.map((bodyText, index) => (

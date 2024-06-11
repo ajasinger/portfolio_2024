@@ -21,14 +21,14 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
     return(
         <div className="bg-cream pt-12 sm:pt-24 text-zinc-950 font-sans flex flex-col">
-            <h3 className="text-4xl font-semibold px-8 md:px-16 pb-8 sm:pb-16">{data?.name}</h3>
+            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16 pb-8 sm:pb-16">{data?.name}</h3>
             
             {/* Intro Section */}
             <div className="flex flex-col gap-4 px-8 md:px-16">
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
-                            <h4 className="font-serif text-xl font-semibold">Project Overview</h4>
+                            <h4 className="text-2xl font-semibold">Project overview</h4>
                             <div className="flex flex-col gap-2">
                                 {data?.overview?.map((text, index) => (
                                     <div key={index}>
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 <div className="py-12 z-50">
                     <MotionSection>
                         <div className="flex flex-col gap-4 ">
-                            <h4 className="font-serif text-xl font-semibold">Tech Stack</h4>
+                            <h4 className="text-2xl font-semibold">Tech stack</h4>
                             <ul className="flex gap-4 md:text-lg flex-wrap">
                                 {data?.techStack?.map((text, index) => (
                                     <li key={index} className="flex gap-4 text-nowrap uppercase">
@@ -127,7 +127,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
                     <MotionSection>
                         <div className="flex flex-col gap-4 lg:px-16">
-                            <h4 className="font-serif text-xl font-semibold">Problems & Solutions</h4>
+                            <h4 className="text-2xl font-semibold">Problems & solutions</h4>
                             {data?.solutions && < SolutionsSection data={data?.solutions} />}
                             {/* {data?.solutions && < SolutionsCarousel data={data?.solutions} />} */}
                         </div>
