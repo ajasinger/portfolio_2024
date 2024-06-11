@@ -21,10 +21,10 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
     return(
         <div className="bg-cream py-12 sm:py-24 text-zinc-950 font-sans flex flex-col">
-            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16 pb-12">{data?.name}</h3>
+            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16">{data?.name}</h3>
             
             {/* Intro Section */}
-            <div className="flex flex-col gap-24 px-8 md:px-16 py-12">
+            <div className="flex flex-col gap-12 px-8 md:px-16 py-12">
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
