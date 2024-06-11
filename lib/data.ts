@@ -3,14 +3,14 @@ export const navLinks = [
     //     name:"ABOUT ME",
     //     href:"/#about"
     // },
-    // {
-    //     name:"WORK",
-    //     href:"/#work"
-    // },
     {
         name:"HOME",
         href:"/",
         ariaLabel:"link to website homepage"
+    },
+    {
+        name:"WORK",
+        href:"/#work"
     },
     {
         name:"LINKEDIN",
