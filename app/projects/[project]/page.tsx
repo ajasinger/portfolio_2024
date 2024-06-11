@@ -20,11 +20,11 @@ export default function ProjectPage({ params }: { params: { project: string } })
     const data: ProjectType | undefined = projects.find(project => project.param === params.project);
 
     return(
-        <div className="bg-cream pt-12 sm:pt-24 text-zinc-950 font-sans flex flex-col">
-            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16 pb-8 sm:pb-16">{data?.name}</h3>
+        <div className="bg-cream py-12 sm:py-24 text-zinc-950 font-sans flex flex-col">
+            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16 pb-6 sm:pb-12">{data?.name}</h3>
             
             {/* Intro Section */}
-            <div className="flex flex-col gap-4 px-8 md:px-16">
+            <div className="flex flex-col gap-4 px-8 md:px-16 py-6 sm:py-12">
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
@@ -61,7 +61,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
 
                 {/* Tech Stack */}
-                <div className="py-12 z-50">
+                <div className="z-50">
                     <MotionSection>
                         <div className="flex flex-col gap-4 ">
                             <h4 className="text-2xl font-semibold">Tech stack</h4>
@@ -79,7 +79,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             </div>
 
-                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-12" : "px-8 md:px-16 py-12 lg:p-0"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-6 sm:py-12" : "px-8 md:px-16 py-6 sm:py-12 lg:p-0"} text-zinc-950 relative`}>
                     <div className="bg-[#E0FEAF] absolute -top-[10rem] right-[20rem] 2xl:left-[20rem] h-[81.25rem] md:h-[31.25rem] lg:h-[61.25rem] w-[31.25rem] lg:w-[61.25rem] rounded-full blur-[7rem] z-0"></div>
                     <div className="bg-[#EDCEE2] absolute top-[55rem] md:top-[10rem] right-[0rem] h-[21.25rem] md:h-[31.25rem] lg:h-[61.25rem] w-[50rem] lg:w-[51.25rem] rounded-full blur-[7rem] z-0"></div>
                     <MotionSection>
@@ -100,7 +100,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
         
 
             {/* Approach */}
-            <div className="px-8 md:px-16 py-12 text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-6 sm:py-12 text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
@@ -113,7 +113,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* One Image Section */}
-            <div className="lg:hidden px-8 md:px-16 py-12 relative">
+            <div className="lg:hidden px-8 md:px-16 py-6 sm:py-12 relative">
                 <div className="bg-[#E0FEAF] absolute top-[15rem] sm:-top-[5rem] md:-top-[20rem] right-[5rem] 2xl:left-[20rem] h-[41.25rem] w-[31.25rem] lg:w-[81.25rem] rounded-full blur-[7rem] z-0"></div>
                 <MotionSection>
                     {data && 
@@ -124,7 +124,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Problems & Solutions */}
             {data?.solutions && 
-                <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10">
+                <div className="px-8 md:px-16 py-6 sm:py-12  text-zinc-950 flex gap-24 z-10">
                     <MotionSection>
                         <div className="flex flex-col gap-4 lg:px-16">
                             <h4 className="text-2xl font-semibold">Problems & solutions</h4>
@@ -136,7 +136,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             }
 
             
-                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-12" : "p-0 lg:px-16 lg:py-12"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-6 sm:py-12" : "p-0 lg:px-16 lg:py-12"} text-zinc-950 relative`}>
                     <div className="bg-[#D8D5FF] absolute top-[-10rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                     <div className="bg-[#E0FEAF] absolute top-[15rem] md:top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                     <MotionSection>
@@ -164,7 +164,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             
 
             {/* Learnings */}
-            <div className="px-8 md:px-16 py-12 pb-24  text-zinc-950 relative">
+            <div className="px-8 md:px-16 py-6 sm:py-12 pb-24  text-zinc-950 relative">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
