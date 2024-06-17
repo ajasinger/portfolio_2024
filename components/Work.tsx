@@ -31,7 +31,7 @@ export default function Work() {
                                 />
                             </div>
                             <div className="space-y-2 z-100">
-                                <h4 className="text-lg font-serif font-semibold z-50">{project.name}</h4>
+                                <h4 className="text-lg font-medium z-50">{project.name}</h4>
                                 <p className="z-50">{project.body}</p>
                             </div>
                             <div className="bg-[#E0FEAF] -z-10 absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem]"></div>

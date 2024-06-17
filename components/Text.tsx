@@ -9,8 +9,8 @@ export default function Text() {
             <div className="bg-[#EDCEE2] absolute z-0 top-[15rem] right-[-25rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem]"></div>
             <MotionSection>
             <div className="flex justify-center">
-                <h2 className="text-center sm:text-left text-2xl md:text-3xl font-thin leading-relaxed z-50">
-                    Engineering <span className="font-serif"> creative </span> solutions to <span className="font-serif"> meaningful </span> problems.
+                <h2 className="text-center sm:text-left text-2xl md:text-3xl font-light leading-relaxed z-50">
+                    Engineering <span className="font-medium"> creative </span> solutions to <span className="font-medium"> meaningful </span> problems.
                 </h2>
             </div>
             </MotionSection>

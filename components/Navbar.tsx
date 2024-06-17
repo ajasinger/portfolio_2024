@@ -21,7 +21,7 @@ export default function Navbar() {
     }
 
     return(
-        <nav  className={`${isOpen && pathname === '/' && "border-b border-white"} font-sans text-lg px-8 md:px-16 py-4 sm:py-8`}>
+        <nav  className={`${isOpen && pathname === '/' && "border-b border-white"} font-general-sans text-lg px-8 md:px-16 py-4 sm:py-8`}>
             <div className="sm:hidden flex justify-end">
                 <button 
                     onClick={handleToggle}

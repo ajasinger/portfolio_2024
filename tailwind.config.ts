@@ -10,6 +10,10 @@ const config: Config = {
     extend: {
       colors: {
         cream: "#FAFAF7"
+      },
+      fontFamily: {
+        'general-sans': ['General Sans', 'sans-serif'],
+        'clash-grotesk': ['Clash Grotesk', 'sans-serif'],
       }
     },
   },
