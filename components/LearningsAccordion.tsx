@@ -54,7 +54,7 @@ export default function LearningsAccordion({ data }: Props) {
                                                 </div>
                                                 <div className="max-w-xl 2xl:max-w-2xl">
                                                     <p>
-                                                        {index !== 0 && <span className="font-semibold">Learnings:{' '}</span>}
+                                                        {index !== 0 && <span className="font-medium">Learnings:{' '}</span>}
                                                         {text.learnings}
                                                     </p>
                                                 </div>
