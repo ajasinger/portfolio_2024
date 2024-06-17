@@ -21,10 +21,10 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
     return(
         <div className="bg-cream py-12 sm:py-24 text-zinc-950 font-sans flex flex-col">
-            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16">{data?.name}</h3>
+            <h3 className="text-4xl font-serif font-semibold px-8 md:px-16 2xl:px-48">{data?.name}</h3>
             
             {/* Intro Section */}
-            <div className="flex flex-col gap-12 px-8 md:px-16 py-12">
+            <div className="flex flex-col gap-12 px-8 md:px-16 2xl:px-48 py-12">
                 <div className="flex gap-28 justify-between w-full">
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
@@ -79,7 +79,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             </div>
 
-                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-12" : "px-8 md:px-16 py-12 lg:p-0"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 2xl:px-48 py-12" : "px-8 md:px-16 py-12 lg:p-0"} text-zinc-950 relative`}>
                     <div className="bg-[#E0FEAF] absolute -top-[10rem] right-[20rem] 2xl:left-[20rem] h-[81.25rem] md:h-[31.25rem] lg:h-[61.25rem] w-[31.25rem] lg:w-[61.25rem] rounded-full blur-[7rem] z-0"></div>
                     <div className="bg-[#EDCEE2] absolute top-[55rem] md:top-[10rem] right-[0rem] h-[21.25rem] md:h-[31.25rem] lg:h-[61.25rem] w-[50rem] lg:w-[51.25rem] rounded-full blur-[7rem] z-0"></div>
                     <MotionSection>
@@ -100,7 +100,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
         
 
             {/* Approach */}
-            <div className="px-8 md:px-16 py-12 text-zinc-950 relative flex justify-center">
+            <div className="px-8 md:px-16 2xl:px-48 py-12 text-zinc-950 relative flex justify-center">
                 {/* <div className="bg-[#E0FEAF] absolute top-[3rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
@@ -113,7 +113,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             </div>
 
             {/* One Image Section */}
-            <div className="lg:hidden px-8 md:px-16 py-12 relative">
+            <div className="lg:hidden px-8 md:px-16 2xl:px-48 py-12 relative">
                 <div className="bg-[#E0FEAF] absolute top-[15rem] sm:-top-[5rem] md:-top-[20rem] right-[5rem] 2xl:left-[20rem] h-[41.25rem] w-[31.25rem] lg:w-[81.25rem] rounded-full blur-[7rem] z-0"></div>
                 <MotionSection>
                     {data && 
@@ -124,7 +124,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
 
             {/* Problems & Solutions */}
             {data?.solutions && 
-                <div className="px-8 md:px-16 py-12  text-zinc-950 flex gap-24 z-10 justify-center w-full">
+                <div className="px-8 md:px-16 2xl:px-48 py-12  text-zinc-950 flex gap-24 z-10 justify-center w-full">
                     <MotionSection>
                         <div className="flex gap-16 max-w-5xl">
                             <h4 className="text-2xl font-semibold whitespace-nowrap">Problems & solutions</h4>
@@ -136,7 +136,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             }
 
             
-                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 py-12" : "p-0 lg:px-16 lg:py-12"} text-zinc-950 relative`}>
+                <div className={`${data && data.images.length - 1 > 1 ? "px-8 md:px-16 2xl:px-48 py-12" : "p-0 lg:px-16 2xl:px-48 lg:py-12"} text-zinc-950 relative`}>
                     <div className="bg-[#D8D5FF] absolute top-[-10rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
                     <div className="bg-[#E0FEAF] absolute top-[15rem] md:top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
                     <MotionSection>
@@ -164,7 +164,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
             
 
             {/* Learnings */}
-            <div className="px-8 md:px-16 py-12  text-zinc-950 relative flex justify-center ">
+            <div className="px-8 md:px-16 2xl:px-48 py-12  text-zinc-950 relative flex justify-center ">
                 {/* <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div> */}
                 {/* <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div> */}
                 { data && 
