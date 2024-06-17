@@ -20,7 +20,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
     const data: ProjectType | undefined = projects.find(project => project.param === params.project);
 
     return(
-        <div className="bg-cream py-12 sm:py-24 text-zinc-950 font-sans flex flex-col">
+        <div className="bg-cream py-12 md:py-24 text-zinc-950 font-sans flex flex-col">
             <h3 className="text-4xl font-serif font-semibold px-8 md:px-16 2xl:px-48">{data?.name}</h3>
             
             {/* Intro Section */}

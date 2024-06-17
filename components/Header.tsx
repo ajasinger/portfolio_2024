@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 export default function Header() {
   return (
-    <header className="px-8 md:px-16 2xl:px-48 pt-4 sm:pt-8 pb-12 sm:pb-24 flex flex-col gap-8">
-      <h1 className="text-[75px] sm:text-[100px] md:text-[150px] lg:text-[200px] xl:text-[250px] font-semibold">Hi, I&apos;m Aja</h1>
+    <header className="px-8 md:px-16 2xl:px-48 pt-4 md:pt-8 pb-12 md:pb-24 flex flex-col gap-8">
+      <h1 className="text-[75px] sm:text-[100px] md:text-[125px] lg:text-[200px] xl:text-[250px] font-semibold">Hi, I&apos;m Aja</h1>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

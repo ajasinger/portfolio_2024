@@ -7,7 +7,7 @@ export default function Footer() {
     const pathname = usePathname();
 
     return(
-        <footer className="bg-zinc-950 px-8 md:px-16 2xl:px-48 py-12 sm:py-24 flex flex-col sm:flex-row justify-between gap-8 sm:gap-16 font-sans relative bottom-0 z-50">
+        <footer className="bg-zinc-950 px-8 md:px-16 2xl:px-48 py-12 md:py-24 flex flex-col sm:flex-row justify-between gap-8 sm:gap-16 font-sans relative bottom-0 z-50">
             <div className="flex flex-col gap-8">
                 <Link href="/"><h2 className="text-3xl max-w-4xl font-semibold">AJA SINGER</h2></Link>
                 {/* <Link href="/#work" className="text-xl hover:underline underline-offset-8 decoration-1">WORK</Link> */}
