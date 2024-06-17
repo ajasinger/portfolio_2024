@@ -13,7 +13,7 @@ const config: Config = {
       },
       fontFamily: {
         'general-sans': ['General Sans', 'sans-serif'],
-        'clash-grotesk': ['Clash Grotesk', 'sans-serif'],
+        // 'clash-grotesk': ['Clash Grotesk', 'sans-serif'],
       }
     },
   },
