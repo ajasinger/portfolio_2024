@@ -36,29 +36,29 @@ export default function LearningsAccordion({ data }: Props) {
                             <div key={index}>
                                 {isOpen === index ? (
                                     <div
-                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "sm:min-h-[300px] md:min-h-[625px] lg:min-h-[425px] xl:min-h-[375px] 2xl:min-h-[350px]"}`}
+                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "md:min-h-[545px] lg:min-h-[400px] xl:min-h-[400px] 2xl:min-h-[375px]"}`}
                                     >
                                         <motion.div
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             transition={{ duration: 0.5 }}
                                         >
-                                            <div className="flex flex-col gap-4 text-left md:p-16">
+                                            <div className="flex flex-col gap-4 text-left md:p-12">
                                                 {index === 0 ? (
                                                     <h5 className="font-semibold text-left text-2xl">Learnings</h5>
                                                 ) : (
                                                     <h5 className="font-semibold text-left text-2xl">{text.title}</h5>
                                                 )}
-                                                <div>
+                                                <div className="flex flex-col gap-2 max-w-xl 2xl:max-w-2xl">
                                                     {text.body}
                                                 </div>
-                                                <div>
+                                                <div className="max-w-xl 2xl:max-w-2xl">
                                                     <p>
                                                         {index !== 0 && <span className="font-semibold">Learnings:{' '}</span>}
                                                         {text.learnings}
                                                     </p>
                                                 </div>
-                                                <div className="flex flex-col gap-2">
+                                                <div className="flex flex-col gap-2 max-w-xl 2xl:max-w-2xl">
                                                     {text?.bodyList?.map((listText, index) => (
                                                         <ol key={index} className="list-disc ml-8">
                                                             <li>

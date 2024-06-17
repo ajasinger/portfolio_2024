@@ -36,14 +36,14 @@ export default function ApproachAccordion({ data }: Props) {
                             <div key={index}>
                                 {isOpen === index ? (
                                     <div
-                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "sm:min-h-[350px] md:min-h-[725px] lg:min-h-[475px] xl:min-h-[400px] 2xl:min-h-[375px]"}`}
+                                        className={`w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 ${data?.length-1 > 1 && "md:min-h-[630px] lg:min-h-[440px] xl:min-h-[440px] 2xl:min-h-[415px]"}`}
                                     >
                                         <motion.div
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             transition={{ duration: 0.5 }}
                                         >
-                                            <div className="flex flex-col gap-4 text-left md:p-16">
+                                            <div className="flex flex-col gap-4 text-left md:p-12">
                                                 {index === 0 ? (
                                                     <h5 className="font-semibold text-left text-2xl">Approach</h5>
                                                 ) : (
@@ -53,13 +53,13 @@ export default function ApproachAccordion({ data }: Props) {
                                                     {text?.body?.map((bodyText, index) => (
                                                         <div 
                                                             key={index} 
-                                                            className="z-50 flex flex-col gap-2"
+                                                            className="z-50 flex flex-col gap-2 max-w-xl 2xl:max-w-2xl"
                                                         >
                                                             {bodyText}
                                                         </div>
                                                     ))}
                                                 </div>
-                                                <div className="flex flex-col gap-2">
+                                                <div className="flex flex-col gap-2 max-w-xl 2xl:max-w-2xl">
                                                     {text?.bodyList?.map((listText, index) => (
                                                         <ol key={index} className="list-disc ml-8">
                                                             <li>
