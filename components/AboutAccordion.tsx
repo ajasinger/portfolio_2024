@@ -11,9 +11,9 @@ export default function AboutAccordion() {
     return(
         <MotionSection>
         <div id="about" className="flex">
-            <div className="sm:border border-zinc-950 z-50 h-full w-full">
+            <div className="md:border border-zinc-950 z-50 h-full w-full">
                 {/* mobile header buttons */}
-                <div className="flex flex-wrap gap-4 pb-8 sm:hidden">
+                <div className="flex flex-wrap gap-4 pb-8 md:hidden">
                     {aboutCards?.map((text, index) => (
                         <div key={index}>
                             <button
@@ -32,19 +32,19 @@ export default function AboutAccordion() {
                             <div key={index}>
                                 {isOpen === index ? (
                                     <div
-                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 sm:min-h-[850px] md:min-h-[785px] lg:min-h-[625px] xl:min-h-[575px] 2xl:min-h-[550px]"
+                                        className="w-full bg-transparent text-zinc-950 text-lgflex flex-col gap-2 md:min-h-[650px] lg:min-h-[585px] 2xl:min-h-[535px]"
                                     >
                                         <motion.div
                                             initial={{ opacity: 0 }}
                                             animate={{ opacity: 1 }}
                                             transition={{ duration: 0.5 }}
                                         >
-                                            <div className="flex flex-col gap-8 text-left sm:p-12">
+                                            <div className="flex flex-col gap-8 text-left md:p-12">
                                             
                                                 {index === 0 ? (
-                                                    <h3 className="hidden sm:block font-semibold text-2xl md:text-4xl text-left">About me</h3>
+                                                    <h3 className="hidden md:block font-semibold text-2xl md:text-4xl text-left">About me</h3>
                                                 ) : (
-                                                    <h3 className="hidden sm:block font-semibold text-2xl md:text-4xl text-left">{text.title}</h3>
+                                                    <h3 className="hidden md:block font-semibold text-2xl md:text-4xl text-left">{text.title}</h3>
                                                 )}
                                                 {text?.body &&
                                                     <div  className="flex flex-col gap-2">
@@ -52,7 +52,7 @@ export default function AboutAccordion() {
                                                         {text?.body?.map((bodyText, index) => (
                                                             <div 
                                                                 key={index} 
-                                                                className="z-50 flex flex-col gap-2"
+                                                                className="z-50 flex flex-col gap-2 max-w-xl 2xl:max-w-2xl"
                                                             >
                                                                 {bodyText}
                                                             </div>
@@ -60,7 +60,7 @@ export default function AboutAccordion() {
                                                     </div>
                                                 }
                                                 {text?.list &&
-                                                    <div className="flex flex-col gap-2">
+                                                    <div className="flex flex-col gap-2 max-w-xl 2xl:max-w-2xl">
                                                         <ol className="list-decimal flex flex-col gap-2  ml-6 sm:ml-4">
                                                             {text?.list?.map((listText, index) => (
                                                                 <li key={index}>
@@ -91,7 +91,7 @@ export default function AboutAccordion() {
                                 ): (
                                     <button
                                         key={index}
-                                        className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full hidden sm:flex justify-center items-center hover:border-zinc-950 ${index !== aboutCards?.length-1 && "hover:border-r"} ${index !== 0 && "hover:border-l"}`}
+                                        className={`bg-zinc-950 hover:bg-transparent text-cream hover:text-zinc-950  w-16 h-full hidden md:flex justify-center items-center hover:border-zinc-950 ${index !== aboutCards?.length-1 && "hover:border-r"} ${index !== 0 && "hover:border-l"}`}
                                         onClick={() => setIsOpen(index)}
                                     >
                                         <h3 className="font-semibold uppercase text-lg -rotate-90 text-nowrap">{text.title}</h3>
