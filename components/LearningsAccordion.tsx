@@ -36,7 +36,7 @@ export default function LearningsAccordion({ data }: Props) {
                             <div key={index}>
                                 {isOpen === index ? (
                                     <div
-                                        className={`w-full bg-transparent text-zinc-950 text-lg flex flex-col gap-2 ${data?.length-1 > 1 && "md:min-h-[545px] lg:min-h-[400px] xl:min-h-[400px] 2xl:min-h-[375px]"}`}
+                                        className={`w-full bg-transparent text-zinc-950 text-lg flex flex-col gap-2 ${data?.length-1 > 1 && "md:min-h-[590px] lg:min-h-[450px] 2xl:min-h-[390px]"}`}
                                     >
                                         <motion.div
                                             initial={{ opacity: 0 }}
