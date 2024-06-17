@@ -29,7 +29,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     <div className="flex flex-col gap-16">
                         <div className="flex flex-col gap-4">
                             <h4 className="text-2xl font-semibold">Project overview</h4>
-                            <div className="flex flex-col gap-2 max-w-3xl">
+                            <div className="flex flex-col gap-2 max-w-xl xl:max-w-2xl">
                                 {data?.overview?.map((text, index) => (
                                     <div key={index}>
                                         <p>{text}</p>
@@ -65,7 +65,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                     <MotionSection>
                         <div className="flex flex-col gap-4 ">
                             <h4 className="text-2xl font-semibold">Tech stack</h4>
-                            <ul className="flex gap-4 md:text-lg flex-wrap">
+                            <ul className="flex gap-4 flex-wrap">
                                 {data?.techStack?.map((text, index) => (
                                     <li key={index} className="flex gap-4 text-nowrap uppercase">
                                         <span>{text}</span>

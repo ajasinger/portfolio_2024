@@ -12,7 +12,7 @@ interface Props {
 export default function SolutionsSection({ data }: Props) {
 
     return(
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 max-w-xl 2xl:max-w-2xl">
             {data?.map((text, index) => (
                 <div key={index}>
                     <p><span className="font-semibold">{text.title}:{' '}</span>{text.body}</p>
