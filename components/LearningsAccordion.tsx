@@ -62,7 +62,7 @@ export default function LearningsAccordion({ data }: Props) {
                                                     {text?.bodyList?.map((listText, index) => (
                                                         <ol key={index} className="list-disc ml-8">
                                                             <li>
-                                                                <p><span className="font-semibold">{listText.title}</span>{' '}{listText.body}</p>
+                                                                <p><span className="font-medium">{listText.title}</span>{' '}{listText.body}</p>
                                                             </li>
                                                         </ol>
                                                     ))}
