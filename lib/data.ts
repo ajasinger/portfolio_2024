@@ -29,6 +29,7 @@ export const techStack = [{ name: "NEXT.JS" }, { name: "REACT" }, { name: "JAVAS
 export const projects = [
     {
         href: "/images/silvershield_site.png",
+        mobileHref: "/images/silvershield_site_cropped.png",
         name: "Silvershield", 
         alt: "Silvershield website landing page",
         body: "A full-stack web app built with Next.js, Supabase, and Tailwind for AI-enabled fraud detection.",
@@ -36,6 +37,7 @@ export const projects = [
     },
     {
         href: "/images/visiblework_site.png",
+        mobileHref: "/images/visiblework_site_cropped.png",
         name: "Visible Work", 
         alt: "Visible Work website landing page",
         body: "A JavaScript website for a personal branding service.",
