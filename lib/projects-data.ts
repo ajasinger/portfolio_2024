@@ -20,7 +20,7 @@ export const projects = [
             ]
         },
         websiteURL: "https://www.silvershield.ai/",
-        techStack: ["Next.js", "Supabase", "Tailwind", "PostgreSQL", "Nylas", "Google API", "Sendgrid"],
+        techStack: ["Next.js", "Supabase", "Tailwind CSS", "PostgreSQL", "Nylas", "Google Cloud Platform", "OAuth 2.0", "Sendgrid"],
         approach: [
             {
                 title: "Overview",
@@ -28,7 +28,7 @@ export const projects = [
                     "When I built the Silvershield platform, I focused on two key things: security and scalability.",
                     "Our users would be trusting us with sensitive data, so keeping it safe was a top priority. The first iteration of the platform analyzes email inboxes for fraud but in the future will also analyze bank accounts, and messages so it needed to be adaptable and scalable.",
                     "Also, with users in their 40s-50s and their senior parents, the interface needed to be both modern and intuitive to a senior user.",
-                    "To achieve this I chose to use Next.js, Supabase, Nylas, Sendgrid, Tailwind, and hosted the platform on Vercel."
+                    "To achieve this I chose to use Next.js, Supabase, Nylas, Sendgrid, Tailwind CSS, and hosted the platform on Vercel."
                 ],
             },
             {
@@ -116,7 +116,7 @@ export const projects = [
             {
                 title: "Overview",
                 body: "If I were to list all the things I learned while developing this project it would be an essay. This project took me from an aspiring coder to a full-fledged software engineer.", 
-                learnings: "Some of the things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind, and most importantly, debugging and interpreting logs."
+                learnings: "Some of the things I taught myself while building this project: auth, SMTPs, databases, storage, SDKs, google API, webhooks, cron jobs, edge functions, postgreSQL, Row Level Security, JWTs, Tailwind CSS, and most importantly, debugging and interpreting logs."
             },
             {
                 title: "Flexibility",

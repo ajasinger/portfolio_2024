@@ -24,7 +24,7 @@ export const navLinks = [
     }
 ]
 
-export const techStack = [{ name: "NEXT.JS" }, { name: "REACT" }, { name: "JAVASCRIPT" }, { name: "TYPESCRIPT" }, { name: "TAILWIND" }, { name: "CSS" } ]
+export const techStack = [{ name: "NEXT.JS" }, { name: "REACT" }, { name: "JAVASCRIPT" }, { name: "TYPESCRIPT" }, { name: "TAILWIND CSS" }, { name: "CSS" } ]
 
 export const projects = [
     {
@@ -32,7 +32,7 @@ export const projects = [
         mobileHref: "/images/silvershield_site_cropped.png",
         name: "Silvershield", 
         alt: "Silvershield website landing page",
-        body: "A full-stack web app built with Next.js, Supabase, and Tailwind for AI-enabled fraud detection.",
+        body: "A full-stack web app built with Next.js, Supabase, and Tailwind CSS for AI-enabled fraud detection.",
         param: "silvershield"
     },
     {
@@ -92,7 +92,7 @@ export const aboutCards = [
             //"Seven months later, a conversation about my career change led to my first freelance project — a web application for a company an entrepreneur planned to incubate. Despite the fact that I hadn't yet built a full-stack web app, I knew I could learn.",
             "Seven months later, a conversation about my career change led to my first freelance project. Despite the fact that I hadn't yet built a full-stack web app, I knew I could learn.",
             //"And I did.",
-            "Today, after countless hours debugging, Stack Overflow rabbit holes, and late nights pouring over documentation, I can say that I'm a software developer who was paid to build an AI-powered web app with Next.js, Supabase, and Tailwind.",
+            "Today, after countless hours debugging, Stack Overflow rabbit holes, and late nights pouring over documentation, I can say that I'm a software developer who was paid to build an AI-powered web app with Next.js, Supabase, and Tailwind CSS.",
             "Now, I'm excited to join a company that values learning and creativity, where I can collaborate and make a meaningful difference.",
         ]
     },
