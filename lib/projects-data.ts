@@ -68,14 +68,18 @@ export const projects = [
                 ]
             },
             {
-                title: "Nylas",
+                title: "GCP",
                 body: [
-                    "Nylas enabled quick integrationg with many email providers."
+                    "Google Cloud Platform provided quick, seamless, and cost effective integration with most users' inboxes."
                 ],
                 bodyList: [
                     {
                         title: "Efficiency:",
-                        body: "Given that we want seniors to connect their inboxes we wanted our platform to be compatible with a wide range of email providers. Instead of integrating individual email APIs I selected Nylas as an efficient way to get up and running and test the product. Eventually we will switch over to individual email APIs for cost saving."
+                        body: "After trying Nylas, which we still use for other email providers, I realized that it would improve user experience in terms of user flow and speed to connect directly through GCP."
+                    },
+                    {
+                        title: "Reliability:",
+                        body: "Connecting to GCP on behalf of a user requires consistently requesting new access tokens and refreshing the pub/sub watch on the user's inbox. Handling this on our end means we can quickly identify and handle any service interruptions for individual users."
                     },
                 ]
             }
