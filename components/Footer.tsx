@@ -23,7 +23,7 @@ export default function Footer() {
                         CONTACT ME
                     </Link>
                 }
-                <p>info@ajasinger.com</p>
+                {/* <p>info@ajasinger.com</p> */}
             </div>
 
         </footer>
