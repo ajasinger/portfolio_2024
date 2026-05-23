@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Work from "@/components/Work";
-import AboutAccordion from "@/components/AboutAccordion";
+import About from "@/components/About";
 import Text from "@/components/Text";
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
         <div className="bg-[#E0FEAF] absolute top-[-15rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
         <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
           <div className="z-50 max-w-5xl">
-            < AboutAccordion />
+            < About />
           </div>
       </div>
       < Work />

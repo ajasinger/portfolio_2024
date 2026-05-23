@@ -1,38 +1,29 @@
 export type ProjectType = {
     param: string;
     name: string;
-    headerHref: string;
-    headerImgAlt: string;
+    role?: string;
+    dates?: string;
+    companyDescription?: string;
+    headerHref?: string;
+    headerImgAlt?: string;
     overview: string[];
-    overviewList?: {
-        title: string;
-        list: string[];
-    };
-    websiteURL: string;
+    websiteURL?: string;
     githubURL?: string;
     techStack: string[];
-    approach: ApproachType[];
     solutions?: SolutionsType[];
-    learnings: LearningsType[];
-    images: ImageType[];
+    sections?: ProjectSection[];
+    images?: ImageType[];
 };
 
-export type ApproachType = {
-    title?: string;
-    body?: string[];
-    bodyList?: { title: string; body: string }[];
+export type ProjectSection = {
+    title: string;
+    body: string[];
+    metric?: string;
 };
 
 export type SolutionsType = {
     title: string;
     body: string;
-};
-
-export type LearningsType = {
-    title?: string;
-    body?: string;
-    learnings?: string;
-    bodyList?: { title: string; body: string }[];
 };
 
 export type ImageType = {

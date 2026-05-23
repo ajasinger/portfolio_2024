@@ -1,6 +1,5 @@
 'use client';
 
-import { techStack } from '@/lib/data';
 import { motion } from 'framer-motion';
 
 export default function Header() {
@@ -13,26 +12,8 @@ export default function Header() {
         transition={{ duration: 0.5, delay: 0.5 }}
       >
         <h2 className="text-2xl md:text-3xl font-light max-w-4xl leading-relaxed">
-          a<span className="font-medium"> full stack engineer </span> with a background in
-          <span className="font-medium"> design</span>.
+          Full-stack engineer. Previously built and scaled a company to seven figures.
         </h2>
-      </motion.div>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
-      >
-        <ul className="flex gap-4 md:text-lg flex-wrap">
-          {techStack.map((tech, index) => (
-            <li
-              key={index}
-              className="flex gap-4 text-nowrap"
-            >
-              <span>{tech.name}</span>
-              {index !== techStack.length - 1 && <span>/</span>}
-            </li>
-          ))}
-        </ul>
       </motion.div>
     </header>
   )
