@@ -4,8 +4,6 @@ export type ProjectType = {
     role?: string;
     dates?: string;
     companyDescription?: string;
-    headerHref?: string;
-    headerImgAlt?: string;
     overview: string[];
     websiteURL?: string;
     githubURL?: string;

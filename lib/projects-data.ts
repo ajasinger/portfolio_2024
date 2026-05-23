@@ -46,8 +46,6 @@ export const projects = [
         role: "Software Engineer (Contract)",
         dates: "Jul 2023\u2013Oct 2024",
         companyDescription: "Silvershield is a full-stack AI-enabled fraud monitoring platform that helps families protect senior relatives from inbox scams.",
-        headerHref: "/images/silvershield_mobile_site_updated.png",
-        headerImgAlt: "mobile version of the Silvershield website",
         overview: [
             "I built the platform from concept to beta, owning all architecture and technology decisions end-to-end \u2014 selecting the stack, designing the data model, and shipping every feature."
         ],

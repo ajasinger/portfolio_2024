@@ -14,10 +14,10 @@ export default function ContactPage() {
                         I&apos;m always open to interesting conversations &mdash; about hard engineering problems, what you&apos;re building, or anything in between.
                     </p>
                     <a
-                        href="mailto:hello@ajasinger.com"
+                        href="mailto:info@ajasinger.com"
                         className="text-lg font-medium hover:underline underline-offset-8 decoration-1"
                     >
-                        hello@ajasinger.com
+                        info@ajasinger.com
                     </a>
                     <div className="flex gap-8 pt-4">
                         <Link
