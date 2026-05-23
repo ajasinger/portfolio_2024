@@ -14,18 +14,22 @@ export default function ProjectPage({ params }: { params: { project: string } })
     const data: ProjectType | undefined = projects.find(project => project.param === params.project);
 
     return(
-        <div className="bg-cream py-12 md:py-24 text-zinc-950 font-general-sans flex flex-col">
-            <h3 className="text-4xl font-semibold px-8 md:px-16 2xl:px-48">{data?.name}</h3>
+        <div className="bg-cream py-12 md:py-24 text-zinc-950 font-general-sans flex flex-col relative overflow-hidden">
+            <div className="bg-[#E0FEAF] absolute top-[20rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
+            <div className="bg-[#EDCEE2] absolute top-[60rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
+            <div className="bg-[#D8D5FF] absolute bottom-[10rem] left-[-10rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] z-0"></div>
+
+            <h3 className="text-4xl font-semibold px-8 md:px-16 2xl:px-48 relative z-10">{data?.name}</h3>
 
             {data?.role && (
-                <div className="px-8 md:px-16 2xl:px-48 pt-4 flex flex-col gap-1">
+                <div className="px-8 md:px-16 2xl:px-48 pt-4 flex flex-col gap-1 relative z-10">
                     <p className="text-lg">{data.role}{data.dates && ` \u2022 ${data.dates}`}</p>
                     {data.companyDescription && <p className="text-zinc-500">{data.companyDescription}</p>}
                 </div>
             )}
 
             {/* Intro Section */}
-            <div className="flex flex-col gap-12 px-8 md:px-16 2xl:px-48 py-12">
+            <div className="flex flex-col gap-12 px-8 md:px-16 2xl:px-48 py-12 relative z-10">
                 <div className="flex flex-col gap-4">
                     <h4 className="text-2xl font-semibold">Project overview</h4>
                     <div className="flex flex-col gap-2 max-w-xl xl:max-w-2xl">
@@ -36,7 +40,7 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
 
                 {/* Tech Stack */}
-                <div className="z-50">
+                <div>
                     <MotionSection>
                         <div className="flex flex-col gap-4">
                             <h4 className="text-2xl font-semibold">Tech stack</h4>
@@ -69,29 +73,12 @@ export default function ProjectPage({ params }: { params: { project: string } })
                 </div>
             )}
 
-            {/* Solutions Sections */}
-            {data?.solutions && (
-                <div className="px-8 md:px-16 2xl:px-48 py-12 text-zinc-950 flex flex-col gap-12 z-10">
-                    {data.solutions.map((solution, index) => (
-                        <MotionSection key={index}>
-                            <div className="flex flex-col gap-4 max-w-xl xl:max-w-2xl">
-                                <h4 className="text-2xl font-semibold">{solution.title}</h4>
-                                <p>{solution.body}</p>
-                            </div>
-                        </MotionSection>
-                    ))}
-                </div>
-            )}
-
-            {/* Project Sections (SimpleClosure-style) */}
+            {/* Project Sections */}
             {data?.sections && (
-                <div className="px-8 md:px-16 2xl:px-48 py-12 text-zinc-950 flex flex-col gap-16 z-10 relative overflow-hidden">
-                    <div className="bg-[#E0FEAF] absolute top-[-10rem] right-[20rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] sm:w-[68.75rem] z-0"></div>
-                    <div className="bg-[#EDCEE2] absolute top-[25rem] right-[0rem] h-[31.25rem] w-[50rem] rounded-full blur-[7rem] z-0"></div>
-                    <div className="bg-[#D8D5FF] absolute bottom-[-5rem] left-[-10rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[7rem] z-0"></div>
+                <div className="px-8 md:px-16 2xl:px-48 py-12 text-zinc-950 flex flex-col gap-16 relative z-10">
                     {data.sections.map((section, index) => (
                         <MotionSection key={index}>
-                            <div className="flex flex-col gap-4 max-w-xl xl:max-w-2xl relative z-10">
+                            <div className="flex flex-col gap-4 max-w-xl xl:max-w-2xl">
                                 <h4 className="text-2xl font-semibold">{section.title}</h4>
                                 {section.body.map((paragraph, pIndex) => (
                                     <p key={pIndex}>{paragraph}</p>

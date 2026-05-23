@@ -50,14 +50,18 @@ export const projects = [
             "I built the platform from concept to beta, owning all architecture and technology decisions end-to-end \u2014 selecting the stack, designing the data model, and shipping every feature."
         ],
         techStack: ["Next.js", "Supabase", "PostgreSQL", "GCP", "SendGrid", "Tailwind CSS"],
-        solutions: [
+        sections: [
             {
                 title: "Infrastructure & Security",
-                body: "With users trusting the platform with access to sensitive email inboxes, security and data integrity were the primary design constraints. I architected auth, permissions, and data access using Supabase Row Level Security and JWTs across a multi-user, multi-organization structure \u2014 ensuring each user could only access exactly the data they were permitted to see.",
+                body: [
+                    "With users trusting the platform with access to sensitive email inboxes, security and data integrity were the primary design constraints. I architected auth, permissions, and data access using Supabase Row Level Security and JWTs across a multi-user, multi-organization structure \u2014 ensuring each user could only access exactly the data they were permitted to see.",
+                ],
             },
             {
                 title: "Performance & Cost",
-                body: "The original architecture used Nylas to connect Gmail inboxes for fraud detection. After profiling the system I identified it as both a cost and performance bottleneck and replaced it with a direct GCP integration. The result was a 70% reduction in infrastructure cost and a 90% improvement in processing speed.",
+                body: [
+                    "The original architecture used Nylas to connect Gmail inboxes for fraud detection. After profiling the system I identified it as both a cost and performance bottleneck and replaced it with a direct GCP integration. The result was a 70% reduction in infrastructure cost and a 90% improvement in processing speed.",
+                ],
             },
         ],
         images: [
